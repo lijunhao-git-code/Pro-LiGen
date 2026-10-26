@@ -2,7 +2,9 @@
 
 This repository provides the retained molecular records and executable analysis supporting the Pro-LiGen study of conditional molecular generation with exemplar retrieval and programmatic verification. The evaluated edit is exactly one fewer RDKit graph ring than the seed, with single-component and noncopy requirements.
 
-The release contains all final-position records used for Studies A, B and C, the retained candidate records needed to replay final selection, the reference molecules, recalibrated docking scores and receptor checks, quantitative plotting inputs, and analysis/plotting code. It also includes the deployed GIN checkpoint, its saved library embeddings and the 26,108-entry retrieval library. No API access or server login is needed for the numerical analysis.
+The release contains all final-position records used for Studies A, B and C, the retained candidate records needed to replay final selection, the reference molecules, recalibrated docking scores and receptor checks, quantitative plotting inputs, and analysis/plotting code. It also includes the deployed GIN checkpoint, complete inference source, saved library embeddings, the 26,108-entry retrieval library, and retained training triplets, curve and log. No API access or server login is needed for the numerical analysis.
+
+Start with the [file and source map](docs/SOURCE_MAP.md), or the [Chinese reading and running guide](docs/README_中文.md). Original server files remain unchanged; the published copies and projections are indexed with their source hashes.
 
 ## Reproduce the reported numerical results
 
@@ -38,6 +40,14 @@ python reproduce/retrieve_references.py --recompute-library --out gin_run_full
 The first command recomputes the seed embeddings using the released checkpoint and uses the saved library embeddings. The second also rebuilds and encodes all **26,108** library molecules from SMILES. Both compare the ordered top-three references for all **25** tasks and both backends against the original **150** reference records. Outputs include selected SMILES, similarities, per-task checks, software versions and input hashes. The exact validated Python 3.10 environment is listed in `reproduce/requirements-gin-validated.txt`; the broader requirements file also supports newer Python environments.
 
 See [the GIN reproduction guide](docs/GIN_REPRODUCTION.md) for the single-task check, output interpretation and source provenance. Core numerical analysis and figure rendering remain available through the earlier commands; their original Python 3.12 dependency pins are separate from the validated GIN environment.
+
+## Inspect and validate the retained training material
+
+```sh
+python reproduce/verify_training_inputs.py --out gin_run_training_inputs
+```
+
+This checks all **15,461** retained training triplets and their ring-count labels, the **26,402** original SMILES rows and their agreement with the deduplicated library, the **50** recorded training epochs, and function identity against the original deployed source. It does not train a model. The original trainer, triplet builder and their inputs are indexed in [SOURCE_MAP.md](docs/SOURCE_MAP.md).
 
 ## Included studies
 

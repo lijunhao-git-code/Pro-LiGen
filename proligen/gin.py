@@ -1,9 +1,8 @@
-"""GIN graph features and frozen encoder restored from retained experiment sources.
+"""Frozen GIN components extracted verbatim from the original deployed run.py.
 
-Feature functions are extracted unchanged from the archived trainer. The graph
-builder and GINEncoder are the exact source functions saved with Study B.
-See provenance/gin_source_restoration.json. Importing this module does not train
-a model, call an API or perform docking.
+The unchanged original source is archive/original_project/run.py. This module
+includes every feature/helper definition required for standalone inference.
+Importing it does not train models, call language-model APIs or run docking.
 """
 import torch
 import torch.nn as nn
@@ -14,6 +13,7 @@ from torch_geometric.nn import GINConv, global_mean_pool
 
 
 def atom_features(atom):
+    """提取原子特征，返回长度为 84 的向量"""
     atomic_num = atom.GetAtomicNum()
     atomic_onehot = [0.0] * 60
     if 1 <= atomic_num <= 60:
@@ -33,12 +33,18 @@ def atom_features(atom):
 
     hybrid = atom.GetHybridization()
     hybrid_onehot = [0.0] * 6
-    if hybrid == Chem.rdchem.HybridizationType.SP:      hybrid_onehot[0] = 1.0
-    elif hybrid == Chem.rdchem.HybridizationType.SP2:    hybrid_onehot[1] = 1.0
-    elif hybrid == Chem.rdchem.HybridizationType.SP3:    hybrid_onehot[2] = 1.0
-    elif hybrid == Chem.rdchem.HybridizationType.SP3D:   hybrid_onehot[3] = 1.0
-    elif hybrid == Chem.rdchem.HybridizationType.SP3D2:  hybrid_onehot[4] = 1.0
-    else:                                                 hybrid_onehot[5] = 1.0
+    if hybrid == Chem.rdchem.HybridizationType.SP:
+        hybrid_onehot[0] = 1.0
+    elif hybrid == Chem.rdchem.HybridizationType.SP2:
+        hybrid_onehot[1] = 1.0
+    elif hybrid == Chem.rdchem.HybridizationType.SP3:
+        hybrid_onehot[2] = 1.0
+    elif hybrid == Chem.rdchem.HybridizationType.SP3D:
+        hybrid_onehot[3] = 1.0
+    elif hybrid == Chem.rdchem.HybridizationType.SP3D2:
+        hybrid_onehot[4] = 1.0
+    else:
+        hybrid_onehot[5] = 1.0
 
     aromatic = [1.0] if atom.GetIsAromatic() else [0.0]
 
@@ -51,19 +57,28 @@ def atom_features(atom):
 
 
 def bond_features(bond):
+    """提取键特征，返回长度为 9 的向量"""
     bt = bond.GetBondType()
     bond_onehot = [0.0] * 4
-    if bt == Chem.rdchem.BondType.SINGLE:    bond_onehot[0] = 1.0
-    elif bt == Chem.rdchem.BondType.DOUBLE:  bond_onehot[1] = 1.0
-    elif bt == Chem.rdchem.BondType.TRIPLE:  bond_onehot[2] = 1.0
-    elif bt == Chem.rdchem.BondType.AROMATIC: bond_onehot[3] = 1.0
+    if bt == Chem.rdchem.BondType.SINGLE:
+        bond_onehot[0] = 1.0
+    elif bt == Chem.rdchem.BondType.DOUBLE:
+        bond_onehot[1] = 1.0
+    elif bt == Chem.rdchem.BondType.TRIPLE:
+        bond_onehot[2] = 1.0
+    elif bt == Chem.rdchem.BondType.AROMATIC:
+        bond_onehot[3] = 1.0
 
     conj = [1.0] if bond.GetIsConjugated() else [0.0]
     ring = [1.0] if bond.IsInRing() else [0.0]
     stereo = [0.0, 0.0, 0.0]
-    if bond.GetStereo() == Chem.rdchem.BondStereo.STEREOZ:   stereo[0] = 1.0
-    elif bond.GetStereo() == Chem.rdchem.BondStereo.STEREOE: stereo[1] = 1.0
-    else:                                                     stereo[2] = 1.0
+    stereo_type = bond.GetStereo()
+    if stereo_type == Chem.rdchem.BondStereo.STEREOZ:
+        stereo[0] = 1.0
+    elif stereo_type == Chem.rdchem.BondStereo.STEREOE:
+        stereo[1] = 1.0
+    else:
+        stereo[2] = 1.0
 
     return bond_onehot + conj + ring + stereo
 

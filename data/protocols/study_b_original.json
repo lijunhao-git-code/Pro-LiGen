@@ -1,0 +1,187 @@
+{
+  "created_utc": "2026-10-11T05:40:14.103002+00:00",
+  "status": "locked_before_generation",
+  "groups": [
+    "T",
+    "M",
+    "G"
+  ],
+  "targets": [
+    "CHEMBL1741186",
+    "CHEMBL1821",
+    "CHEMBL1827",
+    "CHEMBL1908381",
+    "CHEMBL2176774",
+    "CHEMBL2185",
+    "CHEMBL2321615",
+    "CHEMBL2343",
+    "CHEMBL2525",
+    "CHEMBL2558",
+    "CHEMBL3401",
+    "CHEMBL3712868",
+    "CHEMBL3961",
+    "CHEMBL4375",
+    "CHEMBL4523509",
+    "CHEMBL5083",
+    "CHEMBL5668",
+    "CHEMBL5896",
+    "CHEMBL5939",
+    "CHEMBL211",
+    "CHEMBL2179",
+    "CHEMBL274",
+    "CHEMBL5469",
+    "CHEMBL5479",
+    "CHEMBL6055"
+  ],
+  "n_per_target": 5,
+  "planned_slots": 375,
+  "conversation_turns": 5,
+  "target": "exact RC_seed - 1 >= 1",
+  "shared_candidate_library_size": 26108,
+  "selection_order": "common exact-RC eligible set, then representation cosine top3",
+  "no_quality_reference_prefilter": true,
+  "no_tanimoto_hard_gate": true,
+  "checkpoint": "/root/PG-TALIRAGEN/PG-TALIRAGEN/mw_experiments/models/best_gin_rc.pth",
+  "checkpoint_sha256": "b08cf0fa0c2625451711d42336f1c032adc6974933d905e4f526471183182253",
+  "pretrain_finetune_causal_claim": false,
+  "historical_targets_not_new_external_test": true,
+  "system_prompt": "你是分子设计助手。使用输入证据提出设计假设，不得虚构已执行工具或实验结果。",
+  "api": {
+    "model": "deepseek-flash",
+    "documented_version": "DeepSeek-V4.1-Flash",
+    "base_url": "https://api.deepseek.com",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "temperature": null,
+    "top_p": null,
+    "max_tokens": 16384,
+    "timeout_seconds": 300,
+    "sdk_max_retries": 0,
+    "max_whole_attempts_per_slot": 2,
+    "workers": 12,
+    "cost_cap_cny": 70.0,
+    "balance_reserve_cny": 5.0,
+    "conservative_peak_budget_rates_per_million": {
+      "input": 2.0,
+      "output": 8.0
+    },
+    "cny_rates_per_million": {
+      "off_peak": {
+        "cache_hit": 0.02,
+        "cache_miss": 1.0,
+        "output": 4.0
+      },
+      "peak": {
+        "cache_hit": 0.04,
+        "cache_miss": 2.0,
+        "output": 8.0
+      }
+    },
+    "pricing_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "docs_source": "https://api-docs.deepseek.com/guides/thinking_mode/",
+    "unknown_usage_charged_at_reserved_upper_bound": true
+  },
+  "extraction": "first three SMILES tags in each of turns4/5; invalid/missing proposals consume quota; extra tags ignored and counted",
+  "candidate_quota": {
+    "design_turns": [
+      4,
+      5
+    ],
+    "proposals_per_turn": 3,
+    "max_total": 6
+  },
+  "final_selection": "eligible single-fragment exact-RC noncopy candidates from turns4/5; QED descending, SA_raw ascending on exact QED ties, canonical SMILES ascending",
+  "program_feedback": "actual RDKit/SA properties of fixed turn4 candidates appended to turn5; no docking feedback",
+  "retry": "only transport/empty/truncated failures; no valid/eligible candidate is scientific failure and is never retried",
+  "primary": {
+    "comparison": "G-M",
+    "metrics": [
+      "exact_noncopy_success_rate",
+      "compliant_QED_yield_per_planned_slot"
+    ],
+    "multiplicity": "Holm over two primary G-M endpoints",
+    "unit": "target-level paired mean",
+    "bootstrap_n": 10000,
+    "bootstrap_seed": 42,
+    "permutation": "100000 Monte Carlo target-wise sign flips, seed42; double-sided plus-one correction; exact enumeration if nonmissing targets<=15"
+  },
+  "secondary_metrics": [
+    "SA_raw_mean",
+    "SA_norm_mean",
+    "vina_mean",
+    "dVina_mean",
+    "valid_rate",
+    "copy_rate",
+    "duplicate_rate",
+    "tanimoto_mean",
+    "QED_mean",
+    "MW_mean"
+  ],
+  "secondary_multiplicity": "Holm over the two primary endpoints for G-T and M-T (four tests); other properties descriptive with unadjusted intervals and no significance claims",
+  "quality_subgroup": "target-compliant QED/SA distributions are descriptive, post-treatment subset",
+  "failure_denominator": "five planned slots per target; failed actual properties missing; explicit compliant-QED delivery utility zero for no output",
+  "docking": {
+    "available_targets": [
+      "CHEMBL1741186",
+      "CHEMBL1821",
+      "CHEMBL1827",
+      "CHEMBL1908381",
+      "CHEMBL2176774",
+      "CHEMBL2185",
+      "CHEMBL2343",
+      "CHEMBL2525",
+      "CHEMBL2558",
+      "CHEMBL3401",
+      "CHEMBL3961",
+      "CHEMBL4375",
+      "CHEMBL4523509",
+      "CHEMBL5083",
+      "CHEMBL5668",
+      "CHEMBL5896",
+      "CHEMBL5939",
+      "CHEMBL211",
+      "CHEMBL274",
+      "CHEMBL5469"
+    ],
+    "excluded_targets": [
+      "CHEMBL2321615",
+      "CHEMBL3712868",
+      "CHEMBL2179",
+      "CHEMBL5479",
+      "CHEMBL6055"
+    ],
+    "subset_rule": "pre-generation receptor identity/pocket audit, never output scores; exploratory computational docking only",
+    "software": "Vina 1.2.7",
+    "ligand_prep": "RDKit Embed seed42 fallback random coords; MMFF500; Meeko; largest fragment",
+    "sf_name": "vina",
+    "exhaustiveness": 16,
+    "n_poses": 10,
+    "cpu_per_job": 1,
+    "seed": 42,
+    "workers": 8,
+    "timeout_seconds": 600,
+    "primary_score": "best docked pose affinity: Vina.energies(n_poses=1)[0,0]",
+    "seed_note": "fixed42 rather than historical seed0 (automatic random); all arms/seeds rerun",
+    "positive_scores_retained": true,
+    "do_not_filter_by_generated_quality": true
+  },
+  "software": {
+    "torch": "2.3.0+cu121",
+    "torch-geometric": "2.8.0.post1",
+    "rdkit": "2026.3.4",
+    "openai": "2.49.0",
+    "vina": "1.2.7",
+    "meeko": "0.7.1"
+  },
+  "sa_scorer": {
+    "sascorer.py": {
+      "path": "/root/miniconda3/envs/ljh/share/RDKit/Contrib/SA_Score/sascorer.py",
+      "sha256": "8c191920cb9d011994e5f77a0b54924d20d92967052bf6f6903f6f40c0a6e3a2"
+    },
+    "fpscores.pkl.gz": {
+      "path": "/root/miniconda3/envs/ljh/share/RDKit/Contrib/SA_Score/fpscores.pkl.gz",
+      "sha256": "10dcef9340c873e7b987924461b0af5365eb8dd96be607203debe8ddf80c1e73"
+    }
+  },
+  "no_manuscript_edits": true
+}

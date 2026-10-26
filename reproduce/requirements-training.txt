@@ -1,0 +1,6 @@
+# Optional retained-trainer use. No training is performed by verification commands.
+-r requirements-gin.txt
+pandas>=2.0,<4
+tqdm>=4.67,<5
+# Used by archive/build_triplets.py; existing triplets are already provided.
+scikit-learn>=1.2,<2

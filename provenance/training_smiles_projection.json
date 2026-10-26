@@ -1,0 +1,19 @@
+{
+  "source": "csv_folder/train.csv",
+  "source_sha256": "02ff1b96468b61aa4ad049e1925f181424db03c78b8326ceebb592b13e17985a",
+  "source_columns": [
+    "CID",
+    "smiles",
+    "description",
+    "polararea",
+    "xlogp",
+    "inchi",
+    "iupacname",
+    "SELFIES"
+  ],
+  "selected_column": "smiles",
+  "rows": 26402,
+  "exported_sha256": "b25ec0c1e10a4f9ebb18a18d597e17e615c3c024b1b027184b62de001a5b6c9c",
+  "published_path": "data/training/source_smiles26402.csv",
+  "operation": "Select smiles column only, preserving row order, original SMILES strings and duplicates"
+}

@@ -45,6 +45,24 @@ The output directory must be new. Paths to all inputs are resolved from the repo
 
 ## Code provenance
 
-`proligen/gin.py` includes all four required definitions. `atom_features` and `bond_features` are extracted unchanged from the retained `archive/train_gin.py`; `mol_to_graph` and `GINEncoder` are the exact functions saved in the Study-B `models/encoder_source.json` snapshot. Function-level AST identity and source hashes are recorded in `provenance/gin_source_restoration.json`.
+`proligen/gin.py` includes all four required definitions, extracted unchanged from the original deployed project `run.py`. That complete source is preserved as `archive/original_project/run.py`; the earlier Study-B `models/encoder_source.json` snapshot is also retained. Function-level AST identity and source hashes are recorded in `provenance/gin_source_restoration.json`.
 
 The separate 2026-10-12 audit already reproduced the top-three GIN references on all 25 tasks, with a maximum recorded CPU-versus-saved score difference of about `1.79e-7`. The v0.2.0 reports under `verification/gin_cached_library.json` and `verification/gin_recomputed_library.json` validate the newly packaged entry point. These are execution checks of the retained model, not additional molecular-generation experiments.
+
+## Retained training inputs
+
+`data/training/triplets_ring_count.csv` contains the 15,461 original triplets. `source_smiles26402.csv` is a SMILES-only projection of the source CSV, preserving row order and duplicates; omitted text columns are not used by the ring-count builder. `best_gin_rc.csv` and `train_rc.log.txt` are the original curve and log. `provenance/server_source_index.json` and `training_smiles_projection.json` identify their sources and hashes.
+
+Validate them without training:
+
+```sh
+python reproduce/verify_training_inputs.py --out gin_run_training_inputs
+```
+
+For optional future training with the retained implementation, install `reproduce/requirements-training.txt` and supply a new output location:
+
+```sh
+python archive/train_gin.py --csv data/training/triplets_ring_count.csv --output gin_run_new_training/best_gin_rc.pth --log gin_run_new_training/curve.csv
+```
+
+This last command performs training; it is not part of the release verification. The retained trainer uses a random 80/20 split without a fixed split-generator seed. The released checkpoint is used to reproduce the reported reference sets.
