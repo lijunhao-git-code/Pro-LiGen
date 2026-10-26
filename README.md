@@ -25,6 +25,20 @@ python reproduce/render_figures.py --out regenerated_figures_01
 
 See [the result-to-file index](docs/RESULTS_TO_FILES.md) for every main table and result figure, [the data dictionary](docs/DATA_DICTIONARY.md), and [the docking protocol](docs/DOCKING_PROTOCOL.md). JSON records are authoritative; `data/csv` contains convenient CSV mirrors. Existing figure assets are the paper's actual saved quantitative figures.
 
+## Reproduce Morgan and frozen-GIN reference selection
+
+Version **v0.2.0** adds the complete frozen-GIN graph builder and encoder, restored from the retained experiment sources, and an independent retrieval entry point. It reads only released files and runs on CPU. No server login, language-model API key, training or docking is required.
+
+```sh
+python -m pip install -r reproduce/requirements-gin.txt
+python reproduce/retrieve_references.py --out gin_run_cached
+python reproduce/retrieve_references.py --recompute-library --out gin_run_full
+```
+
+The first command recomputes the seed embeddings using the released checkpoint and uses the saved library embeddings. The second also rebuilds and encodes all **26,108** library molecules from SMILES. Both compare the ordered top-three references for all **25** tasks and both backends against the original **150** reference records. Outputs include selected SMILES, similarities, per-task checks, software versions and input hashes. The exact validated Python 3.10 environment is listed in `reproduce/requirements-gin-validated.txt`; the broader requirements file also supports newer Python environments.
+
+See [the GIN reproduction guide](docs/GIN_REPRODUCTION.md) for the single-task check, output interpretation and source provenance. Core numerical analysis and figure rendering remain available through the earlier commands; their original Python 3.12 dependency pins are separate from the validated GIN environment.
+
 ## Included studies
 
 | Study | Purpose | Released final records |
@@ -37,6 +51,6 @@ Each B run can propose up to three molecules in each of two rounds, but returns 
 
 ## Release scope
 
-This is a results-reproduction release. Complete original API requests and literature-containing dialogues are omitted, as are credentials and account records. The archived generation/docking scripts document historical implementation and retain their historical path assumptions; they are not portable turnkey experiment commands. The portable entry points are the two commands above. The immutable weights of the external served language model and the complete original GIN training lineage are not available. `models/encoder_source.json` contains the two source functions archived with Study B, rather than a complete training package.
+Runnable entry points cover numerical result reproduction, quantitative figure rendering, and Morgan/frozen-GIN reference selection, including library re-encoding. The original encoder snapshot is preserved under `models/`; the executable implementation is `proligen/gin.py`, and the retained training implementation is `archive/train_gin.py`.
 
-The manuscript and editable schematic artwork are not published by this release. Partial release boundaries are described in [RELEASE_SCOPE.md](docs/RELEASE_SCOPE.md). Public access does not by itself establish journal compliance or independent replication. See [TERMS.md](TERMS.md) for reuse terms and third-party attribution.
+Complete literature-containing API dialogues, credentials, account records, manuscript files and editable schematic artwork are outside this release. Historical generation/docking scripts remain archived implementation records with their original path assumptions. The exact contents and execution scope are described in [RELEASE_SCOPE.md](docs/RELEASE_SCOPE.md). See [TERMS.md](TERMS.md) for reuse terms and third-party attribution.

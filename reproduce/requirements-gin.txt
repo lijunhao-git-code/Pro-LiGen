@@ -1,0 +1,7 @@
+# Frozen-GIN inference; training and model APIs are not used.
+# Install in an isolated environment. The exact tested versions are recorded
+# in verification/gin_recomputed_library.json and requirements-gin-validated.txt.
+torch==2.7.1
+torch-geometric==2.8.0
+rdkit==2026.3.4
+numpy>=1.23.5,<3

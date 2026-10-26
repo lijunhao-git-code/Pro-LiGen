@@ -1,0 +1,24 @@
+{
+  "restored_date": "2026-10-26",
+  "original_trainer_sha256": "1c01b995122431d67d2fb2952f796f764c60ecdcb829e97a2e9be95f58150edc",
+  "original_trainer_archive": "archive/train_gin.py",
+  "graph_builder_and_encoder_source": "models/encoder_source.json",
+  "original_run_sha256": "90314e479232f07e333d4c6eadae80200eec7c7996cbcd2c0c7100b4a2a98648",
+  "restored_module": "proligen/gin.py",
+  "restored_module_sha256": "f7e64153103e666c890bcef51ed1f048e815bc1776c4257bef6dc28ff24d2fd9",
+  "source_function_AST_identity_verified": true,
+  "feature_functions": [
+    "atom_features",
+    "bond_features"
+  ],
+  "snapshot_functions": [
+    "mol_to_graph",
+    "GINEncoder"
+  ],
+  "previous_20261012_CPU_top3_checks": {
+    "targets": 25,
+    "all_matched": true,
+    "max_cosine_difference": 1.7881393432617188e-07
+  },
+  "training_executed": false
+}

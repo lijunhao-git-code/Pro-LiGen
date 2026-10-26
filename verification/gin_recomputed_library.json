@@ -1,0 +1,192 @@
+{
+  "status": "passed",
+  "tasks_checked": 25,
+  "references_checked": 150,
+  "all_Morgan_top3_exact": true,
+  "all_GIN_top3_exact": true,
+  "library_recomputed": true,
+  "library_size": 26108,
+  "embedding_dimension": 256,
+  "library_embedding_max_abs_difference": 3.5762786865234375e-07,
+  "saved_reference_score_max_abs_difference": {
+    "M": 5.551115123125783e-17,
+    "G": 2.384185789905402e-07
+  },
+  "score_absolute_tolerance": 1e-06,
+  "per_task": [
+    {
+      "chemblid": "CHEMBL1741186",
+      "pool_size": 4592,
+      "Morgan_top3_exact": true,
+      "GIN_top3_exact": true
+    },
+    {
+      "chemblid": "CHEMBL1821",
+      "pool_size": 4592,
+      "Morgan_top3_exact": true,
+      "GIN_top3_exact": true
+    },
+    {
+      "chemblid": "CHEMBL1827",
+      "pool_size": 781,
+      "Morgan_top3_exact": true,
+      "GIN_top3_exact": true
+    },
+    {
+      "chemblid": "CHEMBL1908381",
+      "pool_size": 4592,
+      "Morgan_top3_exact": true,
+      "GIN_top3_exact": true
+    },
+    {
+      "chemblid": "CHEMBL2176774",
+      "pool_size": 3790,
+      "Morgan_top3_exact": true,
+      "GIN_top3_exact": true
+    },
+    {
+      "chemblid": "CHEMBL2185",
+      "pool_size": 4592,
+      "Morgan_top3_exact": true,
+      "GIN_top3_exact": true
+    },
+    {
+      "chemblid": "CHEMBL2321615",
+      "pool_size": 3790,
+      "Morgan_top3_exact": true,
+      "GIN_top3_exact": true
+    },
+    {
+      "chemblid": "CHEMBL2343",
+      "pool_size": 3167,
+      "Morgan_top3_exact": true,
+      "GIN_top3_exact": true
+    },
+    {
+      "chemblid": "CHEMBL2525",
+      "pool_size": 3790,
+      "Morgan_top3_exact": true,
+      "GIN_top3_exact": true
+    },
+    {
+      "chemblid": "CHEMBL2558",
+      "pool_size": 3167,
+      "Morgan_top3_exact": true,
+      "GIN_top3_exact": true
+    },
+    {
+      "chemblid": "CHEMBL3401",
+      "pool_size": 4592,
+      "Morgan_top3_exact": true,
+      "GIN_top3_exact": true
+    },
+    {
+      "chemblid": "CHEMBL3712868",
+      "pool_size": 3790,
+      "Morgan_top3_exact": true,
+      "GIN_top3_exact": true
+    },
+    {
+      "chemblid": "CHEMBL3961",
+      "pool_size": 3790,
+      "Morgan_top3_exact": true,
+      "GIN_top3_exact": true
+    },
+    {
+      "chemblid": "CHEMBL4375",
+      "pool_size": 4592,
+      "Morgan_top3_exact": true,
+      "GIN_top3_exact": true
+    },
+    {
+      "chemblid": "CHEMBL4523509",
+      "pool_size": 1671,
+      "Morgan_top3_exact": true,
+      "GIN_top3_exact": true
+    },
+    {
+      "chemblid": "CHEMBL5083",
+      "pool_size": 3167,
+      "Morgan_top3_exact": true,
+      "GIN_top3_exact": true
+    },
+    {
+      "chemblid": "CHEMBL5668",
+      "pool_size": 4592,
+      "Morgan_top3_exact": true,
+      "GIN_top3_exact": true
+    },
+    {
+      "chemblid": "CHEMBL5896",
+      "pool_size": 3167,
+      "Morgan_top3_exact": true,
+      "GIN_top3_exact": true
+    },
+    {
+      "chemblid": "CHEMBL5939",
+      "pool_size": 4545,
+      "Morgan_top3_exact": true,
+      "GIN_top3_exact": true
+    },
+    {
+      "chemblid": "CHEMBL211",
+      "pool_size": 3790,
+      "Morgan_top3_exact": true,
+      "GIN_top3_exact": true
+    },
+    {
+      "chemblid": "CHEMBL2179",
+      "pool_size": 3790,
+      "Morgan_top3_exact": true,
+      "GIN_top3_exact": true
+    },
+    {
+      "chemblid": "CHEMBL274",
+      "pool_size": 3167,
+      "Morgan_top3_exact": true,
+      "GIN_top3_exact": true
+    },
+    {
+      "chemblid": "CHEMBL5469",
+      "pool_size": 4592,
+      "Morgan_top3_exact": true,
+      "GIN_top3_exact": true
+    },
+    {
+      "chemblid": "CHEMBL5479",
+      "pool_size": 1671,
+      "Morgan_top3_exact": true,
+      "GIN_top3_exact": true
+    },
+    {
+      "chemblid": "CHEMBL6055",
+      "pool_size": 4592,
+      "Morgan_top3_exact": true,
+      "GIN_top3_exact": true
+    }
+  ],
+  "mismatches": [],
+  "inputs_unchanged": true,
+  "input_sha256": {
+    "models/best_gin_rc.pth": "b08cf0fa0c2625451711d42336f1c032adc6974933d905e4f526471183182253",
+    "data/retrieval/library.csv": "314b79dee49b08e56e269e057ccd5cbab95326e91764d5b272af5509ef60def4",
+    "data/retrieval/library_embeddings.npy": "7aa98e2ad4b8779e6a6ce9b46eb0d74a2984ca6714e670eaabee46f76de72b64",
+    "data/SI_records/tasks25.json": "b9d0375f38453f8717bc1217fe97e9b299d8bd67f03fa241101c1f1337b069e1",
+    "data/SI_records/B_references150.json": "0fe70cf4f2467111f589dc9f70900261515e9c0f6dcba259634a88c2715a15e5",
+    "proligen/gin.py": "f7e64153103e666c890bcef51ed1f048e815bc1776c4257bef6dc28ff24d2fd9"
+  },
+  "versions": {
+    "python": "3.10.7",
+    "torch": "2.7.1+cu118",
+    "torch_geometric": "2.8.0",
+    "rdkit": "2026.03.4",
+    "numpy": "1.23.5"
+  },
+  "device": "cpu",
+  "batch_size": 128,
+  "threads": 4,
+  "elapsed_seconds": 65.89,
+  "training_jobs": 0,
+  "language_model_API_calls": 0,
+  "docking_jobs": 0
+}
