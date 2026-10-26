@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "credential_patterns": [
+    "private_key",
+    "github_token",
+    "api_secret",
+    "credential_literal",
+    "ssh_endpoint",
+    "windows_user_path"
+  ],
+  "credential_findings": [],
+  "files_scanned": 969,
+  "maximum_file_bytes": 26734720,
+  "excluded_prompt_files": [
+    "A_stored_prompt_definitions_NG.json",
+    "A_stored_prompt_definitions_PG-aggr.json",
+    "A_stored_prompt_definitions_PG-mild.json",
+    "A_stored_prompt_definitions_TG.json",
+    "B_prompts75.json",
+    "C_shared_contexts75_verbatim.json",
+    "historical_P0P1_budget_diagnostics.json"
+  ],
+  "new_generation_calls": 0,
+  "new_training_jobs": 0,
+  "new_docking_jobs": 0
+}

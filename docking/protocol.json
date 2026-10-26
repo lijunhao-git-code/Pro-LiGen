@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-10-12T10:59:03.019433+00:00",
+  "seed": 42,
+  "exhaustiveness": 16,
+  "n_poses": 10,
+  "cpu": 1,
+  "workers": 8,
+  "timeout_seconds": 600,
+  "sf_name": "vina",
+  "top1_rmsd_cutoff_A": 2.0,
+  "metal_targets_excluded_from_primary": true,
+  "parent_not_overwritten": true,
+  "salt_rule": "unique carbon-containing fragment; only atomic counterions",
+  "ligand_prep": "input formal charge; RDKit AddHs, Embed42/fallback random42, MMFF500, Meeko",
+  "ligand_protonation_enumeration": false,
+  "receptor_prep": "reuse preaudited receptor; new: OpenBabel pH7.4; NAD explicitly retained",
+  "no_rescue_parameter_tuning": true,
+  "rmsd": "RDKit CalcRMS heavy symmetry-aware in place; no alignment"
+}

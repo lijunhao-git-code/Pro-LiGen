@@ -1,0 +1,90 @@
+{
+  "main_figures": 5,
+  "supplementary_figures": 3,
+  "graphical_overviews": 1,
+  "diagram_box_bounds_checked": 17,
+  "plotting_versions": {
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.4",
+    "rdkit": "2026.09.1"
+  },
+  "target_unit": 25,
+  "docking_target_unit": 11,
+  "reference_records": 150,
+  "structure_example_target": "CHEMBL1741186",
+  "case_rule": "lexicographically first target, planned position 1; no quality selection",
+  "case": [
+    {
+      "label": "Seed",
+      "smiles": "O=C(O)c1ccc(-n2cc(C(=O)c3c(Cl)cccc3Cl)c3ccccc32)cc1",
+      "RC": 4,
+      "QED": 0.4285381999401544,
+      "recomputed_RC": 4,
+      "recomputed_QED": 0.42853819994015446
+    },
+    {
+      "label": "Morgan reference 1",
+      "smiles": "O=C(O)c1nn(Cc2ccc(Cl)cc2Cl)c2ccccc12",
+      "recomputed_RC": 3,
+      "recomputed_QED": 0.7903437394725361
+    },
+    {
+      "label": "Morgan reference 2",
+      "smiles": "O=C(c1ccccc1I)c1cn(CCCCCF)c2ccccc12",
+      "recomputed_RC": 3,
+      "recomputed_QED": 0.2684839740849729
+    },
+    {
+      "label": "Morgan reference 3",
+      "smiles": "COc1c(C)c(C(=O)c2ccc(N)c(C(=O)O)c2)n2ccccc12",
+      "recomputed_RC": 3,
+      "recomputed_QED": 0.568305534131578
+    },
+    {
+      "label": "GIN reference 1",
+      "smiles": "O=C(O)Cc1cn(-c2ccccc2)nc1-c1ccc(Cl)cc1",
+      "recomputed_RC": 3,
+      "recomputed_QED": 0.7964809117861744
+    },
+    {
+      "label": "GIN reference 2",
+      "smiles": "O=C(O)c1nn(Cc2ccc(Cl)cc2Cl)c2ccccc12",
+      "recomputed_RC": 3,
+      "recomputed_QED": 0.7903437394725361
+    },
+    {
+      "label": "GIN reference 3",
+      "smiles": "COc1c(C)c(C(=O)c2ccc(N)c(C(=O)O)c2)n2ccccc12",
+      "recomputed_RC": 3,
+      "recomputed_QED": 0.568305534131578
+    },
+    {
+      "label": "T output, position 1",
+      "smiles": "COc1cn(-c2ccc(C(=O)O)cc2)c2ccccc12",
+      "RC": 3,
+      "QED": 0.791450463851176,
+      "recomputed_RC": 3,
+      "recomputed_QED": 0.791450463851176
+    },
+    {
+      "label": "M output, position 1",
+      "smiles": "CN(C)C(=O)c1cn(-c2ccc(C(=O)O)cc2)c2ccccc12",
+      "RC": 3,
+      "QED": 0.8086941250062336,
+      "recomputed_RC": 3,
+      "recomputed_QED": 0.8086941250062335
+    },
+    {
+      "label": "G output, position 1",
+      "smiles": "CC(=O)c1cn(-c2ccc(C(=O)O)cc2)c2ccccc12",
+      "RC": 3,
+      "QED": 0.7459902591912817,
+      "recomputed_RC": 3,
+      "recomputed_QED": 0.7459902591912817
+    }
+  ],
+  "chemical_structure_PDF": "high-resolution RDKit depiction; separate native SVG retained",
+  "new_API_calls": 0,
+  "new_training_jobs": 0,
+  "new_docking_jobs": 0
+}

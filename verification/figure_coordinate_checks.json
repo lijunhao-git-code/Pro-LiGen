@@ -1,0 +1,55 @@
+{
+  "changed_text_count": 7,
+  "numeric_coordinates_unchanged": true,
+  "figures": {
+    "fig2_historical_tradeoffs": {
+      "changed_text_count": 2,
+      "edits": [
+        {
+          "old": "(a) Historical strategy response",
+          "new": "(a) Guidance-strategy profiles"
+        },
+        {
+          "old": "Study A: 25 target means / group; 500 retained historical records",
+          "new": "Study A: 25 targets; 500 outputs"
+        }
+      ],
+      "numeric_coordinates_unchanged": true,
+      "numerical_coordinate_sha256": "bf40f51ba0aeba9fd31782a1e9aa5926a2c96548ce8d4cd7127fda552bd64776"
+    },
+    "fig3_mechanism": {
+      "changed_text_count": 4,
+      "edits": [
+        {
+          "old": "(a) New paired fifth-turn branches",
+          "new": "(a) Paired additional-feedback comparison"
+        },
+        {
+          "old": "Turn 4\nQED",
+          "new": "Round 1\nQED"
+        },
+        {
+          "old": "Turn 5\nQED",
+          "new": "Round 2\nQED"
+        },
+        {
+          "old": "Budget: 3 / 3 / 6 / 6 positions\nSaved attempts; not new ablation",
+          "new": "Candidates per policy: 3 / 3 / 6 / 6\nReplay of saved generation outputs"
+        }
+      ],
+      "numeric_coordinates_unchanged": true,
+      "numerical_coordinate_sha256": "8cf6dfdeb506f3655ddaecbe2f5c600bcc5469a1f27a4e37c417f21aee536e7d"
+    },
+    "fig4_downstream": {
+      "changed_text_count": 1,
+      "edits": [
+        {
+          "old": "pH: original family-specific Holm p\nNonsignificant \u2260 equivalent",
+          "new": "pH: family-specific Holm-adjusted p"
+        }
+      ],
+      "numeric_coordinates_unchanged": true,
+      "numerical_coordinate_sha256": "f1826b8c5f668bd69f7d5f352dedd49d2c53a8749b21a9175f741e9d31a6c068"
+    }
+  }
+}

@@ -1,0 +1,746 @@
+{
+  "facts": {
+    "source_filename": "B04_numeric_manifest.json",
+    "sha256": "2d5352db8ecd5052db76602d47322216f2c9828f45e15b1ed308d2a5d9111d41"
+  },
+  "tasks": {
+    "source_filename": "targets.csv",
+    "sha256": "a19bb1a15fbc89d6dce60d2624ca44ec10f5c13f383bc30f0b9d0e6d0d204354"
+  },
+  "A_records": {
+    "source_filename": "A_500_scoring_pairing_and_diagnostics.csv",
+    "sha256": "2fd792a6b3d55691df2ad038233b4122f043a6b841c4242555c4c17faefdfd99"
+  },
+  "A_targets": {
+    "source_filename": "A_500_per_target.csv",
+    "sha256": "c4daa289b596543f0d8af2b307232f60ab33bd149bdd918fe39d3287a8aa67c0"
+  },
+  "A_flags": {
+    "source_filename": "A_quality_flags_retained_not_deleted.csv",
+    "sha256": "bd8252dbc3b63e34fe8e55f125938bc54f6598d6d26432ed599cfa7261682f97"
+  },
+  "B_slots": {
+    "source_filename": "generation_per_slot.csv",
+    "sha256": "a59fcb9b564b9ead57c63a16a28e60fc7ab82ef6199f97d7e924fc269a6c2c94"
+  },
+  "B_targets": {
+    "source_filename": "B_375_per_target_verified.csv",
+    "sha256": "a762cb31314d0156fe4f30e5b1b06267e1d1ed4630d36fa62e32dfe48eb21a91"
+  },
+  "B_candidates": {
+    "source_filename": "descriptive_proposals.csv",
+    "sha256": "89fed6080d6a8ce8e598913fead5160e804144b87c0d4c66b7a71d8dd5575985"
+  },
+  "B_candidate_summary": {
+    "source_filename": "B_candidate_summary.csv",
+    "sha256": "09de5fc9a80e0f998f179e991b9dbef59b450ee3f47fd92ba82b0353a81183a7"
+  },
+  "B_references": {
+    "source_filename": "B_reference_fragment_flags.csv",
+    "sha256": "d501a78f069f351e2ec55fac318731c006d01c3dd4dee2c2522699d2c65772d0"
+  },
+  "B_full_references": {
+    "source_filename": "exemplars.csv",
+    "sha256": "8d3cc5dc0aa3b88d4ba51f0c367e1524ef8995e289c72c383669f12a2ad474a8"
+  },
+  "B_failures": {
+    "source_filename": "B_failure_records.csv",
+    "sha256": "0b3fbddfb3eff30bc8e2ec16ff2c6901103070c925138ab509ba91d8857a7322"
+  },
+  "replay": {
+    "source_filename": "B_candidate_selection_replay_per_slot.csv",
+    "sha256": "a6056281eaf65c87fe0d05d6a64d4c67a729fd085254df6162df010a016f0b4f"
+  },
+  "C_records": {
+    "source_filename": "branch_records.csv",
+    "sha256": "7cd831f8f5fd55739e84ef2d08e1b1a14a5bd3a338214fd9c7b1b6f331ebb30d"
+  },
+  "C_targets": {
+    "source_filename": "target_means.csv",
+    "sha256": "186ece3d7cb470371d56a00e5a6011d1c690e9e16302a13dd7b9b939b5d6cd07"
+  },
+  "C_contexts": {
+    "source_filename": "contexts.json",
+    "sha256": "4538fb7bd3b6fdf5237ddff0f254ca785b8f08dbe2cccdc0ff69da2ea1010af4"
+  },
+  "C_status": {
+    "source_filename": "generation_status.json",
+    "sha256": "eab7aa7bb8753add80b6b7f4517e75a42507383a9566a453890d84ca5ed5bb8b"
+  },
+  "B_prompts": {
+    "source_filename": "prompts.jsonl",
+    "sha256": "6073555ebef5b420185d61e56c6b538b529404cbdd1d94b8ed3f55f368dec0cf"
+  },
+  "B_protocol": {
+    "source_filename": "protocol.json",
+    "sha256": "7bca4b9fe280e1b51856bbfb95a2e9a46a98d70357494270cc83998d229b8542"
+  },
+  "C_protocol": {
+    "source_filename": "protocol.json",
+    "sha256": "0fac16974292eefa5e24da65eace30c98b739e91838ec17065ef3a22a68917af"
+  },
+  "B_schedule": {
+    "source_filename": "schedule.json",
+    "sha256": "fed0cecf2332b272db7d5cef0db1af0a806e8aba9d1883fedb98788d17c1d60a"
+  },
+  "docking": {
+    "source_filename": "docking_scores_with_seed_pairs.csv",
+    "sha256": "bfba26c310412ebb0253de9bd9ae6d64d3f75085119e10b9a37429bad373a657"
+  },
+  "receptors": {
+    "source_filename": "receptor_calibration_summary.csv",
+    "sha256": "5f062f5696a51abd3a247540d5737c3625c570b08f57e1c32ed214e12c557313"
+  },
+  "docking_protocol": {
+    "source_filename": "docking_protocol.json",
+    "sha256": "06988bd5d937670d59f0fbb828f1397baadc16b107452325c62154452d4388f0"
+  },
+  "receptor_details": {
+    "source_filename": "receptor_audit.json",
+    "sha256": "5b90831775bd4a2226d60a5a8e94d99bc7e2f38e5215445f3edc9b2436dc9f1e"
+  },
+  "calibration_results": {
+    "source_filename": "calibration_results.json",
+    "sha256": "4436f1e624256b7464ee04bc3ab06e712148a1225829181f5118c5758d9c6347"
+  },
+  "forms": {
+    "source_filename": "chemical_form_group_sensitivity.csv",
+    "sha256": "f86bdc83cce9eaf687dca920684ab06cd4f8df0245bbfa53cf1cf1da8852e2b2"
+  },
+  "component_copies": {
+    "source_filename": "active_component_noncopy_sensitivity_all_outputs.csv",
+    "sha256": "050a4bae287778aa2b652afa3d40581122cd859a2aa63c318862bad0dcd280fd"
+  },
+  "B_cost": {
+    "source_filename": "cost.json",
+    "sha256": "e5d944cbe0929475c954075371b471f9786209302afde68dba76ecb1d612a8d7"
+  },
+  "model_provenance": {
+    "source_filename": "model_and_dataset_provenance.json",
+    "sha256": "15b519f696eb35e2d263d1d86bd10bf942baf7894fe2498dd21cf1317ab0c5a0"
+  },
+  "training_log": {
+    "source_filename": "old_train_rc.log",
+    "sha256": "8bbf9e07123abeeb5218c184f7204447fa002e6ee3771e2915076e9be34becfd"
+  },
+  "historical_P0P1": {
+    "source_filename": "training_budget_summary.json",
+    "sha256": "20d11913ad72487dd96e971f1fe0efc078d267e32f7e156b566e4ad3f54e3232"
+  },
+  "A_prompts_NG": {
+    "source_filename": "exp30rc25_ng.jsonl",
+    "sha256": "f89dacc985bc9d7b8574e69cff8c1f537116ebba76868cbe9459aadbf9dd45da"
+  },
+  "A_prompts_TG": {
+    "source_filename": "exp30rc25_tg.jsonl",
+    "sha256": "d67d8170c6d2d23646d53fc3bff713deb846a557be726e166c9a20fcf469d7da"
+  },
+  "A_prompts_PG-aggr": {
+    "source_filename": "exp30rc25_pg_aggr.jsonl",
+    "sha256": "0e60a88df55dc73e5656675d547a099feff9125515a28ff584f47ea909b35b60"
+  },
+  "A_prompts_PG-mild": {
+    "source_filename": "exp30rc25_pg_mild.jsonl",
+    "sha256": "d0c9898886cfd60ed4b9640d3fd3da5f8e5dca9bce7315ee3f087192dc639ddd"
+  },
+  "C_result_CHEMBL1741186_1_M_C_Feedback": {
+    "source_filename": "CHEMBL1741186_1_M_C_Feedback.json",
+    "sha256": "73c3792df60212e064979dc0855281444d4d5977a6deaaca0981589150ebd2d7"
+  },
+  "C_result_CHEMBL1741186_1_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL1741186_1_M_C_NoExtraFeedback.json",
+    "sha256": "a257a767b6fe688af661a30ed92232b94bfb0496859ac2a8a3cd158424682d4d"
+  },
+  "C_result_CHEMBL1741186_2_M_C_Feedback": {
+    "source_filename": "CHEMBL1741186_2_M_C_Feedback.json",
+    "sha256": "7ac48031947d98428b86d4d548b6c7c3d5e4c1105e0ac7425f9742dad41fa75f"
+  },
+  "C_result_CHEMBL1741186_2_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL1741186_2_M_C_NoExtraFeedback.json",
+    "sha256": "db910a489baf75747a8a5acac8c92a9573b80af448d7b47e4886bf304c925dc6"
+  },
+  "C_result_CHEMBL1741186_3_M_C_Feedback": {
+    "source_filename": "CHEMBL1741186_3_M_C_Feedback.json",
+    "sha256": "a27785baf34f01cee726cb455a1940bc66f2118c5e599f2d5d223b6442665ef3"
+  },
+  "C_result_CHEMBL1741186_3_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL1741186_3_M_C_NoExtraFeedback.json",
+    "sha256": "0e46ec5c0ad667e259a32e645649a1b5c80621555b4ceb99063172905faed9ce"
+  },
+  "C_result_CHEMBL1821_1_M_C_Feedback": {
+    "source_filename": "CHEMBL1821_1_M_C_Feedback.json",
+    "sha256": "a1e9af4038fdf8b96c2a54e2aadb925f29ff0fd1ddf47619f7bbcb83aa5152f0"
+  },
+  "C_result_CHEMBL1821_1_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL1821_1_M_C_NoExtraFeedback.json",
+    "sha256": "daed26912fab414d7795359eec0e2292331c238df5a09a63e8ebfa69cdc491d3"
+  },
+  "C_result_CHEMBL1821_2_M_C_Feedback": {
+    "source_filename": "CHEMBL1821_2_M_C_Feedback.json",
+    "sha256": "c7b30cbb6929a103768532098cbc7488c7b0cae6d1511d3bb0f893b20a7c587f"
+  },
+  "C_result_CHEMBL1821_2_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL1821_2_M_C_NoExtraFeedback.json",
+    "sha256": "666e2b422b630f791c9d247082543173b9003709c4c9119954b1faa38fbc1a09"
+  },
+  "C_result_CHEMBL1821_3_M_C_Feedback": {
+    "source_filename": "CHEMBL1821_3_M_C_Feedback.json",
+    "sha256": "652e59ce693f0338781c1b7cf0afddb72007609d85ed3a6ce1708ee21b13edb0"
+  },
+  "C_result_CHEMBL1821_3_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL1821_3_M_C_NoExtraFeedback.json",
+    "sha256": "9961a6246b65f4f0bb7b282a3ccd7731d9ee12138be66df4f2b5616e6a9a6f22"
+  },
+  "C_result_CHEMBL1827_1_M_C_Feedback": {
+    "source_filename": "CHEMBL1827_1_M_C_Feedback.json",
+    "sha256": "3f491533235db990f0f1adef5cf01fded504e965111b964ced77235cc6c03b00"
+  },
+  "C_result_CHEMBL1827_1_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL1827_1_M_C_NoExtraFeedback.json",
+    "sha256": "529ce665ea9c3def1d5e4191717ad538a1b62f11790b95d416f69f30f7abf925"
+  },
+  "C_result_CHEMBL1827_2_M_C_Feedback": {
+    "source_filename": "CHEMBL1827_2_M_C_Feedback.json",
+    "sha256": "2b2800a3e4f5cbe302a7a2c34573da102fc4d584fe99055c5d8f971c8a721391"
+  },
+  "C_result_CHEMBL1827_2_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL1827_2_M_C_NoExtraFeedback.json",
+    "sha256": "8dcdf171318febe8444db36ea53aa4ed66581218e480917e5eda3978bf467f93"
+  },
+  "C_result_CHEMBL1827_3_M_C_Feedback": {
+    "source_filename": "CHEMBL1827_3_M_C_Feedback.json",
+    "sha256": "c0cde4311ce4c592ce80fee252c65fad0ea8513c89f715cbc6f7cbca464d39f2"
+  },
+  "C_result_CHEMBL1827_3_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL1827_3_M_C_NoExtraFeedback.json",
+    "sha256": "8e3bd579999999f063ea392543fb490d6265b3c35bb9bdf1b91829891fc30083"
+  },
+  "C_result_CHEMBL1908381_1_M_C_Feedback": {
+    "source_filename": "CHEMBL1908381_1_M_C_Feedback.json",
+    "sha256": "d07ebfb0631b064cd675d4756dde32721e45b8e337c36666496571c80de9c13d"
+  },
+  "C_result_CHEMBL1908381_1_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL1908381_1_M_C_NoExtraFeedback.json",
+    "sha256": "23cf15629c5fb8dba92fdcc6b1457a4a57fee73a79094c00bd518f7b5b25bbe7"
+  },
+  "C_result_CHEMBL1908381_2_M_C_Feedback": {
+    "source_filename": "CHEMBL1908381_2_M_C_Feedback.json",
+    "sha256": "fd9739052ad4eec9ec4344bf7660f87b1c118b02b64c963473d9375c7d7fc906"
+  },
+  "C_result_CHEMBL1908381_2_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL1908381_2_M_C_NoExtraFeedback.json",
+    "sha256": "2281a7e7fe9dd40f2d2e2c1e948e24f96a1e86a1dcf15d39348089a4f093280c"
+  },
+  "C_result_CHEMBL1908381_3_M_C_Feedback": {
+    "source_filename": "CHEMBL1908381_3_M_C_Feedback.json",
+    "sha256": "c891741b77f48015068926d3ad9c38a2a7c8d51ad4209e63f7cb77a65bae663b"
+  },
+  "C_result_CHEMBL1908381_3_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL1908381_3_M_C_NoExtraFeedback.json",
+    "sha256": "3ca53ce5a0626dc9bd1b386626bd9daff4c90ad6b46ec1408e5f355262dad475"
+  },
+  "C_result_CHEMBL211_1_M_C_Feedback": {
+    "source_filename": "CHEMBL211_1_M_C_Feedback.json",
+    "sha256": "982fa2490905f02cb766ae2f8e4fdb92bc2bdaa276d9397549e1ec7dc44a6fbd"
+  },
+  "C_result_CHEMBL211_1_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL211_1_M_C_NoExtraFeedback.json",
+    "sha256": "c24b5e307525f3c8725d550eda6a31cdab97e353fcdd74f3960fcf2a3123fb73"
+  },
+  "C_result_CHEMBL211_2_M_C_Feedback": {
+    "source_filename": "CHEMBL211_2_M_C_Feedback.json",
+    "sha256": "d40e62560debce817f8ac5213665faafc6fa2aa85dc0fd5bdaee1d5fedf75018"
+  },
+  "C_result_CHEMBL211_2_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL211_2_M_C_NoExtraFeedback.json",
+    "sha256": "8e942d9546f5fbe1f881675e372f3335f8d74ba9920b5d09f85f45646fbbdfaa"
+  },
+  "C_result_CHEMBL211_3_M_C_Feedback": {
+    "source_filename": "CHEMBL211_3_M_C_Feedback.json",
+    "sha256": "24836cb8fadc9a8f70279e60c6370ce9e1a495562198635553f9cc8c210c10c0"
+  },
+  "C_result_CHEMBL211_3_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL211_3_M_C_NoExtraFeedback.json",
+    "sha256": "8001e4c200c1c4419b395b13604bade2d28cd6c090f1d8394b9a88d52dcb716c"
+  },
+  "C_result_CHEMBL2176774_1_M_C_Feedback": {
+    "source_filename": "CHEMBL2176774_1_M_C_Feedback.json",
+    "sha256": "fb949dacc13e14f7a58f282c3a6242c286beaab22d591986304867d7aae9d060"
+  },
+  "C_result_CHEMBL2176774_1_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL2176774_1_M_C_NoExtraFeedback.json",
+    "sha256": "6f2064cc58c20b3bd24d8c236b772a1c643ca074e66a04582f195cf7f803db6e"
+  },
+  "C_result_CHEMBL2176774_2_M_C_Feedback": {
+    "source_filename": "CHEMBL2176774_2_M_C_Feedback.json",
+    "sha256": "8a99974f602473fb361d292730f98b570a8c94560421e5839f077e1b1243df54"
+  },
+  "C_result_CHEMBL2176774_2_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL2176774_2_M_C_NoExtraFeedback.json",
+    "sha256": "7e9eda40550bb0a3c5f32ba4f03ec61b7a9537c39550758118b22f48bd252e2e"
+  },
+  "C_result_CHEMBL2176774_3_M_C_Feedback": {
+    "source_filename": "CHEMBL2176774_3_M_C_Feedback.json",
+    "sha256": "c867a4b75f70cda6658e57c7744c9db66291e465dc9b8bd3d56ced4edb6cd559"
+  },
+  "C_result_CHEMBL2176774_3_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL2176774_3_M_C_NoExtraFeedback.json",
+    "sha256": "d3077e69e2cc286c50a8fe8cde044bda44cfd6ab8bc33a4810faa40580dc49f5"
+  },
+  "C_result_CHEMBL2179_1_M_C_Feedback": {
+    "source_filename": "CHEMBL2179_1_M_C_Feedback.json",
+    "sha256": "82841ba38f315efe29b3349ce1c5952fdefc4f37a26ee9c942bd0434e7f389a8"
+  },
+  "C_result_CHEMBL2179_1_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL2179_1_M_C_NoExtraFeedback.json",
+    "sha256": "e22bfe144d58f62630b262988c7ca7b60e4cbc46b903bf25441daaa19fb29182"
+  },
+  "C_result_CHEMBL2179_2_M_C_Feedback": {
+    "source_filename": "CHEMBL2179_2_M_C_Feedback.json",
+    "sha256": "a9e2d94646f328724af768aa178a3a14c268a8a00e044fc961fcefe58229817e"
+  },
+  "C_result_CHEMBL2179_2_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL2179_2_M_C_NoExtraFeedback.json",
+    "sha256": "5c0d96d9971b30ef79181540285beab7032b0c4b5cb1dc251c35c76a568b1dfb"
+  },
+  "C_result_CHEMBL2179_3_M_C_Feedback": {
+    "source_filename": "CHEMBL2179_3_M_C_Feedback.json",
+    "sha256": "89c5a44b14635c39c076ab677750136a021f3f55c7c4cd6e4d88e1c05449a543"
+  },
+  "C_result_CHEMBL2179_3_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL2179_3_M_C_NoExtraFeedback.json",
+    "sha256": "a4ac584cf58395ffa4ef44f5c9e7dc6b738fa8963f5ee180dc29117e2963d5fa"
+  },
+  "C_result_CHEMBL2185_1_M_C_Feedback": {
+    "source_filename": "CHEMBL2185_1_M_C_Feedback.json",
+    "sha256": "7fa82d0aee77b764efaf5ed110c7d25cc5bac0081dd7a76dad0612162be7b77d"
+  },
+  "C_result_CHEMBL2185_1_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL2185_1_M_C_NoExtraFeedback.json",
+    "sha256": "fad7058500d46005e8ce3f0f9c9398e2379dbc158ad0a4870f597b158187e71d"
+  },
+  "C_result_CHEMBL2185_2_M_C_Feedback": {
+    "source_filename": "CHEMBL2185_2_M_C_Feedback.json",
+    "sha256": "56517561d1887cfe60cfb2e6d2dc431651956d72872b7df3ae0b6d8c7a2406c1"
+  },
+  "C_result_CHEMBL2185_2_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL2185_2_M_C_NoExtraFeedback.json",
+    "sha256": "f3e7dae152c46f480d56a8496d4f678a44120feb1870745c5142231c38db3d1a"
+  },
+  "C_result_CHEMBL2185_3_M_C_Feedback": {
+    "source_filename": "CHEMBL2185_3_M_C_Feedback.json",
+    "sha256": "c283ca8584d7cf649e5cf7671ea1bed6b0a3b9a4b7164f4428a38eb1265f1462"
+  },
+  "C_result_CHEMBL2185_3_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL2185_3_M_C_NoExtraFeedback.json",
+    "sha256": "cab0d194f63062a4d3d73c63b266b805e3d048df6427a555e735035ca703c07b"
+  },
+  "C_result_CHEMBL2321615_1_M_C_Feedback": {
+    "source_filename": "CHEMBL2321615_1_M_C_Feedback.json",
+    "sha256": "aaabcf19b322f883b9a192aa9890f56c3c990fdc55ce2f53bf79ac34f23a4d50"
+  },
+  "C_result_CHEMBL2321615_1_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL2321615_1_M_C_NoExtraFeedback.json",
+    "sha256": "081f0045caef89d8aa0c8fe83f0c50f25daf4a6f2f09747f4da62c6fa43d4323"
+  },
+  "C_result_CHEMBL2321615_2_M_C_Feedback": {
+    "source_filename": "CHEMBL2321615_2_M_C_Feedback.json",
+    "sha256": "5efc2cc7552ea72a158ea721e8b2e89c0e8427f9cd8a4afd1248f6b91a292f30"
+  },
+  "C_result_CHEMBL2321615_2_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL2321615_2_M_C_NoExtraFeedback.json",
+    "sha256": "de684fb26656342b8989c635bc3df6ed5f62487d04b7a440609e0c5d31f02b92"
+  },
+  "C_result_CHEMBL2321615_3_M_C_Feedback": {
+    "source_filename": "CHEMBL2321615_3_M_C_Feedback.json",
+    "sha256": "30519a8baa318efc730ff7d91f4b7713db0d4decb9df5b832207ab85e3951d2a"
+  },
+  "C_result_CHEMBL2321615_3_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL2321615_3_M_C_NoExtraFeedback.json",
+    "sha256": "afe2189a0bcd89256f7cce8b17d46a23f3a4bcf97f3039cf89d891784768e409"
+  },
+  "C_result_CHEMBL2343_1_M_C_Feedback": {
+    "source_filename": "CHEMBL2343_1_M_C_Feedback.json",
+    "sha256": "3dcab271133f566f72c96b4587b0e636b52c8e02fc386d2c885675a78b9aa670"
+  },
+  "C_result_CHEMBL2343_1_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL2343_1_M_C_NoExtraFeedback.json",
+    "sha256": "d1c65b4f04763fa5592849b2b5210a175a6dc8fd8561214483b1fa0079820691"
+  },
+  "C_result_CHEMBL2343_2_M_C_Feedback": {
+    "source_filename": "CHEMBL2343_2_M_C_Feedback.json",
+    "sha256": "18d75d9ce6113c36e550a203312c5b7d0a710732867a9ae00b730b11a5083b15"
+  },
+  "C_result_CHEMBL2343_2_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL2343_2_M_C_NoExtraFeedback.json",
+    "sha256": "e8c82e3d27572c918892a48c61569c1a717bad2945397ab01cb060c131c7523a"
+  },
+  "C_result_CHEMBL2343_3_M_C_Feedback": {
+    "source_filename": "CHEMBL2343_3_M_C_Feedback.json",
+    "sha256": "15db50b8cadf39c1809c711eb8c758c1bb717fa777432ab2c9a91e42a4f7bc86"
+  },
+  "C_result_CHEMBL2343_3_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL2343_3_M_C_NoExtraFeedback.json",
+    "sha256": "b8056ebd80b9ac2a6d21dc58db3dd57e5cea6cb0327e3f190d227060ec7c1bf6"
+  },
+  "C_result_CHEMBL2525_1_M_C_Feedback": {
+    "source_filename": "CHEMBL2525_1_M_C_Feedback.json",
+    "sha256": "87d1d81ceab91fe85b30e77fb897819356bb6782980737f4149e8e0064f92176"
+  },
+  "C_result_CHEMBL2525_1_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL2525_1_M_C_NoExtraFeedback.json",
+    "sha256": "a4f15056f302c306732122140f8ee1187e4ddbc54837ac045e9fdf2bad98518a"
+  },
+  "C_result_CHEMBL2525_2_M_C_Feedback": {
+    "source_filename": "CHEMBL2525_2_M_C_Feedback.json",
+    "sha256": "adf1188559056a8a37eca56af187641ad3f5330d9507b1eb44e8211810f89d93"
+  },
+  "C_result_CHEMBL2525_2_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL2525_2_M_C_NoExtraFeedback.json",
+    "sha256": "f47bf3b0fc36c4a949f67d9aff5edf4d7b261ede4d6fa9f407872c7ace6f454a"
+  },
+  "C_result_CHEMBL2525_3_M_C_Feedback": {
+    "source_filename": "CHEMBL2525_3_M_C_Feedback.json",
+    "sha256": "dc56e4fdaf3648b41acf37e17dbd1425812ec6340ba7d952b9b088cbdf2dc700"
+  },
+  "C_result_CHEMBL2525_3_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL2525_3_M_C_NoExtraFeedback.json",
+    "sha256": "103585d70f33a34daf9bb1bd0915b5b7212f048359a9ffff2eb49efee1088402"
+  },
+  "C_result_CHEMBL2558_1_M_C_Feedback": {
+    "source_filename": "CHEMBL2558_1_M_C_Feedback.json",
+    "sha256": "9f5e69201e68051ba90bcb76849cccbfc873328b07e40f8ce4a82735e6b0694f"
+  },
+  "C_result_CHEMBL2558_1_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL2558_1_M_C_NoExtraFeedback.json",
+    "sha256": "8eb547f03c7579f2d5a1473f48ac913ea106d4bbc91ede84d77d95caa9a390e8"
+  },
+  "C_result_CHEMBL2558_2_M_C_Feedback": {
+    "source_filename": "CHEMBL2558_2_M_C_Feedback.json",
+    "sha256": "518cb1ea8c7aae86c3eea944628b1832dabacaa0f47c30e21c2ffac31f9a7531"
+  },
+  "C_result_CHEMBL2558_2_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL2558_2_M_C_NoExtraFeedback.json",
+    "sha256": "c6947bb4ecd940d8aff1f54d6587c84487522e2657d63376f835860a89385981"
+  },
+  "C_result_CHEMBL2558_3_M_C_Feedback": {
+    "source_filename": "CHEMBL2558_3_M_C_Feedback.json",
+    "sha256": "e3707c6cb8e2b2ac00f75c135a5ad14e8d3506457e697df28cf3668119263859"
+  },
+  "C_result_CHEMBL2558_3_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL2558_3_M_C_NoExtraFeedback.json",
+    "sha256": "6dc53e5106abc314091ec201e42d1fddfb0614aa70e3924fc7a4ee91068c5174"
+  },
+  "C_result_CHEMBL274_1_M_C_Feedback": {
+    "source_filename": "CHEMBL274_1_M_C_Feedback.json",
+    "sha256": "322662b7892f95fbec68f6cd132dd03e8afe13379cd7337be36266a3fec0b841"
+  },
+  "C_result_CHEMBL274_1_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL274_1_M_C_NoExtraFeedback.json",
+    "sha256": "2e46075ed0b4ac50ee31099bd54a33809e186cd3ab96e0af616decd91c0f9ebe"
+  },
+  "C_result_CHEMBL274_2_M_C_Feedback": {
+    "source_filename": "CHEMBL274_2_M_C_Feedback.json",
+    "sha256": "f9580e93808e08fee39cda5adc4646a3f032c63c2e14c60386470de373235410"
+  },
+  "C_result_CHEMBL274_2_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL274_2_M_C_NoExtraFeedback.json",
+    "sha256": "f2b146d7ca5f243693237a65ff67e98c3b1a605d213bd6cc94dfc022881b8911"
+  },
+  "C_result_CHEMBL274_3_M_C_Feedback": {
+    "source_filename": "CHEMBL274_3_M_C_Feedback.json",
+    "sha256": "0fa64b5c4e405f025054e46cbc4b53f0431e2176c6aa471b121fe2f70a0b86b0"
+  },
+  "C_result_CHEMBL274_3_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL274_3_M_C_NoExtraFeedback.json",
+    "sha256": "d1057788043cfe6ec1c1c545cda51462da26ef92b26f00be3fe03521b8d921f7"
+  },
+  "C_result_CHEMBL3401_1_M_C_Feedback": {
+    "source_filename": "CHEMBL3401_1_M_C_Feedback.json",
+    "sha256": "e14a616abcb8abd1487a4aca4b00092f4e91ca4c1eacd86dab53fad89edca6de"
+  },
+  "C_result_CHEMBL3401_1_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL3401_1_M_C_NoExtraFeedback.json",
+    "sha256": "c80234ffd0c2c7160421effd285bb34395a91d54ec9808c0d306410533b096b7"
+  },
+  "C_result_CHEMBL3401_2_M_C_Feedback": {
+    "source_filename": "CHEMBL3401_2_M_C_Feedback.json",
+    "sha256": "1108dc2f30c858c2eb034edf809f6c18e6cca70e4db24058317f316685e1ee28"
+  },
+  "C_result_CHEMBL3401_2_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL3401_2_M_C_NoExtraFeedback.json",
+    "sha256": "ced673452874b29113f8708d183ad3cc916bf528e6f50c1a6224ed6cfa4a3d20"
+  },
+  "C_result_CHEMBL3401_3_M_C_Feedback": {
+    "source_filename": "CHEMBL3401_3_M_C_Feedback.json",
+    "sha256": "0e0e795320803a10669d72a6137934879731f32f0202301ed55ab2b2b8989ba1"
+  },
+  "C_result_CHEMBL3401_3_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL3401_3_M_C_NoExtraFeedback.json",
+    "sha256": "dcde466397d4b962501fbddfe162d1a6b454518a0324c2e88837373006ae8a23"
+  },
+  "C_result_CHEMBL3712868_1_M_C_Feedback": {
+    "source_filename": "CHEMBL3712868_1_M_C_Feedback.json",
+    "sha256": "3b66795c9bdcc30b6605a9669f8938681fd1847f2782f47d5e478f70712f6b16"
+  },
+  "C_result_CHEMBL3712868_1_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL3712868_1_M_C_NoExtraFeedback.json",
+    "sha256": "4018151788386aaf52ba7f9c71c6a92ef077a1440452d3a981b3156e2fc9ffed"
+  },
+  "C_result_CHEMBL3712868_2_M_C_Feedback": {
+    "source_filename": "CHEMBL3712868_2_M_C_Feedback.json",
+    "sha256": "19573fdf5414ba4db9bb646d2d40a93cab8c6208de779cc923e55cbb3f242f99"
+  },
+  "C_result_CHEMBL3712868_2_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL3712868_2_M_C_NoExtraFeedback.json",
+    "sha256": "4ab78de48df3615945a630acd80569893a3d80f9babf36b75c503e5c088d0ad8"
+  },
+  "C_result_CHEMBL3712868_3_M_C_Feedback": {
+    "source_filename": "CHEMBL3712868_3_M_C_Feedback.json",
+    "sha256": "c7bca9faa8ed8171af4fb9675af212c627908a2c6d7f43f9ae6add029dea677e"
+  },
+  "C_result_CHEMBL3712868_3_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL3712868_3_M_C_NoExtraFeedback.json",
+    "sha256": "c51a158e1df0477a39ec9d0b809887576adc66f35188baecac2bca46f0282635"
+  },
+  "C_result_CHEMBL3961_1_M_C_Feedback": {
+    "source_filename": "CHEMBL3961_1_M_C_Feedback.json",
+    "sha256": "2be41c7b69fa8a76cdb768d59da172c21855b7ff9c3c7eadb3337d29040762d3"
+  },
+  "C_result_CHEMBL3961_1_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL3961_1_M_C_NoExtraFeedback.json",
+    "sha256": "0424edaee43eff52a6187e2e125958ef01f68496743eee39b747691a62a337a1"
+  },
+  "C_result_CHEMBL3961_2_M_C_Feedback": {
+    "source_filename": "CHEMBL3961_2_M_C_Feedback.json",
+    "sha256": "2712a63042d3adc3eda2ec377ecda6706840b23f0452edaae3c8d3989ef2c4b2"
+  },
+  "C_result_CHEMBL3961_2_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL3961_2_M_C_NoExtraFeedback.json",
+    "sha256": "d46d638df39fc34d5394ff4a3578a789a6de80f88fb9dbd32cc0dd3a196d6949"
+  },
+  "C_result_CHEMBL3961_3_M_C_Feedback": {
+    "source_filename": "CHEMBL3961_3_M_C_Feedback.json",
+    "sha256": "59f077214119b302d8fe181fb76d4c67d111e3305d63cfcbacf001d9ced30db3"
+  },
+  "C_result_CHEMBL3961_3_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL3961_3_M_C_NoExtraFeedback.json",
+    "sha256": "dae40ce1dac9d555940852782b3c470ab23060620d0054d1ef56d3bef6ee8ed4"
+  },
+  "C_result_CHEMBL4375_1_M_C_Feedback": {
+    "source_filename": "CHEMBL4375_1_M_C_Feedback.json",
+    "sha256": "be2a8ac1074a33b80265f398e4bcf389e99006a6f2491f073dd8ad4e42ecdaac"
+  },
+  "C_result_CHEMBL4375_1_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL4375_1_M_C_NoExtraFeedback.json",
+    "sha256": "7edcc4c8aacb50e33d851e78aed5194664ab9b3dacfd14c92412efccf5ab455c"
+  },
+  "C_result_CHEMBL4375_2_M_C_Feedback": {
+    "source_filename": "CHEMBL4375_2_M_C_Feedback.json",
+    "sha256": "0a21415b798393d74bf0782e26d0332c72afb57c2b34a72d21c2a317ad4a6bd3"
+  },
+  "C_result_CHEMBL4375_2_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL4375_2_M_C_NoExtraFeedback.json",
+    "sha256": "315f13720f59cd5d50946ad457d26190f50712f2c77a782f0f5e8a667adcb17b"
+  },
+  "C_result_CHEMBL4375_3_M_C_Feedback": {
+    "source_filename": "CHEMBL4375_3_M_C_Feedback.json",
+    "sha256": "c43d9064916e65358a553be530ed1f5d78112305358d7b212d5bced9e90c4d59"
+  },
+  "C_result_CHEMBL4375_3_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL4375_3_M_C_NoExtraFeedback.json",
+    "sha256": "79951f338be42aac8e5d411a7883da7d24b70c9d5352446cc65503e0d0db3f6c"
+  },
+  "C_result_CHEMBL4523509_1_M_C_Feedback": {
+    "source_filename": "CHEMBL4523509_1_M_C_Feedback.json",
+    "sha256": "2dd41d3ca35649aded95fb23c722ba8fecebc8efccd2109bd4e59a9c4989d33f"
+  },
+  "C_result_CHEMBL4523509_1_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL4523509_1_M_C_NoExtraFeedback.json",
+    "sha256": "f0efd4c01d3ef0de9c3f5c66c875d4b0e8a3253d9d150a93c5164c8b857b114a"
+  },
+  "C_result_CHEMBL4523509_2_M_C_Feedback": {
+    "source_filename": "CHEMBL4523509_2_M_C_Feedback.json",
+    "sha256": "e109bf8b2ce7a1277693d6fdd615467bbff575cb5bbce94d2b988d772e963890"
+  },
+  "C_result_CHEMBL4523509_2_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL4523509_2_M_C_NoExtraFeedback.json",
+    "sha256": "647b45545f6ebe4aa79e54435ecc0c3ec77459c3d1eb7c5411bfedb8bd8091ba"
+  },
+  "C_result_CHEMBL4523509_3_M_C_Feedback": {
+    "source_filename": "CHEMBL4523509_3_M_C_Feedback.json",
+    "sha256": "2f142a3deb9c2e7f9a8b449115ee23105820672ae5aeeeb4b4dbadc57f742194"
+  },
+  "C_result_CHEMBL4523509_3_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL4523509_3_M_C_NoExtraFeedback.json",
+    "sha256": "ea147754f18c145cd5aa4616fe76e5acb291204251b861b509eb9e8e5f70f040"
+  },
+  "C_result_CHEMBL5083_1_M_C_Feedback": {
+    "source_filename": "CHEMBL5083_1_M_C_Feedback.json",
+    "sha256": "a7995ba7778215fc6bf91314e6bfe90855f6583a48d82077227c08903c7a5411"
+  },
+  "C_result_CHEMBL5083_1_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL5083_1_M_C_NoExtraFeedback.json",
+    "sha256": "cea71eb95b75d37133b923a5c2d664bd6f5d64c94c2cfa93d3653c9b0fca1d33"
+  },
+  "C_result_CHEMBL5083_2_M_C_Feedback": {
+    "source_filename": "CHEMBL5083_2_M_C_Feedback.json",
+    "sha256": "1bee884bf45e2f460f7a73cc674e8d72da22d816ed8a0123b3b5079b58b90509"
+  },
+  "C_result_CHEMBL5083_2_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL5083_2_M_C_NoExtraFeedback.json",
+    "sha256": "18632d3006720a650ebe591b221de4478e856e02fe8fb7760578a4c1d154469d"
+  },
+  "C_result_CHEMBL5083_3_M_C_Feedback": {
+    "source_filename": "CHEMBL5083_3_M_C_Feedback.json",
+    "sha256": "d45565365000b0eb5cc6156b0d39340b4594d60318997b9d74cf791fd2981db6"
+  },
+  "C_result_CHEMBL5083_3_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL5083_3_M_C_NoExtraFeedback.json",
+    "sha256": "f772006cbe38ca1ac6452bba88a1227bb77d1d82467d7a30e2728da0053539d9"
+  },
+  "C_result_CHEMBL5469_1_M_C_Feedback": {
+    "source_filename": "CHEMBL5469_1_M_C_Feedback.json",
+    "sha256": "dae699ac9db9165212cb45cc3307c1273c3a4cfae2f836fefb402ebd97f6284c"
+  },
+  "C_result_CHEMBL5469_1_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL5469_1_M_C_NoExtraFeedback.json",
+    "sha256": "9c9575dc941c3619dfc2988332e7159dad00df7e85fc86214f576110244c99f4"
+  },
+  "C_result_CHEMBL5469_2_M_C_Feedback": {
+    "source_filename": "CHEMBL5469_2_M_C_Feedback.json",
+    "sha256": "d14026a5c33ba0ffadd9d24c9fd5dd1cae9eb0b1a79ee2eaee4cb2b0ec557ea5"
+  },
+  "C_result_CHEMBL5469_2_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL5469_2_M_C_NoExtraFeedback.json",
+    "sha256": "8fd35af1daf2e43edd7baf240ee0e60a757397ef932562717f2e306342721210"
+  },
+  "C_result_CHEMBL5469_3_M_C_Feedback": {
+    "source_filename": "CHEMBL5469_3_M_C_Feedback.json",
+    "sha256": "1e21d382f572f2c2b6a83d02ad61df3e82e7191fc20e03818315e98f458ac167"
+  },
+  "C_result_CHEMBL5469_3_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL5469_3_M_C_NoExtraFeedback.json",
+    "sha256": "051397d66a7483d060801878628550f73d4c86e7da19c151917fa8981bf833e7"
+  },
+  "C_result_CHEMBL5479_1_M_C_Feedback": {
+    "source_filename": "CHEMBL5479_1_M_C_Feedback.json",
+    "sha256": "57606fabb712254fe8e918406ad40f98eb212d26e46f9ba224effd61143d6fcc"
+  },
+  "C_result_CHEMBL5479_1_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL5479_1_M_C_NoExtraFeedback.json",
+    "sha256": "5aa9abcc85725ff134afb4c429d4c348c62bdf9b8031a247f286a10e1d90ff9e"
+  },
+  "C_result_CHEMBL5479_2_M_C_Feedback": {
+    "source_filename": "CHEMBL5479_2_M_C_Feedback.json",
+    "sha256": "eddce71cfcaf26585d06fc30108a99ed7b71603ae942ccd12073fe63212206e7"
+  },
+  "C_result_CHEMBL5479_2_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL5479_2_M_C_NoExtraFeedback.json",
+    "sha256": "51f51f805a1c0fa7db66cc4fa9799da174ce43bd5c31118272a557a598627feb"
+  },
+  "C_result_CHEMBL5479_3_M_C_Feedback": {
+    "source_filename": "CHEMBL5479_3_M_C_Feedback.json",
+    "sha256": "e0cb6bbd58bda99ab82b368a35f3f61e4b13a3930165f47d7735214e5e0387f7"
+  },
+  "C_result_CHEMBL5479_3_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL5479_3_M_C_NoExtraFeedback.json",
+    "sha256": "968e8ffa336a7ebde86edc7ec1a36f47a87a13d9beb4b3b73bf4b988f46e60c3"
+  },
+  "C_result_CHEMBL5668_1_M_C_Feedback": {
+    "source_filename": "CHEMBL5668_1_M_C_Feedback.json",
+    "sha256": "30a34467bd426b6ba69ddc043131bdea13fbf9421c54e64e30f768298619fc9a"
+  },
+  "C_result_CHEMBL5668_1_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL5668_1_M_C_NoExtraFeedback.json",
+    "sha256": "ccd836174c3c04a1a3601c7d66b3bfb0960696ca373c440be9f9f23edbbf6052"
+  },
+  "C_result_CHEMBL5668_2_M_C_Feedback": {
+    "source_filename": "CHEMBL5668_2_M_C_Feedback.json",
+    "sha256": "f1d9258aa242a76bb3596aa8d17069f945cf0f014461f39155dec5fbd956cf4a"
+  },
+  "C_result_CHEMBL5668_2_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL5668_2_M_C_NoExtraFeedback.json",
+    "sha256": "8d4e96b6f0353aa9749c86ba56600776c60e471bc9ee7d0f6a300ef0f706e88a"
+  },
+  "C_result_CHEMBL5668_3_M_C_Feedback": {
+    "source_filename": "CHEMBL5668_3_M_C_Feedback.json",
+    "sha256": "78645e9bf696298db9ec5620023370fc90b638c545757e6ad40004af58173153"
+  },
+  "C_result_CHEMBL5668_3_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL5668_3_M_C_NoExtraFeedback.json",
+    "sha256": "91b520d4ac2bc39b78bde990453d8179baeb4c8b540be0b35d51c46c4218b5ba"
+  },
+  "C_result_CHEMBL5896_1_M_C_Feedback": {
+    "source_filename": "CHEMBL5896_1_M_C_Feedback.json",
+    "sha256": "e06be8e8b494532b3c1d4b4f851c9a6a4196880e85e36db538d5b2f479ff0f77"
+  },
+  "C_result_CHEMBL5896_1_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL5896_1_M_C_NoExtraFeedback.json",
+    "sha256": "4515eb34b894f1faf05afe5058c5344a1f85719ee92b37f4e310c79fe70ca12c"
+  },
+  "C_result_CHEMBL5896_2_M_C_Feedback": {
+    "source_filename": "CHEMBL5896_2_M_C_Feedback.json",
+    "sha256": "d82652ea0aacd5fd50076a3829b54e6cf3511d967acffe077b49dd42aa625bc3"
+  },
+  "C_result_CHEMBL5896_2_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL5896_2_M_C_NoExtraFeedback.json",
+    "sha256": "bd8af73100024287f2993e339621393564cd496faf3375d53916b42979f2bad6"
+  },
+  "C_result_CHEMBL5896_3_M_C_Feedback": {
+    "source_filename": "CHEMBL5896_3_M_C_Feedback.json",
+    "sha256": "4fb16a7df42b2a29f8edd8d7bdb7d8e2031999b3ed9949fcfb8d38a568cde376"
+  },
+  "C_result_CHEMBL5896_3_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL5896_3_M_C_NoExtraFeedback.json",
+    "sha256": "bd938e28f163416b85b0d0ae74248aedd0fd5c080aad656701203207ea88eb40"
+  },
+  "C_result_CHEMBL5939_1_M_C_Feedback": {
+    "source_filename": "CHEMBL5939_1_M_C_Feedback.json",
+    "sha256": "c75a2c10f824ba196b512bb6f8a0354cdfb06a70a23e858af2c8d72f25800a58"
+  },
+  "C_result_CHEMBL5939_1_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL5939_1_M_C_NoExtraFeedback.json",
+    "sha256": "341abaadc271e2b8516968422fa284cd8f32e1e17d59eb388393eee0477d1389"
+  },
+  "C_result_CHEMBL5939_2_M_C_Feedback": {
+    "source_filename": "CHEMBL5939_2_M_C_Feedback.json",
+    "sha256": "8163befbc8b6cf2983ae9ea4518f4dd50137f0dd9127713a43663aded2b21d57"
+  },
+  "C_result_CHEMBL5939_2_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL5939_2_M_C_NoExtraFeedback.json",
+    "sha256": "8a1a390d88690f7aa0d425910a1c4ebbf39d7df5529cead38ff676509a507ec8"
+  },
+  "C_result_CHEMBL5939_3_M_C_Feedback": {
+    "source_filename": "CHEMBL5939_3_M_C_Feedback.json",
+    "sha256": "320cab519ca6ad17b156ce09733d8c256c2d67c91bb3b60a7c312b05d1a15025"
+  },
+  "C_result_CHEMBL5939_3_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL5939_3_M_C_NoExtraFeedback.json",
+    "sha256": "31edb2e09bd401890457d9799a7c2edca783f53f7b1b8aacdfd87f57c11233cc"
+  },
+  "C_result_CHEMBL6055_1_M_C_Feedback": {
+    "source_filename": "CHEMBL6055_1_M_C_Feedback.json",
+    "sha256": "287a5a176c72454dc70da8cd18f4fbb5e7b72bd26966ab233095e15971bcc5a8"
+  },
+  "C_result_CHEMBL6055_1_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL6055_1_M_C_NoExtraFeedback.json",
+    "sha256": "f54c63e97e9ff77e7978c619b9b06f80109493b1f5bf74cd28cd4653e93480ff"
+  },
+  "C_result_CHEMBL6055_2_M_C_Feedback": {
+    "source_filename": "CHEMBL6055_2_M_C_Feedback.json",
+    "sha256": "9ed1e221af332d27c97e00e8c93100db6aee7ee0a1c78f6a5848c1b337bd581a"
+  },
+  "C_result_CHEMBL6055_2_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL6055_2_M_C_NoExtraFeedback.json",
+    "sha256": "3db8e2d744fa90e365c8b6162b498140f9e2eae43f5822da0379ff012d9917de"
+  },
+  "C_result_CHEMBL6055_3_M_C_Feedback": {
+    "source_filename": "CHEMBL6055_3_M_C_Feedback.json",
+    "sha256": "65b9578f560e2b20940bd2510ef8993f5e13a84f39a624e5bdf3db0ee13d5698"
+  },
+  "C_result_CHEMBL6055_3_M_C_NoExtraFeedback": {
+    "source_filename": "CHEMBL6055_3_M_C_NoExtraFeedback.json",
+    "sha256": "ea590556a2aa17933fddd24f48857bafb753cf812ac47223d6ff34583b815922"
+  }
+}

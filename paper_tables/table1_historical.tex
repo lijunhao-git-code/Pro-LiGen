@@ -1,0 +1,23 @@
+\begin{table}[H]
+\centering\small
+\caption{Exploratory comparison of condition-guidance strategies and output properties in Study A (25 tasks).}
+\label{tab:historical_strategies}
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrrrrr@{}}
+\toprule
+ & & \multicolumn{2}{c}{Ring-count change} & \multicolumn{2}{c}{Molecular properties} & Similarity \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}\cmidrule(l){7-7}
+Strategy & Outputs & $\Delta$RC & $\Delta$RC $=1$ (\%) & QED $\uparrow$ & SA$_{\rm raw}$ $\downarrow$ & Tanimoto \\
+\midrule
+NG & 125 & 0.832 & 29.6 & 0.6329 & 2.4967 & 0.1426 \\
+TG & 125 & 2.200 & 22.4 & 0.7149 & 2.3278 & 0.1238 \\
+PG-aggr & 125 & 1.600 & 52.0 & 0.6555 & 2.4419 & 0.3018 \\
+PG-mild & 125 & 0.960 & 96.0 & 0.5386 & 2.7890 & 0.4784 \\
+\bottomrule
+\end{tabular*}
+\par\smallskip
+\begin{minipage}{\linewidth}\footnotesize
+$\Delta$RC = seed minus output (positive: ring reduction). $\Delta$RC $=1$ checks PG-mild's requested edit and includes outputs with chemical-form/copy flags. Means are target-macro; Tanimoto uses Morgan fingerprints. Full-qualification diagnostics: Supporting Information Section S2.
+\end{minipage}
+\end{table}

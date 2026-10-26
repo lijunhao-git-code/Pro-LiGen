@@ -1,0 +1,380 @@
+{
+  "A": [
+    {
+      "group": "NG",
+      "retained": 125,
+      "targets": 25,
+      "dRC_seed_minus_output": 0.8320000000000001,
+      "exact_one_less_ring_diagnostic": 0.29600000000000004,
+      "QED": 0.6328545339104188,
+      "SA_standard_raw": 2.4967271043204518,
+      "sim": 0.14260447076033567,
+      "exact_single_noncopy_diagnostic": 0.29600000000000004,
+      "multi_fragment_n": 0,
+      "exemplar_copy_n": 0
+    },
+    {
+      "group": "TG",
+      "retained": 125,
+      "targets": 25,
+      "dRC_seed_minus_output": 2.2,
+      "exact_one_less_ring_diagnostic": 0.22400000000000003,
+      "QED": 0.7148811893016476,
+      "SA_standard_raw": 2.3278389428562227,
+      "sim": 0.12384516393114996,
+      "exact_single_noncopy_diagnostic": 0.22400000000000003,
+      "multi_fragment_n": 0,
+      "exemplar_copy_n": 0
+    },
+    {
+      "group": "PG-aggr",
+      "retained": 125,
+      "targets": 25,
+      "dRC_seed_minus_output": 1.6,
+      "exact_one_less_ring_diagnostic": 0.52,
+      "QED": 0.6554906175445813,
+      "SA_standard_raw": 2.4418580961903196,
+      "sim": 0.30179569275469015,
+      "exact_single_noncopy_diagnostic": 0.512,
+      "multi_fragment_n": 2,
+      "exemplar_copy_n": 0
+    },
+    {
+      "group": "PG-mild",
+      "retained": 125,
+      "targets": 25,
+      "dRC_seed_minus_output": 0.96,
+      "exact_one_less_ring_diagnostic": 0.96,
+      "QED": 0.5386459798183703,
+      "SA_standard_raw": 2.788973115587501,
+      "sim": 0.47840948246046294,
+      "exact_single_noncopy_diagnostic": 0.912,
+      "multi_fragment_n": 5,
+      "exemplar_copy_n": 1
+    }
+  ],
+  "B": {
+    "groups": [
+      {
+        "group": "T",
+        "planned": 125,
+        "delivered": 123,
+        "distinct": 110,
+        "S": 0.9840000000000001,
+        "U": 0.6240948767631722,
+        "QED": 0.6321574252512516,
+        "SA_raw": 2.877257218793373,
+        "tanimoto": 0.593970137606524
+      },
+      {
+        "group": "M",
+        "planned": 125,
+        "delivered": 125,
+        "distinct": 111,
+        "S": 1.0,
+        "U": 0.7046994697078286,
+        "QED": 0.7046994697078286,
+        "SA_raw": 2.696874310819834,
+        "tanimoto": 0.5535049499719253
+      },
+      {
+        "group": "G",
+        "planned": 125,
+        "delivered": 125,
+        "distinct": 116,
+        "S": 1.0,
+        "U": 0.6916971738919603,
+        "QED": 0.6916971738919603,
+        "SA_raw": 2.7076842499718383,
+        "tanimoto": 0.5457970640395341
+      }
+    ],
+    "statistics": [
+      {
+        "comparison": "G-M",
+        "family": "primary",
+        "metric": "S",
+        "difference": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "p_raw": 1.0,
+        "n_targets": 25,
+        "p_holm": 1.0
+      },
+      {
+        "comparison": "G-M",
+        "family": "primary",
+        "metric": "U",
+        "difference": -0.01300229581586843,
+        "ci_low": -0.04245046606493826,
+        "ci_high": 0.013285275157697457,
+        "p_raw": 0.37850621493785064,
+        "n_targets": 25,
+        "p_holm": 0.7570124298757013
+      },
+      {
+        "comparison": "G-T",
+        "family": "secondary_delivery",
+        "metric": "S",
+        "difference": 0.015999999999999997,
+        "ci_low": 0.0,
+        "ci_high": 0.039999999999999994,
+        "p_raw": 0.5010549894501055,
+        "n_targets": 25,
+        "p_holm": 1.0
+      },
+      {
+        "comparison": "G-T",
+        "family": "secondary_delivery",
+        "metric": "U",
+        "difference": 0.06760229712878782,
+        "ci_low": 0.025268410401444837,
+        "ci_high": 0.11658297838083047,
+        "p_raw": 0.004629953700462996,
+        "n_targets": 25,
+        "p_holm": 0.013889861101388987
+      },
+      {
+        "comparison": "M-T",
+        "family": "secondary_delivery",
+        "metric": "S",
+        "difference": 0.015999999999999997,
+        "ci_low": 0.0,
+        "ci_high": 0.039999999999999994,
+        "p_raw": 0.5010549894501055,
+        "n_targets": 25,
+        "p_holm": 1.0
+      },
+      {
+        "comparison": "M-T",
+        "family": "secondary_delivery",
+        "metric": "U",
+        "difference": 0.08060459294465623,
+        "ci_low": 0.034445012777224955,
+        "ci_high": 0.13676654963297602,
+        "p_raw": 0.0003599964000359996,
+        "n_targets": 25,
+        "p_holm": 0.0014399856001439985
+      }
+    ],
+    "global_distinct": 293
+  },
+  "C": {
+    "groups": [
+      {
+        "branch": "Feedback",
+        "planned": 75,
+        "delivered": 75,
+        "S": 1.0,
+        "U": 0.6936259772894294,
+        "QED": 0.6936259772894294,
+        "SA_raw": 2.7271967756949267,
+        "selected_also_available_fourth": 17
+      },
+      {
+        "branch": "NoExtraFeedback",
+        "planned": 75,
+        "delivered": 74,
+        "S": 0.9866666666666666,
+        "U": 0.6698941974087107,
+        "QED": 0.6787281920998177,
+        "SA_raw": 2.7264977812282014,
+        "selected_also_available_fourth": 29
+      }
+    ],
+    "primary": {
+      "difference": 0.023731779880718874,
+      "ci_low": -0.0024961258777028597,
+      "ci_high": 0.0548231292530166,
+      "p_raw": 0.11647883521164788,
+      "n_targets": 25
+    },
+    "global_distinct": 114
+  },
+  "replay": [
+    {
+      "policy": "turn4_QED",
+      "T": {
+        "planned": 125,
+        "delivered": 119,
+        "U": 0.5285016406686032
+      },
+      "M": {
+        "planned": 125,
+        "delivered": 120,
+        "U": 0.5889916033203856
+      },
+      "G": {
+        "planned": 125,
+        "delivered": 120,
+        "U": 0.5788028956037214
+      }
+    },
+    {
+      "policy": "turn5_QED",
+      "T": {
+        "planned": 125,
+        "delivered": 123,
+        "U": 0.6210405251307289
+      },
+      "M": {
+        "planned": 125,
+        "delivered": 125,
+        "U": 0.6994647454766405
+      },
+      "G": {
+        "planned": 125,
+        "delivered": 125,
+        "U": 0.6865376908381181
+      }
+    },
+    {
+      "policy": "union_first_eligible",
+      "T": {
+        "planned": 125,
+        "delivered": 123,
+        "U": 0.5154862868093539
+      },
+      "M": {
+        "planned": 125,
+        "delivered": 125,
+        "U": 0.5697517693280435
+      },
+      "G": {
+        "planned": 125,
+        "delivered": 125,
+        "U": 0.5664123117699451
+      }
+    },
+    {
+      "policy": "union_QED",
+      "T": {
+        "planned": 125,
+        "delivered": 123,
+        "U": 0.6240948767631722
+      },
+      "M": {
+        "planned": 125,
+        "delivered": 125,
+        "U": 0.7046994697078286
+      },
+      "G": {
+        "planned": 125,
+        "delivered": 125,
+        "U": 0.6916971738919603
+      }
+    }
+  ],
+  "docking": {
+    "groups": [
+      {
+        "study": "A",
+        "group": "NG",
+        "planned_or_retained": 125,
+        "docked": 55,
+        "targets": 11,
+        "Vina": -9.230836363636364,
+        "delta_Vina": 0.6881636363636365,
+        "ci_low": -0.24795318181818193,
+        "ci_high": 1.5852145454545454,
+        "improved_fraction": 0.2909090909090909,
+        "delta_active_QED": 0.1353077106942726,
+        "excluded": 70,
+        "no_output": 0
+      },
+      {
+        "study": "A",
+        "group": "TG",
+        "planned_or_retained": 125,
+        "docked": 55,
+        "targets": 11,
+        "Vina": -8.377545454545453,
+        "delta_Vina": 1.5414545454545456,
+        "ci_low": 0.7912359090909089,
+        "ci_high": 2.3427149999999997,
+        "improved_fraction": 0.18181818181818182,
+        "delta_active_QED": 0.2582721889585781,
+        "excluded": 70,
+        "no_output": 0
+      },
+      {
+        "study": "A",
+        "group": "PG-aggr",
+        "planned_or_retained": 125,
+        "docked": 55,
+        "targets": 11,
+        "Vina": -8.597618181818182,
+        "delta_Vina": 1.3213818181818182,
+        "ci_low": 0.44955590909090926,
+        "ci_high": 2.2870422727272723,
+        "improved_fraction": 0.18181818181818182,
+        "delta_active_QED": 0.20831913954642098,
+        "excluded": 70,
+        "no_output": 0
+      },
+      {
+        "study": "A",
+        "group": "PG-mild",
+        "planned_or_retained": 125,
+        "docked": 55,
+        "targets": 11,
+        "Vina": -9.128654545454546,
+        "delta_Vina": 0.7903454545454547,
+        "ci_low": 0.0371690909090913,
+        "ci_high": 1.587265454545454,
+        "improved_fraction": 0.2545454545454546,
+        "delta_active_QED": 0.09363924102701683,
+        "excluded": 70,
+        "no_output": 0
+      },
+      {
+        "study": "B",
+        "group": "T",
+        "planned_or_retained": 125,
+        "docked": 54,
+        "targets": 11,
+        "Vina": -9.069204545454545,
+        "delta_Vina": 0.8497954545454547,
+        "ci_low": 0.2691121590909096,
+        "ci_high": 1.512140340909091,
+        "improved_fraction": 0.14545454545454548,
+        "delta_active_QED": 0.17361120530231514,
+        "excluded": 69,
+        "no_output": 2
+      },
+      {
+        "study": "B",
+        "group": "M",
+        "planned_or_retained": 125,
+        "docked": 55,
+        "targets": 11,
+        "Vina": -9.023672727272727,
+        "delta_Vina": 0.8953272727272725,
+        "ci_low": 0.2447759090909092,
+        "ci_high": 1.6029522727272723,
+        "improved_fraction": 0.16363636363636364,
+        "delta_active_QED": 0.22887318916812482,
+        "excluded": 70,
+        "no_output": 0
+      },
+      {
+        "study": "B",
+        "group": "G",
+        "planned_or_retained": 125,
+        "docked": 55,
+        "targets": 11,
+        "Vina": -9.00950909090909,
+        "delta_Vina": 0.9094909090909092,
+        "ci_low": 0.30632954545454527,
+        "ci_high": 1.5630595454545455,
+        "improved_fraction": 0.12727272727272726,
+        "delta_active_QED": 0.21368812821155833,
+        "excluded": 70,
+        "no_output": 0
+      }
+    ],
+    "all_observations": 900,
+    "all_scored": 395,
+    "all_excluded": 503
+  }
+}

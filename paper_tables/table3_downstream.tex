@@ -1,0 +1,35 @@
+\begin{table}[H]
+\centering\small
+\caption{Exemplar configurations and target-paired comparisons (Study B, 25 tasks).}
+\label{tab:downstream}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.12}
+\noindent\textbf{A. Configuration summaries}\par\smallskip
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrrrr@{}}
+\toprule
+ & \multicolumn{2}{c}{Qualified delivery} & QED yield & \multicolumn{2}{c}{Delivered molecules} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-4}\cmidrule(l){5-6}
+Configuration & $n/N$ & $S$ (\%) & $U$ $\uparrow$ & QED $\uparrow$ & SA$_{\rm raw}$ $\downarrow$ \\
+\midrule
+No examples (T) & 123/125 & 98.4 & 0.6241 & 0.6322 & 2.8773 \\
+Morgan (M) & 125/125 & 100.0 & 0.7047 & 0.7047 & 2.6969 \\
+GIN (G) & 125/125 & 100.0 & 0.6917 & 0.6917 & 2.7077 \\
+\bottomrule
+\end{tabular*}
+\par\medskip
+\noindent\textbf{B. Target-paired QED-yield comparisons}\par\smallskip
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrr@{}}
+\toprule
+Contrast & $\Delta U$ & 95\% CI & $p_{\rm Holm}$ \\
+\midrule
+G$-$M & $-0.0130$ & $[-0.0425, 0.0133]$ & 0.7570 \\
+\addlinespace
+G$-$T & $+0.0676$ & $[0.0253, 0.1166]$ & 0.0139 \\
+M$-$T & $+0.0806$ & $[0.0344, 0.1368]$ & 0.0014 \\
+\bottomrule
+\end{tabular*}
+\par\smallskip
+\begin{minipage}{\linewidth}\footnotesize
+$n/N$ is qualified/planned runs; $U$ averages QED per planned run, assigning zero to no delivery. QED/SA describe delivered molecules. Means and left-minus-right contrasts use 25 paired target averages; intervals are unadjusted. Holm p values retain the original primary G--M and auxiliary G--T/M--T families, including delivery-rate tests (Table S7).
+\end{minipage}
+\end{table}

@@ -1,0 +1,9 @@
+# Release scope
+
+Included: all 500 A outputs, all 375 B planned records (including failures), all 150 C branches, retained complete-attempt proposal records, lossless candidate replay inputs, reference molecules and controls, target seeds, receptor review/calibration and 900 docking observations, available docking coordinates/poses, the actual deployed GIN checkpoint and library embeddings, the retrieval library, frozen result-figure inputs, actual saved result figures, and offline numerical/figure reproduction code.
+
+Not included: raw language-model requests/responses and literature-containing dialogue prefixes, third-party paper text, API credentials/account records, manuscript/illustration source files, unrelated earlier P0/P1 diagnostic runs, an immutable copy of the externally served language model, or a recovered complete initial GIN training chain. The retained encoder source snapshot includes `GINEncoder` and `mol_to_graph` but not all graph-feature helper definitions; frozen inference from scratch is therefore not a tested portable entry point in this first release. The checkpoint SHA256 is `b08cf0fa0c2625451711d42336f1c032adc6974933d905e4f526471183182253`.
+
+Statistical reanalysis and saved-candidate selection replay are executable from the released observations. Re-running generation, retraining GIN and independently re-running docking are different tasks; the release does not claim to have performed them. The historical scripts under `archive/` are retained implementation records rather than turnkey commands.
+
+`release_manifest.json` identifies release files and hashes. `provenance/copied_file_sources.json` maps copied files to existing local scientific exports using relative paths, with source hashes. Generated CSV mirrors and documentation are separately identifiable. `verification/` contains the checks run for this release. No scientific input value was adjusted to improve a result.

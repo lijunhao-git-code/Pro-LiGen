@@ -1,0 +1,81 @@
+{
+  "B": {
+    "created_utc": "2026-10-11T05:40:14.103002+00:00",
+    "planned_slots": 375,
+    "candidate_quota": {
+      "design_turns": [
+        4,
+        5
+      ],
+      "proposals_per_turn": 3,
+      "max_total": 6
+    },
+    "api": {
+      "model": "deepseek-flash",
+      "base_url": "https://api.deepseek.com",
+      "thinking": "enabled",
+      "reasoning_effort": "low",
+      "temperature": null,
+      "top_p": null,
+      "max_tokens": 16384,
+      "timeout_seconds": 300,
+      "sdk_max_retries": 0,
+      "max_whole_attempts_per_slot": 2,
+      "workers": 12,
+      "cost_cap_cny": 70.0
+    },
+    "immutable_weights_identified": false,
+    "software": {
+      "torch": "2.3.0+cu121",
+      "torch-geometric": "2.8.0.post1",
+      "rdkit": "2026.3.4",
+      "openai": "2.49.0",
+      "vina": "1.2.7",
+      "meeko": "0.7.1"
+    }
+  },
+  "C": {
+    "created_utc": "2026-10-12T10:59:04.745216+00:00",
+    "planned_slots": 150,
+    "candidate_quota": {
+      "shared_fourth": 3,
+      "new_fifth": 3
+    },
+    "schedule_random_seed": 42,
+    "api": {
+      "model": "deepseek-flash",
+      "base_url": "https://api.deepseek.com",
+      "thinking": "enabled",
+      "reasoning_effort": "low",
+      "temperature": null,
+      "top_p": null,
+      "max_tokens": 16384,
+      "timeout_seconds": 300,
+      "sdk_max_retries": 0,
+      "max_whole_attempts_per_slot": 2,
+      "workers": 8,
+      "cost_cap_cny": 40.0
+    },
+    "immutable_weights_identified": false,
+    "software": {}
+  },
+  "docking": {
+    "created_utc": "2026-10-12T10:59:03.019433+00:00",
+    "seed": 42,
+    "exhaustiveness": 16,
+    "n_poses": 10,
+    "cpu": 1,
+    "workers": 8,
+    "timeout_seconds": 600,
+    "sf_name": "vina",
+    "top1_rmsd_cutoff_A": 2.0,
+    "metal_targets_excluded_from_primary": true,
+    "parent_not_overwritten": true,
+    "salt_rule": "unique carbon-containing fragment; only atomic counterions",
+    "ligand_prep": "input formal charge; RDKit AddHs, Embed42/fallback random42, MMFF500, Meeko",
+    "ligand_protonation_enumeration": false,
+    "receptor_prep": "reuse preaudited receptor; new: OpenBabel pH7.4; NAD explicitly retained",
+    "no_rescue_parameter_tuning": true,
+    "rmsd": "RDKit CalcRMS heavy symmetry-aware in place; no alignment"
+  }
+}

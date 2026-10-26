@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "inputs_unchanged": true,
+  "frozen_result_tolerance": 1e-10,
+  "checks": [
+    "All main table summaries",
+    "Original paired primary and auxiliary test families",
+    "375 B final selections",
+    "150 C final selections",
+    "1500 fixed-candidate replay selections",
+    "Docking coverage and seven group summaries",
+    "Reference ring-count control"
+  ],
+  "input_sha256": {
+    "A_chemical_form_copy_flags8.json": "7445fb914c92712cdcea00a77c899254642b609e44b284ec2fa7e1c08df11f5b",
+    "A_protocol_provenance.json": "b7abb6ac79cbac2c283753ef8c3c62c5824c13ad48e1ffc110d5d4b72562463f",
+    "A_retained500.json": "c7f861f4cd79fb0f73d05a2783317cba29f8af61a21491d02887c05057a46841",
+    "A_target_means100.json": "1619961bfb224c351c2718a1908a5eeac3fbcd3ad2f9e915e413eea5b3937a81",
+    "B_completed_candidate_positions2244.json": "1156d8283e8e898a154581c581149e595bd2d9b1aade1fb446ff6871bcd90090",
+    "B_execution_schedule375.json": "e8fd8706fcd418fb29f8362cc973b258a1c9d54091d47e49066e9ef58c231f18",
+    "B_fixed_candidate_replay1500.json": "e3aa410eea6ed10553d8e858b85957aac6dac3b49ab8abc7ce8fda4e2c107723",
+    "B_no_delivery2.json": "b6343a554fad0027229f478490342a2528fd76ee19311abfd7531e6e406491f6",
+    "B_planned375.json": "7fd4fe2af014d59cf15cd3c9ee18613edb749f9329f747be403d96e1ceca671f",
+    "B_references150.json": "0fe70cf4f2467111f589dc9f70900261515e9c0f6dcba259634a88c2715a15e5",
+    "B_reference_forms_flags.json": "cdb3cc8b92848da703a2a2017b801d50ce7011857025fd2a670a63a9dc6732f6",
+    "B_target_means75.json": "f4812ad5f3168a8591beba429e4c5f3119b858ef24ddf1a0a3923f044e6ff560",
+    "chemical_form_sensitivity.json": "1f0aa3147a3aa3d9735544794cac0ee19c17d7c9767799f5a926efd565f9061b",
+    "cocrystal_calibrations22.json": "20bc2bde26403de942f274c50421244965abfae96a635b5e553896e17ae25e97",
+    "component_noncopy_sensitivity.json": "5e5dfa8344fa53a2f211088f43b52de6f96d0a88495622cccd739ffa4f04420d",
+    "cost_usage_estimates.json": "e864d4a2ccf3ae7b3b723a17e6a33f98799e086c734decd2fe1f1266a4efbc7f",
+    "C_branches150.json": "e0c01c2e4c6df82b912efefe8178454f230821bef05242db97b1a186e7c20224",
+    "C_completed_branches150_with_candidates.json": "23445176d28c0d5f40693e46a94460cb5849db6d728cc3b57987b921bb72a333",
+    "C_target_means50.json": "6046f35497b9188f70c0ef7188984bdfe8c5ad5d362fb762c5e9407e483e4034",
+    "docking_observations900.json": "84b69f96df34bf40bc59564a5abfdf4b5c69b5eabcc40319fde996206d3675e6",
+    "observed_protocols.json": "7ba69c3064771e499c6dd4385db3de6572216901d7df3385cdd2a80424cab771",
+    "README.md": "a328cd2ec545f2972c318152e0b52b69391a12745bd712cec75eb6ccc135c48c",
+    "receptor_grids25.json": "08e3d9a4de7109861cb36f807789cf9af05a4bd7e3bd65b40f87b606740fd037",
+    "receptor_review25.json": "cc1e9a8fb0104c90be973211ad4c5bc2c31d5155dc918b184bf23ba731cb728d",
+    "source_provenance.json": "f224dafc822ba2ab8f94785d3d29e09d49e14d81b89619945e3dee9ce14ef53c",
+    "tasks25.json": "b9d0375f38453f8717bc1217fe97e9b299d8bd67f03fa241101c1f1337b069e1",
+    "expected_frozen_results.json": "5acd159b6b057a764907c53e283674f8b88ab7560f6a582657aefbc80b0b379c",
+    "B_candidates_lossless2244.json": "1b405069b4272b12705ade967e996af8aa5c0f3abfcd6329c79e44a5349e1eeb"
+  },
+  "chemistry": {
+    "executed": false,
+    "reason": "Optional --chemistry not requested"
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1"
+  },
+  "new_API_calls": 0,
+  "new_training_jobs": 0,
+  "new_docking_jobs": 0,
+  "external_model_or_GIN_training_regenerated": false,
+  "input_distribution": "public_research_release"
+}

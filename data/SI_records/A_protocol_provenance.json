@@ -1,0 +1,109 @@
+{
+  "schema": "study_A_protocol_reaudit_v1",
+  "verified_date": "2026-10-18",
+  "scope": "Documented generation configuration, retained code snapshots, prompt consistency, and output identity; not a reconstruction of all raw API responses.",
+  "documented_api_settings": {
+    "model": "deepseek-v4-flash",
+    "reasoning_effort": "low",
+    "temperature": 0.7,
+    "max_tokens": 16384,
+    "request_timeout_seconds": 300,
+    "basis": {
+      "model": ["experiment_guide:38", "NG_launcher_log:1", "RC_expansion_launcher:25"],
+      "reasoning_effort": ["experiment_guide:38", "NG_launcher_log:1", "caller_snapshot:21"],
+      "temperature": ["experiment_guide:38", "caller_snapshot:21,57"],
+      "max_tokens": ["experiment_guide:38", "caller_snapshot:21,58"],
+      "request_timeout_seconds": ["caller_snapshot:56"]
+    }
+  },
+  "generation_protocol": {
+    "strategies": ["NG", "TG", "PG-aggr", "PG-mild"],
+    "targets": 25,
+    "outputs_per_target_strategy": 5,
+    "total_outputs": 500,
+    "dialogue_turns": {"NG": 5, "TG": 5, "PG-aggr": 6, "PG-mild": 6},
+    "max_whole_conversation_attempts": 10,
+    "retry_trigger": "API exception or no RDKit-valid SMILES extractable from the final response",
+    "final_selection": "First RDKit-valid tagged or fallback SMILES extracted from the final assistant response",
+    "runtime_note": "Saved logs use eight generation workers for the earlier RC runs and six for the extension. This is a scheduling difference, not evidence of identical execution in every detail."
+  },
+  "snapshot_checks": {
+    "current_caller_equals_v2_snapshot": true,
+    "current_parallel_runner_equals_v2_snapshot": true
+  },
+  "prompt_checks": {
+    "same_25_target_ids_in_all_strategies": true,
+    "all_strategies_share_first_three_context_turns": 25,
+    "all_strategies_share_final_validation_turn": 25,
+    "NG_and_PG_share_design_turn": 25,
+    "TG_design_turn_extends_NG_with_RC_instruction": 25,
+    "PG_aggr_and_mild_identical_except_example_guidance_turn": 25,
+    "earlier_target_prompts_preserved_exactly_per_strategy": 19,
+    "additional_targets_use_same_imported_guidance_builders": true
+  },
+  "record_identity": {
+    "paper_record_file": "A_retained500.json",
+    "remote_files": ["exp30rc25_ng.txt", "exp30rc25_tg.txt", "exp30rc25_pg_aggr.txt", "exp30rc25_pg_mild.txt"],
+    "record_count": 500,
+    "unique_target_strategy_position_keys": 500,
+    "normalization": "Sort tuples (group, chemblid, position_label, stripped input SMILES), then JSON encode with ensure_ascii=false and separators=(',', ':').",
+    "normalized_sha256": "d011ad9d8f8c9094a57aa8b04d6a9213bb25aec14f4c5c2fc6f6c93e55b51fa2",
+    "paper_and_remote_normalized_records_match": true
+  },
+  "batch_provenance": {
+    "earlier_targets": 19,
+    "additional_targets": 6,
+    "earlier_outputs": 380,
+    "additional_outputs": 120,
+    "per_strategy_preserved_outputs": 95,
+    "per_strategy_added_outputs": 30,
+    "additional_target_ids": ["CHEMBL211", "CHEMBL2179", "CHEMBL274", "CHEMBL5469", "CHEMBL5479", "CHEMBL6055"],
+    "note": "These phases describe sample expansion, not additional independent copies of the same target-strategy-position. Existing record-level source_phase values remain unchanged."
+  },
+  "verification_scope": {
+    "major_configuration_documented": true,
+    "stored_prompts_and_final_outputs_checked": true,
+    "all_500_raw_api_responses_verified": false,
+    "immutable_served_weights_identified": false,
+    "A_B_C_identical_protocol_asserted": false,
+    "original_archives_overwritten": false,
+    "new_generation_or_training_run": false
+  },
+  "sources": {
+    "experiment_guide": {
+      "filename": "新对话启动指南_ProLiGen.md",
+      "sha256": "ad333634f7beaec12461f22b4ffb22ce406399a7e8e5a58540cc5cbd84569a0b",
+      "role": "Experiment notes documenting the RC25 configuration; unsupported legacy docking interpretations in that document are not adopted."
+    },
+    "caller_snapshot": {
+      "filename": "mw_experiments/scripts_snapshot_v2/deepseek.py",
+      "sha256": "5e5657b80f7642cf3d26aa06260363155e0b91fd14861a7060dd0e100a2d79aa",
+      "role": "Archived caller defaults and request construction; source contents and credentials are not copied into this record."
+    },
+    "parallel_runner_snapshot": {
+      "filename": "mw_experiments/scripts_snapshot_v2/generate_parallel.py",
+      "sha256": "8fb6a2ee7aba6365e0dbbcf613c957d0eeac6d8281d0738516bcc6df9ee8c59e",
+      "role": "Generation, final-response extraction, retry, checkpoint and output rules."
+    },
+    "RC_expansion_launcher": {
+      "filename": "mw_experiments/run_rc_expand.sh",
+      "sha256": "e145c26281b95ce52ae99275a5eea22d45225f61211cf3396734dd2f0e7c9f9a",
+      "role": "Model-setting default and common generator invocation with five positions and resume."
+    },
+    "prompt_expansion_builder": {
+      "filename": "mw_experiments/build_prompts_rc_expand.py",
+      "sha256": "598e2c889ee834ece96445110ff9fc94d2fc81cf06fc41fc7e81a872a7018ebe",
+      "role": "Preserves earlier target prompts and imports the same TG/PG guidance builders for new targets."
+    },
+    "checkpoint_preload": {
+      "filename": "mw_experiments/prep_checkpoint_rc25.py",
+      "sha256": "a47c6bf4a34cd11a3e88147d6dfdc0b48b0e794766dc83e4e6c79d44023135db",
+      "role": "Links earlier records to expanded output files without regeneration."
+    },
+    "NG_launcher_log": {
+      "filename": "mw_experiments/generated/exp30v2_run.log",
+      "sha256": "d8af10ec33f6f574467654d2c6cecea4f0da7f70b915ee0b51b980f955f65e90",
+      "role": "Records requested deepseek-v4-flash and low reasoning for the source NG run; this is a launcher record, not a raw server-response archive."
+    }
+  }
+}

@@ -1,0 +1,22 @@
+\begin{table}[H]
+\centering\small
+\caption{Study-B docking and property trade-offs on the 11 nonmetal pose-calibrated tasks.}
+\label{tab:calibrated_docking}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrrrrr@{}}
+\toprule
+ & & \multicolumn{4}{c}{Docking outcomes} & QED change \\
+\cmidrule(lr){3-6}\cmidrule(l){7-7}
+Group & $n$ & Vina $\downarrow$ & $\Delta$Vina & 95\% CI & Improved (\%) & $\Delta$QED \\
+\midrule
+T & 54 & $-9.0692$ & $+0.8498$ & $[0.2691, 1.5121]$ & 14.55 & $+0.1736$ \\
+M & 55 & $-9.0237$ & $+0.8953$ & $[0.2448, 1.6030]$ & 16.36 & $+0.2289$ \\
+G & 55 & $-9.0095$ & $+0.9095$ & $[0.3063, 1.5631]$ & 12.73 & $+0.2137$ \\
+\bottomrule
+\end{tabular*}
+\par\smallskip
+\begin{minipage}{\linewidth}\footnotesize
+$n$ counts scored outputs; Vina is in kcal/mol. $\Delta$Vina = output minus same-protocol seed (positive: less favorable), with an unadjusted target-bootstrap 95\% CI. Means average successful seed-paired outputs within target, then across 11 targets. Improved (\%) averages within-target fractions with $\Delta$Vina $<0$. $\Delta$QED uses scored organic components, differing from the parent forms in Table~\ref{tab:downstream}. Complete A/B results: Table S11.
+\end{minipage}
+\end{table}
