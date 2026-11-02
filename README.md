@@ -1,6 +1,6 @@
 # Pro-LiGen: data, models and reproducible analysis
 
-This repository supports property-constrained molecular editing with exemplar retrieval, program-computed verification, candidate retention and final QED selection. Version **v0.3.0** adds the three-condition comparisons in the current manuscript: ring count, LogP and topological polar surface area (TPSA). The original v0.2.0 records and scientific assets remain intact.
+This repository supports property-constrained molecular editing with exemplar retrieval, program-computed verification, candidate retention and final QED selection. Version **v0.3.1** adds a complete output-novelty audit and runnable entry. Version **v0.3.0** added the three-condition comparisons in the current manuscript: ring count, LogP and topological polar surface area (TPSA). The original v0.2.0 records and scientific assets remain intact.
 
 Start with [the current result-to-file map](docs/CURRENT_RESULTS_TO_FILES.md) or the [Chinese running guide](docs/README_中文.md). The [initial-release guide](docs/README_v020.md) and its original commands remain available.
 
@@ -15,6 +15,10 @@ python reproduce/verify_extended_selection.py --out my_selection_check
 ```
 
 The first command verifies initial A/B/C records and the extended comparisons. The second verifies all 1,500 final choices exactly from lossless candidate exports. Output directories must be new; frozen inputs are not overwritten. Neither command accesses an API, trains a model or runs docking. Optional `--figures` recreates the quantitative figures with the dependencies in `reproduce/requirements-optional.txt`.
+
+## Audit molecular and scaffold novelty
+
+See [the novelty guide](docs/NOVELTY_AUDIT.md). Run `python reproduce/audit_novelty.py --source . --out NEW_NOVELTY_RESULTS` with NumPy and RDKit. The audit includes full-library and GIN-input overlap, uniqueness, nearest neighbors, Murcko scaffold novelty and representation sensitivities.
 
 ## Reselect references and validate training inputs
 

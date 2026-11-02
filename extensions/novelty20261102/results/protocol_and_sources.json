@@ -1,0 +1,35 @@
+{
+  "input_sha256": {
+    "data/retrieval/library.csv": "314b79dee49b08e56e269e057ccd5cbab95326e91764d5b272af5509ef60def4",
+    "data/training/triplets_ring_count.csv": "113c0e809eed531ae03fcc10c3c7ce3b212ee9643b8389ab132348f7c8702af9",
+    "extensions/20261102/gin/training/logp_train_triplets.csv": "d398fe1c3bb3d45faba82913103873adbe84f22157f31aa76177fbe38b028dec",
+    "extensions/20261102/gin/training/logp_val_triplets.csv": "2070f482d390c55c570c6695ad76e2116a4b8ecb7256f99084b35bd8742edf88",
+    "extensions/20261102/gin/training/tpsa_train_triplets.csv": "cb536ad58559768138c7f1e78c608943e10488472e8c2b0e59e9d45f88e78dbc",
+    "extensions/20261102/gin/training/tpsa_val_triplets.csv": "4083b657a8497ada571427ba70bd98a1951a2182fbe6e814e291c0b8c76e4992",
+    "extensions/20261102/lossless/ring_completed.json": "df9f1cbe8fadbad84172efc1205d4724a66dee39e5791966e9cbb82971e244da",
+    "extensions/20261102/lossless/properties_completed.json": "009816c8f9943594f4a29b1ebfbde41a88691eb3f279b5a1fefe5ad47fe9c532",
+    "extensions/20261102/data/updated20261102/observations1500.csv": "e2a8855f77bc0daa871295bf18c90d19341b9c561d276488caa02bcc92819b60",
+    "data/SI_records/tasks25.json": "b9d0375f38453f8717bc1217fe97e9b299d8bd67f03fa241101c1f1337b069e1",
+    "extensions/20261102/gin/inputs/tasks25.json": "1309d5ba5774516c434605554b43d5f4c89a6fab9f09ccb7d6a71bbf91c31d8f"
+  },
+  "RDKit": "2026.03.4",
+  "numpy": "1.23.5",
+  "fingerprint": {
+    "type": "binary Morgan",
+    "radius": 2,
+    "bits": 2048,
+    "includeChirality": false,
+    "metric": "Tanimoto"
+  },
+  "canonicalization": "RDKit isomeric canonical SMILES; retain charge, isotopes, components and tautomers",
+  "stereo_free": "RemoveStereochemistry then canonical isomeric SMILES; retain isotopes and charge",
+  "atomic_component_sensitivity": "Retain the sole carbon-containing component only when all other components are single atoms; otherwise leave unchanged",
+  "scaffold": "Typed Bemis-Murcko scaffold without stereochemistry; empty acyclic scaffolds excluded from scaffold novelty denominator",
+  "generic_framework_sensitivity": "RDKit MakeScaffoldGeneric applied to the Murcko scaffold; atom identities and bond orders generalized",
+  "seed_scaffold_sensitivity": "Check typed scaffolds against reference-library and all25 task-seed scaffolds jointly; exact own-seed scaffold retention also counted",
+  "nearest_tie_break": "ascending isomeric canonical reference string; ties within1e-12",
+  "rc_input_scope": "all participants in archived RC triplets",
+  "property_input_scope": "training and validation participants reported separately and as property-specific unions",
+  "novelty_scope": "released reference collections, not global chemical novelty",
+  "statistical_tests_added": 0
+}

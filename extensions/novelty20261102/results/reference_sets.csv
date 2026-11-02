@@ -1,0 +1,10 @@
+reference_set,unique_canonical_molecules,source_triplets,unique_nonempty_scaffolds,unique_stereo_free,unique_atomic_component,source
+library,26108,,5978,23635,25667,data/retrieval/library.csv
+rc_triplet_inputs,17325,15461,5815,16127,16990,data/training/triplets_ring_count.csv
+logp_train,17342,17334,2908,15613,17342,extensions/20261102/gin/training/logp_train_triplets.csv
+logp_validation,3650,3650,1443,3544,3650,extensions/20261102/gin/training/logp_val_triplets.csv
+tpsa_train,16343,16187,2894,14698,16343,extensions/20261102/gin/training/tpsa_train_triplets.csv
+tpsa_validation,3483,3426,1442,3385,3483,extensions/20261102/gin/training/tpsa_val_triplets.csv
+logp_inputs,20992,,4351,19003,20992,union of named archived collections
+tpsa_inputs,19826,,4336,17939,19826,union of named archived collections
+all_archived_gin_inputs,24012,,5935,21905,23675,union of named archived collections

@@ -1,4 +1,4 @@
-# Current manuscript results to files (v0.3.0)
+# Current manuscript results to files (v0.3.1)
 
 All paths below are relative to the repository root. Display numbers refer to the current manuscript, not historical script filenames.
 
@@ -13,6 +13,7 @@ All paths below are relative to the repository root. Display numbers refer to th
 | Extended reference pool and distributions | `extensions/20261102/gin/inputs/library.csv`, `references2250.csv`, `reference_pools50.csv`; ring references in extended data | `reproduce/retrieve_property_references.py`; original `reproduce/retrieve_references.py` for ring M/G; ring R records/seeds in protocol |
 | GIN property training | `extensions/20261102/gin/models/`, `training/*_triplets.csv`, `*_epochs.csv`, `*_status.json`, original code | `reproduce/train_property_adaptations.py`; checkpoints selected by validation loss |
 | Actual scoring evidence | `extensions/20261102/scoring/{ring,properties}/jobs/`, receptor files, protocol | Observation/job identifiers link raw scores and poses; numeric verification does not rerun docking |
+| Novelty paragraph / SI Tables S19--S21 | `extensions/novelty20261102/results/` and unchanged released source library/triplets/lossless records | `reproduce/audit_novelty.py`; [definitions](NOVELTY_AUDIT.md) |
 | Initial-ring MCS/threshold and selection diagnostics | `extensions/20261102/archive/initial_structural_sensitivity`, `initial_selection_diagnostics` | Original code and full numerical exports retained with initial-cohort labels |
 
 The ring, continuous-property and initial cohorts retain separate identities. Conditional descriptors first average successful observations within a task, then across tasks; S/U keep the planned-run denominator. Current manuscript table snippets and quantitative figure assets are in `extensions/20261102/paper_tables/` and `figures/`. Their filenames retain the original project naming convention.
