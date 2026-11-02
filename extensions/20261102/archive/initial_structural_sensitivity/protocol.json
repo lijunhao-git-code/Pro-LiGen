@@ -1,0 +1,115 @@
+{
+  "analysis": "Supplementary exploratory offline analyses addressing P0-4 and P0-5",
+  "frozen_before_this_run_utc": "2026-10-28T07:36:36.095430+00:00",
+  "original_experiments_unchanged": true,
+  "new_LLM_calls": 0,
+  "new_training_jobs": 0,
+  "new_docking_jobs": 0,
+  "task_count": 25,
+  "existing_B_planned_positions": 375,
+  "existing_candidate_positions": 2244,
+  "methods": [
+    "T",
+    "M",
+    "G",
+    "R_NN1",
+    "R_QED3",
+    "R_QED6"
+  ],
+  "retrieval": {
+    "representation": "Morgan radius2/2048 bits, no chirality, binary cosine (original M ranking)",
+    "common_filter": "valid canonical molecule; exact seed RC minus 1; exclude seed; single component required for returned library molecules",
+    "reference_copy_rule": "A direct-library baseline may return supplied exemplars; it is not judged by the generative non-exemplar-copy rule",
+    "methods": {
+      "R_NN1": "first ranked molecule",
+      "R_QED3": "highest QED in first 3",
+      "R_QED6": "highest QED in first 6"
+    },
+    "rank_ties": "canonical SMILES ascending",
+    "QED_ties": "SA_raw ascending, then canonical SMILES ascending",
+    "output_count": "one deterministic output per target per baseline; never treated as five independent replicas"
+  },
+  "structures": {
+    "tanimoto": "Original parent-form radius2/2048-bit Morgan Tanimoto, matched to paper; organic-component sensitivity also retained",
+    "MCS": "Maximum common connected substructure, maximize atoms; compare elements and bond orders; permit ring-to-chain matches; no chirality or formal-charge matching",
+    "MCS_form": "Unique carbon-containing component after removal of atomic counterions; input charges and stereochemical specification retained",
+    "MCS_fraction": "number of common heavy atoms divided by seed organic-component heavy atoms; candidate-normalized fraction also saved",
+    "MCS_timeouts_seconds": [
+      2,
+      10,
+      30
+    ],
+    "MCS_workers": 4,
+    "incomplete_MCS": "Record lower bound and completion flag. Primary exact MCS summaries require completion; incomplete gates report unresolved cases and conservative lower-bound acceptance.",
+    "thresholds": [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "display_thresholds": {
+      "tanimoto_parent": [
+        0.4,
+        0.6
+      ],
+      "mcs_seed_fraction": [
+        0.6,
+        0.8
+      ]
+    },
+    "gate_policies": [
+      "filter the originally selected final molecule",
+      "reselect from all saved eligible union candidates"
+    ],
+    "replay": "Same last-occurrence canonical deduplication, QED/SA/canonical selector as original; no new proposals",
+    "size": "Both original parent-form and organic-component MW/heavy-atom differences; organic logP/TPSA/HBD/HBA changes"
+  },
+  "statistics": {
+    "unit": "25 equally weighted paired target means; five original planned positions per LLM target; one deterministic library output per target",
+    "yield_definition": "QED for accepted output, zero for no delivery; planned denominator retained under every gate",
+    "new_test_family": "Nine exploratory QED-yield contrasts: T/M/G minus each of three direct-retrieval baselines; Holm across nine",
+    "original_G_M_test_family_unchanged": true,
+    "bootstrap": "10000 target resamples, seed42, unadjusted percentile95CI",
+    "sign_flip": "100000 paired target sign flips, seed42, two-sided plus-one correction",
+    "threshold_curves": "Descriptive sensitivity analyses, not new-generation causal ablations or universal chemical acceptability thresholds"
+  },
+  "molecular_novelty": "Exact canonical and stereo-agnostic library membership, plus exact canonical original-triplet training membership; not novelty against all chemistry or LLM training",
+  "sources": [
+    {
+      "source_release_path": "data/SI_records/tasks25.json",
+      "published_copy": "inputs/tasks25.json",
+      "sha256": "b9d0375f38453f8717bc1217fe97e9b299d8bd67f03fa241101c1f1337b069e1"
+    },
+    {
+      "source_release_path": "data/SI_records/B_planned375.json",
+      "published_copy": "inputs/B_planned375.json",
+      "sha256": "7fd4fe2af014d59cf15cd3c9ee18613edb749f9329f747be403d96e1ceca671f"
+    },
+    {
+      "source_release_path": "data/SI_records/B_references150.json",
+      "published_copy": "inputs/B_references150.json",
+      "sha256": "0fe70cf4f2467111f589dc9f70900261515e9c0f6dcba259634a88c2715a15e5"
+    },
+    {
+      "source_release_path": "reproduce/B_candidates_lossless2244.json",
+      "published_copy": "inputs/B_candidates_lossless2244.json",
+      "sha256": "1b405069b4272b12705ade967e996af8aa5c0f3abfcd6329c79e44a5349e1eeb"
+    },
+    {
+      "source_release_path": "data/retrieval/library.csv",
+      "published_copy": "inputs/library.csv",
+      "sha256": "314b79dee49b08e56e269e057ccd5cbab95326e91764d5b272af5509ef60def4"
+    },
+    {
+      "source_release_path": "data/training/triplets_ring_count.csv",
+      "published_copy": "inputs/triplets_ring_count.csv",
+      "sha256": "113c0e809eed531ae03fcc10c3c7ce3b212ee9643b8389ab132348f7c8702af9"
+    }
+  ]
+}

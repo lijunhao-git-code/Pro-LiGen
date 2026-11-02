@@ -1,0 +1,320 @@
+{
+  "status": "frozen_before_first_paid_generation",
+  "prepared_utc": "2026-10-28T10:25:20.237912+00:00",
+  "user_confirmed_planned_positions": 1000,
+  "remote_root": "/root/ProLiGen_single_property_1000_20261028",
+  "properties": [
+    "Crippen_LogP",
+    "TPSA"
+  ],
+  "groups": [
+    "T",
+    "M",
+    "G",
+    "R"
+  ],
+  "targets": 25,
+  "repeats": 5,
+  "slots_per_property": 500,
+  "slots_per_group_per_property": 125,
+  "nominal_candidate_positions": 6000,
+  "design_rounds": 2,
+  "candidates_per_round": 3,
+  "conditions": {
+    "Crippen_LogP": {
+      "delta": -1.0,
+      "tolerance": 0.2
+    },
+    "TPSA": {
+      "delta": -20.0,
+      "tolerance": 5.0,
+      "units": "Angstrom squared"
+    }
+  },
+  "bounds_inclusive": true,
+  "numeric_tolerance": 1e-08,
+  "other_properties_are_not_hard_constraints": true,
+  "seed_form": "Unique carbon-containing component; strip only atomic counterions, preserve charges/stereo/isotopes; record source and used forms. Reject ambiguous multiple organic components.",
+  "library": "Frozen v0.2.0 canonical library; common reference pool uses valid single-component carbon-containing subset, recompute both descriptors before filtering.",
+  "output_form": "Require raw generated molecule to have one connected carbon-containing component; never strip generated counterions to rescue a failed output.",
+  "g_models": {
+    "initializer": "models/gin_pretrained.pth",
+    "initializer_sha256": "ad65679dc6b9a9b63fe2f7efd97fb1fd115b2b92c14303d6c492807e725266fe",
+    "action": "Recompute consistent canonical RDKit labels, rebuild lower-property triplets, train separate LogP and TPSA adaptations from the same frozen initializer before LLM generation.",
+    "architecture": {
+      "in_dim": 84,
+      "hidden_dim": 256,
+      "layers": 5,
+      "out_dim": 256
+    },
+    "triplets": "Morgan cosine nearest10 non-self neighbors within each fixed split; positive minimum property, negative maximum; skip degenerate ties; no mixed old labels.",
+    "training": {
+      "seed": 42,
+      "max_epochs": 50,
+      "early_stopping_patience": 10,
+      "batch_size": 32,
+      "lr": 0.0001,
+      "weight_decay": 1e-05,
+      "temperature": 0.1,
+      "loss": "Retain existing InfoNCE definition; record dot-product training versus normalized-cosine inference explicitly.",
+      "checkpoint_selection": "Lowest held-out validation loss only, no downstream generated scores."
+    },
+    "split": "Retain existing train/val/test canonical assignments; no cross-split triplet neighbors; test not used to choose epochs; remove exact normalized task seeds from fine-tuning sets if present.",
+    "no_new_large_scale_pretraining": true,
+    "no_generated_molecules_in_training": true
+  },
+  "reference_pool": "Same basic chemical and exact property-band filter for M/G/R for each task; exclude current normalized seed; no QED/SA or similarity prefilter.",
+  "retrieval": {
+    "M": "Original radius2/2048bit binary Morgan cosine top3, canonical tie-break",
+    "G": "Attribute-specific normalized embedding cosine top3, canonical tie-break",
+    "R": "Uniform sample3 without replacement within the same pool, seed fixed by property/task/repeat; one set per run, fixed across both design rounds",
+    "T": "No examples"
+  },
+  "shared_context": "Share external target/literature/pocket input sources and prompt templates only. Each slot independently makes all five calls; never reuse generated assistant replies across slots, methods, repeats or properties.",
+  "model": {
+    "service": "DeepSeek official API",
+    "requested": "deepseek-flash",
+    "documented_current": "DeepSeek-V4.1-Flash-1017",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "max_tokens": 16384,
+    "timeout_seconds": 300,
+    "version_control": "Save model catalog/documentation/time/request/response model metadata; interleave both properties and all methods; aliases do not pin immutable weights.",
+    "SDK_max_retries": 0,
+    "scientific_failure_retries": 0,
+    "workers_pilot": 4,
+    "workers_main_initial": 8,
+    "record_usage": true,
+    "cost_cap_from_old_B_not_reused": true,
+    "max_whole_attempts_per_slot": 2,
+    "retry_policy": "Follow Study-B bounded whole-trajectory retries for transport/empty/truncated technical failures only. Retain all attempts; use the first technically completed attempt, no quality-based attempt choice."
+  },
+  "schedule": "Seed42 randomized property/task/repeat blocks, randomized method order within each block; 250 blocks x4 methods.",
+  "final_selection": "Eligible union across two rounds; last canonical occurrence; highest QED, then lowest SA_raw, then canonical ascending; empty eligible set => no output.",
+  "pilot": {
+    "formal_slots": 16,
+    "design": "First2 frozen tasks x2 properties x4 groups at repeat1; technical criteria only; include in1000 if identical scientific protocol.",
+    "scientific_changes": "Retain development pilot separately and restart a fully specified protocol version; no performance-based target/seed/model tuning.",
+    "formal_conversation_calls": 80,
+    "remaining_slots_if_unchanged": 984
+  },
+  "candidate_metrics": [
+    "valid_fraction",
+    "single_component_fraction",
+    "property_hit_fraction",
+    "noncopy_eligibility_fraction",
+    "raw_property_error",
+    "candidate_QED_distributions"
+  ],
+  "final_metrics": [
+    "S_property_compliant_noncopy_delivery",
+    "U_compliant_QED_yield",
+    "target_center_error",
+    "QED",
+    "SA_raw",
+    "Tanimoto",
+    "MCS_seed_fraction",
+    "delta_MW",
+    "delta_heavy_atoms",
+    "uniqueness",
+    "full_library_and_training_membership"
+  ],
+  "selection_replay": [
+    "first eligible",
+    "uniform unique-eligible exact expectation",
+    "max QED",
+    "chronological prefixes1..6"
+  ],
+  "direct_retrieval_baselines": [
+    "Morgan NN1",
+    "Morgan top3 highest QED",
+    "Morgan top6 highest QED"
+  ],
+  "direct_baseline_outputs": 150,
+  "direct_baselines_not_in_1000_generation_positions": true,
+  "primary_statistics": {
+    "contrasts": [
+      "M-R",
+      "G-R"
+    ],
+    "endpoints": [
+      "S",
+      "U"
+    ],
+    "properties": 2,
+    "tests": 8,
+    "multiplicity": "Holm across8",
+    "unit": "25 paired target means per property, five planned runs per target; missing deliveries remain zero",
+    "bootstrap_n": 10000,
+    "signflip_n": 100000,
+    "seed": 42
+  },
+  "secondary_statistics": {
+    "contrasts": [
+      "R-T",
+      "G-M"
+    ],
+    "endpoints": [
+      "S",
+      "U"
+    ],
+    "properties": 2,
+    "tests": 8,
+    "multiplicity": "Separate predeclared secondary family, Holm across8",
+    "distributions_and_structure": "Descriptive paired intervals and full curves, no selective unadjusted significance claims"
+  },
+  "docking": {
+    "enabled": true,
+    "role": "Secondary computational comparison after final generation, following the currently corrected Study-B receptor protocol",
+    "target_ids": [
+      "CHEMBL1741186",
+      "CHEMBL1821",
+      "CHEMBL2185",
+      "CHEMBL3712868",
+      "CHEMBL3961",
+      "CHEMBL4375",
+      "CHEMBL5083",
+      "CHEMBL5668",
+      "CHEMBL211",
+      "CHEMBL274",
+      "CHEMBL5469"
+    ],
+    "target_count": 11,
+    "receptor_selection_file": "precheck/receptor_review25.csv",
+    "receptor_selection_sha256": "b4412d490e357068efe0d559e679e6fddd235059eba67eec83f16038137b704f",
+    "inclusion": "Current published primary_nonmetal_calibrated subset, fixed before new generation; do not use obsolete original20-target inclusion as if it were the current11-target set.",
+    "nominal_final_output_records_max": 440,
+    "seed_records": 11,
+    "include_all_group_outputs": true,
+    "filter_by_QED_or_affinity": false,
+    "missing_output_or_prep_or_docking_failure": "Keep original position and failure reason; no favorable-subset replacement or zero-as-affinity imputation.",
+    "protocol": {
+      "vina_version": "1.2.7",
+      "exhaustiveness": 16,
+      "n_poses": 10,
+      "seed": 42,
+      "cpu_per_job": 1,
+      "workers": 8,
+      "timeout_seconds": 600,
+      "ligand": "Use the same frozen standardized single-component forms and current RDKit/MMFF/Meeko preparation for seeds and all groups."
+    },
+    "deterministic_cache": "If used, key on target, canonical ligand, receptor/grid hash and full preparation/scoring protocol; repeated records are retained.",
+    "direct_baselines": "If comparing their Vina, score all relevant three baseline outputs on the same11 targets, at most66 additional records.",
+    "interpretation": "Conditional computational Vina and delta from matched seed, with delivery and docking-completion denominators reported; no claim of measured affinity."
+  },
+  "historical_B": "Preserve old ring-generation records. Match its five-call generation skeleton and current corrected docking protocol; new property encoders, seed normalization, available service and R arm are documented changes, not assertions of identical historical conditions.",
+  "deliverables": [
+    "Frozen tasks/pools/examples/prompts/schedule/model code+weights",
+    "Raw requests/responses and per-candidate calculations",
+    "All1000 planned positions and all6000 nominal proposal positions",
+    "Paired target summaries and declared tests",
+    "Source-linked scientific plots",
+    "Standalone rerun instructions and manifests"
+  ],
+  "precheck": {
+    "rdkit": "2026.03.4",
+    "source_library": 26108,
+    "valid_single_connected_carbon_pool": 24693,
+    "normalized_seed_changes": [
+      "CHEMBL1821"
+    ],
+    "logp_min_reference_pool": 227,
+    "tpsa_min_reference_pool": 800,
+    "all_tasks_have_three_references": true,
+    "all_selected_library_LogP_and_TPSA_recomputed_and_matched": true,
+    "new_API_calls": 0,
+    "new_training_jobs": 0
+  },
+  "model_label_precheck": "precheck/remote_model_and_label_precheck.json",
+  "plan_version": "v2_follow_actual_Study_B",
+  "revised_utc": "2026-10-28T10:48:12.029855+00:00",
+  "supersedes": "Earlier plan that shared frozen LLM background replies and deferred docking",
+  "remote_plan_directory": "/root/ProLiGen_single_property_1000_20261028/plan_v2_like_ring",
+  "conversation_turns_per_slot": 5,
+  "nominal_conversation_calls": 5000,
+  "reference_B_protocol_sha256": "7bca4b9fe280e1b51856bbfb95a2e9a46a98d70357494270cc83998d229b8542",
+  "five_turns": [
+    {
+      "turn": 1,
+      "role": "Molecular design setup and SMILES/task rules; adapt RC-specific statement to current descriptor."
+    },
+    {
+      "turn": 2,
+      "role": "Literature information extraction from the same archived target abstracts."
+    },
+    {
+      "turn": 3,
+      "role": "Analyze archived target/pocket information, acknowledge unavailable binding data without inventing contacts."
+    },
+    {
+      "turn": 4,
+      "role": "Conditioned design using seed plus none or three fixed references; propose three tagged SMILES."
+    },
+    {
+      "turn": 5,
+      "role": "External RDKit/SA feedback on the three turn4 positions; propose three optimized tagged SMILES."
+    }
+  ],
+  "locked_utc": "2026-10-28T11:29:01.617271+00:00",
+  "actual_runtime_models": [
+    {
+      "property": "logp",
+      "mean_embedding_std": 0.04052171856164932,
+      "checkpoint_sha256": "76e4dab6557a77f08a365b5d5bb671731dab106469868b9298aa587879efdf41"
+    },
+    {
+      "property": "tpsa",
+      "mean_embedding_std": 0.04236837849020958,
+      "checkpoint_sha256": "0fe2bf857b14ecfcb6731244b1dcf2bd4dedd93ab841190b8ae0ea5bb3e96076"
+    }
+  ],
+  "pilot_review_required_before_full_concurrency": true,
+  "pilot_review": "Check task interpretation, valid actual structures, descriptor windows, factual program feedback, selection and resume. No requirement that GIN wins. Systematic problems must be resolved with explicit protocol-version records.",
+  "balance": {
+    "reserve_cny": 2.0,
+    "check_before_paid_requests": true,
+    "live_check_interval_seconds": 15,
+    "live_check_every_calls": 8,
+    "insufficient": "Stop submitting, drain in-flight replies to durable storage, preserve per-call/slot state, resume same slot and cached successful turns after top-up."
+  },
+  "structural_sensitivity": {
+    "metrics": [
+      "Morgan parent Tanimoto",
+      "MCS seed-heavy-atom coverage"
+    ],
+    "thresholds": [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "policies": [
+      "filter original final",
+      "reselect from retained eligible candidates"
+    ],
+    "interpretation": "Descriptive saved-candidate sensitivity; not additional paid generation or a hard constraint in the primary experiment.",
+    "mcs": "Maximum atoms, elements/bond order, ring-to-chain allowed, no chirality/charge match; timeouts2/10/30s with completion flags and lower/upper bounds."
+  },
+  "pricing_provenance": {
+    "checked_client_date": "2026-10-28",
+    "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "peak_cny_per_million": {
+      "cache_hit": 0.04,
+      "cache_miss": 2.0,
+      "output": 8.0
+    },
+    "offpeak_cny_per_million": {
+      "cache_hit": 0.02,
+      "cache_miss": 1.0,
+      "output": 4.0
+    },
+    "prices_are_estimates": true,
+    "balance_is_live": true
+  }
+}

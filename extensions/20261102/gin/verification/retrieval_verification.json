@@ -1,0 +1,46 @@
+{
+  "status": "passed_with_documented_float32_near_ties",
+  "time_utc": "2026-10-28T12:03:10.146003+00:00",
+  "all_reference_identities_reselected_exact": false,
+  "reference_records": 2250,
+  "Morgan_and_random_reselected_exact": true,
+  "frozen_reference_table_matches_all_actual_prompts_exact": true,
+  "all_GIN_reselected_exact_from_saved_library_embeddings": true,
+  "cached_embedding_reselection_differences": [],
+  "saved_embedding_sha256": {
+    "logp": "03500ed4d46b31690a5f77ff223894a352c6943c60dacde917a4bba25643b747",
+    "tpsa": "4f7c0bac976c032213e03e4fae12716cf292632ccddaf3729231b70a4662f669"
+  },
+  "near_tie_task_count": 1,
+  "near_tie_details": [
+    {
+      "property": "tpsa",
+      "chemblid": "CHEMBL2176774",
+      "frozen_examples": [
+        "NC1CC1c1ccccc1",
+        "OC(CN1CCN(c2cccc(Cl)c2)CC1)C(c1ccccc1)c1ccccc1",
+        "N[C@H]1C[C@@H]1c1ccccc1"
+      ],
+      "fresh_examples": [
+        "NC1CC1c1ccccc1",
+        "OC(CN1CCN(c2cccc(Cl)c2)CC1)C(c1ccccc1)c1ccccc1",
+        "N[C@@H]1C[C@H]1c1ccccc1"
+      ],
+      "score_deficit": 0.0,
+      "explanation": "Near-tied float32 GIN scores differ under fresh graph reductions. Actual pre-generation frozen examples remain authoritative and unchanged."
+    }
+  ],
+  "numeric_validation_tolerance": 1e-05,
+  "common_pools_verified": 50,
+  "library_embeddings_recomputed": 49386,
+  "embedding_max_abs_diff": {
+    "logp": 2.384185791015625e-07,
+    "tpsa": 3.2782554626464844e-07
+  },
+  "inference_uses_saved_best_weights": true,
+  "full_library_sort_not_partition_topk": true,
+  "fresh_R_sampling_matches_fixed_seeds": true,
+  "no_new_API_calls": true,
+  "elapsed_seconds": 46.082,
+  "code_sha256": "aefaedd8d016e40f9a216871b13af83b04bcec4d7691de6b7f6dcc874c44b348"
+}

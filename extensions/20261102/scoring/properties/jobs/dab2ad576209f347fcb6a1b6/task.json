@@ -1,0 +1,34 @@
+{
+  "job_id": "dab2ad576209f347fcb6a1b6",
+  "chemblid": "CHEMBL211",
+  "canonical": "Cc1ccc(CC(=O)O[C@H]2C[C@H]3CC[C@@H](C2)N3C)cc1",
+  "receptor": {
+    "chemblid": "CHEMBL211",
+    "path": "docking/receptors/CHEMBL211/receptor.pdbqt",
+    "sha256": "f55458b43aa213f95f40fabf5662871faaecad37fc18426b3c768c87c9ce995b",
+    "box_center": [
+      183.11450000000002,
+      27.2765,
+      526.2014999999999
+    ],
+    "box_size": [
+      23.64099999999999,
+      23.369,
+      20.908999999999992
+    ],
+    "pdb_id": "5ZKC"
+  },
+  "protocol": {
+    "vina_version": "1.2.7",
+    "exhaustiveness": 16,
+    "n_poses": 10,
+    "seed": 42,
+    "cpu_per_job": 1,
+    "workers": 8,
+    "timeout_seconds": 600,
+    "ligand": "Use the same frozen standardized single-component forms and current RDKit/MMFF/Meeko preparation for seeds and all groups.",
+    "source_code_sha256": "e123b233355c5236ec54f942d24e32a97e5f300638c8ad794776ddd1e2b67389",
+    "standardized_single_component": true
+  },
+  "protocol_sha256": "c6ade11c6defa1b0c4660cde03c61a7b7129ba9992c54224611c759cec881237"
+}

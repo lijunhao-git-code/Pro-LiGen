@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "inputs_and_frozen_code_unchanged": true,
+  "original_375_selections_exact": true,
+  "original_Morgan_reference_identities_and_scores_matched": 75,
+  "all_valid_original_candidate_descriptors_recomputed": true,
+  "original_final_QED_and_Tanimoto_match": true,
+  "top6_QED_ge_top3_QED_ge_nearest": true,
+  "all_zero_threshold_outputs_match_originals": true,
+  "all_structure_curves_monotone": true,
+  "reselected_yield_ge_final_filter_yield": true,
+  "paired_tests_use_25_targets": true,
+  "inference_family": "nine exploratory yield tests, Holm",
+  "MCS_complete": 1453,
+  "MCS_incomplete": 9,
+  "elapsed_seconds": 383.109,
+  "versions": {
+    "python": "3.10.7",
+    "numpy": "1.23.5",
+    "pandas": "2.0.3",
+    "rdkit": "2026.03.4"
+  },
+  "new_API_calls": 0,
+  "new_training_jobs": 0,
+  "new_docking_jobs": 0
+}

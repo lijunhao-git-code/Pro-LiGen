@@ -1,0 +1,36 @@
+\begin{table}[!htbp]
+\centering\small
+\caption{Matched exemplar comparisons under three single-property conditions (Study B, 25 tasks per condition).}
+\label{tab:downstream}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrrrr@{}}
+\toprule
+ & \multicolumn{2}{c}{Qualified delivery} & QED yield & \multicolumn{2}{c}{Delivered molecules} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-4}\cmidrule(l){5-6}
+Configuration & $n/N$ & $S$ (\%) & $U$ $\uparrow$ & QED $\uparrow$ & SA$_{\rm raw}$ $\downarrow$ \\
+\midrule
+\multicolumn{6}{l}{\textit{One fewer ring}} \\
+No examples (T) & 125/125 & 100.0 & 0.6243 & 0.6243 & 2.8846 \\
+Morgan (M) & 125/125 & 100.0 & 0.6659 & 0.6659 & 2.7354 \\
+GIN (G) & 125/125 & 100.0 & 0.6676 & 0.6676 & 2.6959 \\
+Random eligible (R) & 124/125 & 99.2 & 0.6431 & 0.6490 & 2.8061 \\
+\midrule
+\multicolumn{6}{l}{\textit{LogP reduction: $1.0\pm0.2$}} \\
+No examples (T) & 118/125 & 94.4 & 0.4058 & 0.4390 & 3.3209 \\
+Morgan (M) & 120/125 & 96.0 & 0.4438 & 0.4703 & 3.2488 \\
+GIN (G) & 117/125 & 93.6 & 0.4177 & 0.4416 & 3.2917 \\
+Random eligible (R) & 116/125 & 92.8 & 0.4071 & 0.4377 & 3.3442 \\
+\midrule
+\multicolumn{6}{l}{\textit{TPSA reduction: $20\pm5$~\AA$^2$}} \\
+No examples (T) & 125/125 & 100.0 & 0.5394 & 0.5394 & 3.0880 \\
+Morgan (M) & 125/125 & 100.0 & 0.5648 & 0.5648 & 2.9447 \\
+GIN (G) & 124/125 & 99.2 & 0.5591 & 0.5650 & 3.0151 \\
+Random eligible (R) & 125/125 & 100.0 & 0.5414 & 0.5414 & 3.0523 \\
+\bottomrule
+\end{tabular*}
+\par\smallskip
+\begin{minipage}{\linewidth}\footnotesize
+$n/N$ is qualified/planned runs. $U$ assigns zero to no output; QED/SA describe delivered molecules. Values first average within task, then across tasks.
+\end{minipage}
+\end{table}

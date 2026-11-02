@@ -1,0 +1,32 @@
+\begin{table}[!htbp]
+\centering\small
+\caption{Seed-paired property and docking changes for the Study-B outputs on 11 calibrated nonmetal tasks.}
+\label{tab:calibrated_docking}
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.08}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrrrr@{}}
+\toprule
+ & Scored/planned & Drug-likeness & \multicolumn{2}{c}{Docking change (kcal/mol)} & Seed resemblance \\
+\cmidrule(lr){4-5}
+Group & $n/N$ & $\Delta$QED & $\Delta$Vina & 95\% CI & Tanimoto \\
+\midrule
+\multicolumn{6}{l}{\textit{One fewer ring}} \\
+T & 55/55 & $+0.1816$ & $+0.8673$ & $[+0.3450, +1.4164]$ & 0.5606 \\
+M & 55/55 & $+0.1985$ & $+0.7777$ & $[+0.0568, +1.5067]$ & 0.5218 \\
+G & 55/55 & $+0.1832$ & $+0.8550$ & $[+0.1887, +1.5685]$ & 0.5368 \\
+R & 54/55 & $+0.1813$ & $+0.8016$ & $[+0.2018, +1.4093]$ & 0.5772 \\
+\midrule
+\multicolumn{6}{l}{\textit{LogP reduction}} \\
+T & 52/55 & $-0.0326$ & $+0.0840$ & $[-0.1861, +0.3049]$ & 0.6748 \\
+M & 52/55 & $-0.0160$ & $+0.1108$ & $[-0.0963, +0.3155]$ & 0.6486 \\
+G & 54/55 & $-0.0370$ & $+0.1011$ & $[-0.1914, +0.3669]$ & 0.6684 \\
+R & 51/55 & $-0.0313$ & $+0.2212$ & $[-0.0585, +0.4616]$ & 0.6709 \\
+\midrule
+\multicolumn{6}{l}{\textit{TPSA reduction}} \\
+T & 55/55 & $+0.0673$ & $+0.0493$ & $[-0.2247, +0.3143]$ & 0.6275 \\
+M & 55/55 & $+0.1071$ & $+0.2143$ & $[-0.2167, +0.6827]$ & 0.5653 \\
+G & 54/55 & $+0.1011$ & $+0.1414$ & $[-0.2452, +0.6063]$ & 0.5779 \\
+R & 55/55 & $+0.0763$ & $+0.0718$ & $[-0.3019, +0.5084]$ & 0.6185 \\
+\bottomrule\end{tabular*}
+\par\smallskip\begin{minipage}{\linewidth}\footnotesize
+Changes are output minus the same-task seed. Positive $\Delta$QED and $\Delta$Vina indicate higher drug-likeness and less favorable docking, respectively. All descriptors use the same scored organic forms. Values first average within task, then across the 11 tasks; intervals are unadjusted task-bootstrap 95\% CIs. Missing outputs remain unscored.
+\end{minipage}\end{table}

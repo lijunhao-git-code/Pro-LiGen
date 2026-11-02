@@ -1,0 +1,136 @@
+{
+  "status": "authorized_before_first_paid_call",
+  "prepared_utc": "2026-11-02T03:40:23.854662+00:00",
+  "groups": [
+    "T",
+    "M",
+    "G",
+    "R"
+  ],
+  "planned_slots": 500,
+  "targets": [
+    "CHEMBL1741186",
+    "CHEMBL1821",
+    "CHEMBL1827",
+    "CHEMBL1908381",
+    "CHEMBL2176774",
+    "CHEMBL2185",
+    "CHEMBL2321615",
+    "CHEMBL2343",
+    "CHEMBL2525",
+    "CHEMBL2558",
+    "CHEMBL3401",
+    "CHEMBL3712868",
+    "CHEMBL3961",
+    "CHEMBL4375",
+    "CHEMBL4523509",
+    "CHEMBL5083",
+    "CHEMBL5668",
+    "CHEMBL5896",
+    "CHEMBL5939",
+    "CHEMBL211",
+    "CHEMBL2179",
+    "CHEMBL274",
+    "CHEMBL5469",
+    "CHEMBL5479",
+    "CHEMBL6055"
+  ],
+  "repeats": 5,
+  "slots_per_group": 125,
+  "conversation_calls": 2500,
+  "candidate_positions": 3000,
+  "pilot_slots": 8,
+  "system_prompt": "你是分子设计助手。使用输入证据提出设计假设，不得虚构已执行工具或实验结果。",
+  "api": {
+    "model": "deepseek-flash",
+    "documented_version": "DeepSeek-V4.1-Flash",
+    "base_url": "https://api.deepseek.com",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "temperature": null,
+    "top_p": null,
+    "max_tokens": 16384,
+    "timeout_seconds": 300,
+    "sdk_max_retries": 0,
+    "max_whole_attempts_per_slot": 2,
+    "workers": 12,
+    "cost_cap_cny": null,
+    "balance_reserve_cny": 2.0,
+    "conservative_peak_budget_rates_per_million": {
+      "input": 2.0,
+      "output": 8.0
+    },
+    "cny_rates_per_million": {
+      "off_peak": {
+        "cache_hit": 0.02,
+        "cache_miss": 1.0,
+        "output": 4.0
+      },
+      "peak": {
+        "cache_hit": 0.04,
+        "cache_miss": 2.0,
+        "output": 8.0
+      }
+    },
+    "pricing_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "docs_source": "https://api-docs.deepseek.com/guides/thinking_mode/",
+    "unknown_usage_charged_at_reserved_upper_bound": true,
+    "workers_pilot": 4,
+    "workers_full": 24,
+    "documented_version_at_preparation": "DeepSeek-V4.1-Flash-1017",
+    "SDK_retries": 0
+  },
+  "original_protocol_sha256": "7bca4b9fe280e1b51856bbfb95a2e9a46a98d70357494270cc83998d229b8542",
+  "original_checkpoint_sha256": "b08cf0fa0c2625451711d42336f1c032adc6974933d905e4f526471183182253",
+  "scientific_scope": "Same-ring-condition contemporary replication with same-pool random reference control; do not pool with original October11 results.",
+  "target": "exact original parent-form RC_seed -1",
+  "seed_forms": "Unmodified original Study-B seed forms, including the original CHEMBL1821 counterion.",
+  "reference_pool": "Exact original RC pool with seed excluded; no extra fragment/QED/SA/Tanimoto filter, identical for M/G/R.",
+  "M_G": "Reuse exactly the original 75+75 ranked references and original checkpoint; no retraining.",
+  "R": "Uniform three distinct library entries from canonical-sorted common pool; seed42+task-derived fixed seed, same set for five repeats and both rounds.",
+  "generation": "Original five prompts, original system prompt; only R example strings differ from M. Independent contexts per position; two proposal rounds x3.",
+  "eligibility": "Unchanged original code: valid nonempty single-component, exact RC, no seed or supplied-example canonical copy.",
+  "selection": "Eligible union; last canonical occurrence; QED descending, SA_raw ascending, canonical ascending.",
+  "primary": {
+    "contrasts": [
+      "M-R",
+      "G-R"
+    ],
+    "endpoints": [
+      "S",
+      "U"
+    ],
+    "family": "Holm across4 primary tests",
+    "unit": "25 target paired means",
+    "bootstrap": 10000,
+    "sign_flips": 100000,
+    "seed": 42
+  },
+  "secondary": {
+    "contrasts": [
+      "R-T",
+      "G-M"
+    ],
+    "endpoints": [
+      "S",
+      "U"
+    ],
+    "family": "separate Holm across4 secondary tests"
+  },
+  "descriptive": [
+    "candidate quality",
+    "first/random-unique-eligible/maximum-QED selection",
+    "QED",
+    "SA",
+    "Tanimoto",
+    "MW",
+    "uniqueness",
+    "library/training exact overlap"
+  ],
+  "no_docking_in_initial_R_control": true,
+  "no_manuscript_edits": true,
+  "no_publication": true,
+  "pause_policy": "Before-API budget and live balance gates, durable successful responses, no quality retries; bounded technical retries only.",
+  "pilot_policy": "Eight predetermined positions; inspect response parsing, property computations, feedback, noncopy and selector before bulk; scientific failure does not trigger protocol tuning.",
+  "user_scope_confirmation": "2026-11-02: user agreed to500 contemporaneous positions and explicitly requested no API spending cap. Preserve live balance stop and durable resume."
+}

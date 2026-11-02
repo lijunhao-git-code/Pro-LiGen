@@ -1,0 +1,69 @@
+{
+  "frozen_utc": "2026-10-28T09:48:06.489763+00:00",
+  "scope": "Exploratory P1 audit of selection/evaluation coupling using fixed Study-B candidate pools",
+  "inputs": [
+    {
+      "source_release_relative": "data/SI_records/tasks25.json",
+      "copy": "inputs/tasks25.json",
+      "sha256": "b9d0375f38453f8717bc1217fe97e9b299d8bd67f03fa241101c1f1337b069e1"
+    },
+    {
+      "source_release_relative": "data/SI_records/B_planned375.json",
+      "copy": "inputs/B_planned375.json",
+      "sha256": "7fd4fe2af014d59cf15cd3c9ee18613edb749f9329f747be403d96e1ceca671f"
+    },
+    {
+      "source_release_relative": "data/SI_records/B_references150.json",
+      "copy": "inputs/B_references150.json",
+      "sha256": "0fe70cf4f2467111f589dc9f70900261515e9c0f6dcba259634a88c2715a15e5"
+    },
+    {
+      "source_release_relative": "reproduce/B_candidates_lossless2244.json",
+      "copy": "inputs/B_candidates_lossless2244.json",
+      "sha256": "1b405069b4272b12705ade967e996af8aa5c0f3abfcd6329c79e44a5349e1eeb"
+    },
+    {
+      "source_release_relative": "data/SI_records/B_fixed_candidate_replay1500.json",
+      "copy": "inputs/B_fixed_candidate_replay1500.json",
+      "sha256": "e3aa410eea6ed10553d8e858b85957aac6dac3b49ab8abc7ce8fda4e2c107723"
+    },
+    {
+      "source_workspace_relative": "outputs/JCIM_P0_4_5_离线补充_2026-10-28/results/molecule_structure_features.csv",
+      "copy": "inputs/P045_molecule_structure_features.csv",
+      "sha256": "df5770512c62b60db56b9c978113dbf966a72fa917c5d8066703481ffb6c5857",
+      "role": "Previously verified organic size and MCS descriptors; QED, SA, validity and parent Tanimoto independently recomputed this run"
+    }
+  ],
+  "targets": 25,
+  "planned_runs": 375,
+  "retained_proposal_positions": 2244,
+  "nominal_positions": 2250,
+  "missing_positions": "Six unretained positions in one bounded technical failure remain in planned denominators with zero validity/utility; not declared model proposals.",
+  "main_policies": [
+    "first_eligible",
+    "random_unique_expected",
+    "best_QED"
+  ],
+  "random_primary": "Analytical expectation of uniform sampling among distinct eligible canonical structures within each run; no Monte Carlo error and no seed selection.",
+  "random_sensitivity": [
+    "uniform over eligible proposal positions, allowing duplicate structures",
+    "one fixed per-slot PCG64 draw, base seed42 hashed with slot_id"
+  ],
+  "dedup": "Last eligible occurrence per canonical retained for QED/SA/canonical selection; first-eligible remains first chronological eligible proposal before dedup.",
+  "budget": "Chronological prefixes of 1..6 archived candidate positions; three from round1 then three from feedback-informed round2.",
+  "budget_limit": "Saved-candidate inspection sensitivity, not measured API/time savings or generation under independently reduced budgets; all three round1 proposals entered round2 feedback.",
+  "yield_definition": "Per-run accepted QED, zero for no delivery; random expected yield integrates the uniform selector exactly.",
+  "aggregation": "Policy metrics average five planned runs within each target, then 25 equally weighted targets. Conditional candidate QED averages valid/eligible proposal positions within target, then across 25 targets.",
+  "proposal_QED_yield": "Sum of QED over valid proposals / 30 nominal proposal positions per target; invalid and missing positions contribute zero.",
+  "new_tests": "Six exploratory contrasts: M-T,G-T,G-M under random expected final yield and under valid-proposal QED yield, Holm correction across all six.",
+  "selection_effects": "Best-minus-first and best-minus-random yield contrasts: descriptive paired bootstrap95CI, no significance test of mechanically nonnegative best-minus-mean.",
+  "statistics": "Same released seed42 bootstrap10000 and signflip100000; confidence intervals unadjusted; unit25 targets.",
+  "original_B_tests_unchanged": true,
+  "no_new_generation": true,
+  "no_new_training": true,
+  "no_new_docking": true,
+  "historical_feedback_fixed": true,
+  "random_exemplar_group_not_tested_here": true,
+  "chemical_descriptors": "Recompute valid SMILES, QED, standard SA, MW, heavy atoms, fragments, RingCount and original parent Morgan Tanimoto; validate eligibility excluding seed/references.",
+  "other_metrics": "Report SA, structural similarity and organic size changes for alternative selections; use previously computed MCS lower/upper flags without new searches."
+}

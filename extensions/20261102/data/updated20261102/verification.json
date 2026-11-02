@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "planned_runs": 1500,
+  "qualified_outputs": 1469,
+  "tasks_per_condition": 25,
+  "table_rows_verified": 12,
+  "paired_tests_verified": 24,
+  "figure5_task_points_verified": 75,
+  "figure5_intervals_verified": 9,
+  "statistic_unit": "paired target means; 5 runs per target",
+  "seed": 42,
+  "bootstrap_draws": 10000,
+  "sign_flips": 100000,
+  "holm_families": {
+    "ring_primary": 4,
+    "ring_secondary": 4,
+    "continuous_primary": 8,
+    "continuous_secondary": 8
+  },
+  "max_numeric_tolerance": 2e-11,
+  "new_API_calls": 0
+}

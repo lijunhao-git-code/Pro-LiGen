@@ -1,0 +1,49 @@
+{
+  "status": "locked_before_new_docking",
+  "prepared_utc": "2026-11-02T05:25:18.237988+00:00",
+  "task": "new contemporary ring T/M/G/R docking",
+  "source_generation": "/root/ProLiGen_ring_random_control_20261102",
+  "generation_unchanged": true,
+  "no_model_calls": true,
+  "no_training": true,
+  "no_manuscript_edits": true,
+  "docking": {
+    "protocol": {
+      "vina_version": "1.2.7",
+      "exhaustiveness": 16,
+      "n_poses": 10,
+      "seed": 42,
+      "cpu_per_job": 1,
+      "workers": 8,
+      "timeout_seconds": 600,
+      "ligand": "Use the same frozen standardized single-component forms and current RDKit/MMFF/Meeko preparation for seeds and all groups."
+    },
+    "primary_targets": [
+      "CHEMBL1741186",
+      "CHEMBL1821",
+      "CHEMBL2185",
+      "CHEMBL3712868",
+      "CHEMBL3961",
+      "CHEMBL4375",
+      "CHEMBL5083",
+      "CHEMBL5668",
+      "CHEMBL211",
+      "CHEMBL274",
+      "CHEMBL5469"
+    ]
+  },
+  "scoring": "First ranked Vina pose; output-minus-same-target-seed delta.",
+  "chemical_forms": "Unique carbon-containing component; only atomic counterions may be removed. Preserve input formal charge, stereochemistry and isotopes; no neutralization/protonation/tautomer search.",
+  "eligibility": "All planned positions retained; score every delivered output on the fixed11 targets, no QED/Vina filter.",
+  "statistics": "Secondary descriptive target-macro means and unadjusted95% target bootstrap intervals; no new superiority tests. Generation S/U tests unchanged.",
+  "cache": "Only exact task identity, normalized canonical, receptor hash, grid, full protocol hash, identical engine code and checked prepared chemistry/score artifacts.",
+  "pilot": "One fresh seed reproduction plus first uncached job per T/M/G/R and one direct baseline, fixed before scores; seed reproduction tolerance0.01 kcal/mol.",
+  "failures": "Keep preparation failures/timeouts with missing scores, no better-score retries; do not impute Vina zero.",
+  "runtime": {
+    "rdkit": "2026.3.4",
+    "numpy": "2.5.1",
+    "pandas": "3.0.5",
+    "vina": "1.2.7",
+    "meeko": "0.7.1"
+  }
+}

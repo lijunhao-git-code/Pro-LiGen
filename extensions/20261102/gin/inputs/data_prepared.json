@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "created_utc": "2026-10-28T11:04:56.000323+00:00",
+  "library": 24693,
+  "triplets": {
+    "logp": {
+      "train": 17334,
+      "val": 3650
+    },
+    "tpsa": {
+      "train": 16187,
+      "val": 3426
+    }
+  },
+  "task_seeds_excluded_from_finetuning": 0,
+  "seed_form_changed": [
+    "CHEMBL1821"
+  ],
+  "rdkit": "2026.03.4",
+  "initializer_sha256": "ad65679dc6b9a9b63fe2f7efd97fb1fd115b2b92c14303d6c492807e725266fe",
+  "model_source_sha256": "1c01b995122431d67d2fb2952f796f764c60ecdcb829e97a2e9be95f58150edc",
+  "source_hashes": {
+    "library_original.csv": "314b79dee49b08e56e269e057ccd5cbab95326e91764d5b272af5509ef60def4",
+    "prompts_B.jsonl": "6073555ebef5b420185d61e56c6b538b529404cbdd1d94b8ed3f55f368dec0cf",
+    "protocol_v2.json": "ee34ad534e07ad85f54c9146b200116b33f773f6dd102c75a0026896fbfcc819",
+    "receptor_review25.csv": "b4412d490e357068efe0d559e679e6fddd235059eba67eec83f16038137b704f",
+    "tasks25.json": "b9d0375f38453f8717bc1217fe97e9b299d8bd67f03fa241101c1f1337b069e1"
+  },
+  "source_files_unchanged": true,
+  "new_API_calls": 0,
+  "elapsed_seconds": 158.495
+}

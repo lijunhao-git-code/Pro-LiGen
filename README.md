@@ -1,66 +1,43 @@
-# Pro-LiGen: research data and analysis code
+# Pro-LiGen: data, models and reproducible analysis
 
-This repository provides the retained molecular records and executable analysis supporting the Pro-LiGen study of conditional molecular generation with exemplar retrieval and programmatic verification. The evaluated edit is exactly one fewer RDKit graph ring than the seed, with single-component and noncopy requirements.
+This repository supports property-constrained molecular editing with exemplar retrieval, program-computed verification, candidate retention and final QED selection. Version **v0.3.0** adds the three-condition comparisons in the current manuscript: ring count, LogP and topological polar surface area (TPSA). The original v0.2.0 records and scientific assets remain intact.
 
-The release contains all final-position records used for Studies A, B and C, the retained candidate records needed to replay final selection, the reference molecules, recalibrated docking scores and receptor checks, quantitative plotting inputs, and analysis/plotting code. It also includes the deployed GIN checkpoint, complete inference source, saved library embeddings, the 26,108-entry retrieval library, and retained training triplets, curve and log. No API access or server login is needed for the numerical analysis.
+Start with [the current result-to-file map](docs/CURRENT_RESULTS_TO_FILES.md) or the [Chinese running guide](docs/README_中文.md). The [initial-release guide](docs/README_v020.md) and its original commands remain available.
 
-Start with the [file and source map](docs/SOURCE_MAP.md), or the [Chinese reading and running guide](docs/README_中文.md). Original server files remain unchanged; the published copies and projections are indexed with their source hashes.
+## Reproduce current-paper results
 
-## Reproduce the reported numerical results
-
-Use Python 3.12 in a virtual environment. From this repository root:
+Use Python 3.12 with the numerical dependencies, from any working directory:
 
 ```sh
-python -m pip install -r reproduce/requirements-analysis.txt
-python reproduce/offline_analysis.py --out reanalysis_run_01
+python -m pip install -r reproduce/requirements-current.txt
+python reproduce/reproduce_current_paper.py --out my_current_results
+python reproduce/verify_extended_selection.py --out my_selection_check
 ```
 
-The command recomputes summaries from row-level observations and checks them against `reproduce/expected_frozen_results.json`. It writes `recomputed_results.json` and `verification.json` into a NEW directory. It does not overwrite records, call a model, train an encoder or run docking. Target means are the statistical units; the original Holm test families are preserved.
+The first command verifies initial A/B/C records and the extended comparisons. The second verifies all 1,500 final choices exactly from lossless candidate exports. Output directories must be new; frozen inputs are not overwritten. Neither command accesses an API, trains a model or runs docking. Optional `--figures` recreates the quantitative figures with the dependencies in `reproduce/requirements-optional.txt`.
 
-Optional chemistry checks and quantitative figure rendering:
-
-```sh
-python -m pip install -r reproduce/requirements-optional.txt
-python reproduce/offline_analysis.py --out reanalysis_run_chemistry --chemistry
-python reproduce/render_figures.py --out regenerated_figures_01
-```
-
-See [the result-to-file index](docs/RESULTS_TO_FILES.md) for every main table and result figure, [the data dictionary](docs/DATA_DICTIONARY.md), and [the docking protocol](docs/DOCKING_PROTOCOL.md). JSON records are authoritative; `data/csv` contains convenient CSV mirrors. Existing figure assets are the paper's actual saved quantitative figures.
-
-## Reproduce Morgan and frozen-GIN reference selection
-
-Version **v0.2.0** adds the complete frozen-GIN graph builder and encoder, restored from the retained experiment sources, and an independent retrieval entry point. It reads only released files and runs on CPU. No server login, language-model API key, training or docking is required.
+## Reselect references and validate training inputs
 
 ```sh
 python -m pip install -r reproduce/requirements-gin.txt
-python reproduce/retrieve_references.py --out gin_run_cached
-python reproduce/retrieve_references.py --recompute-library --out gin_run_full
+python reproduce/retrieve_property_references.py --out my_property_retrieval
+python reproduce/retrieve_property_references.py --recompute-library --out my_fresh_property_retrieval
+python reproduce/train_property_adaptations.py --out my_training_input_check
 ```
 
-The first command recomputes the seed embeddings using the released checkpoint and uses the saved library embeddings. The second also rebuilds and encodes all **26,108** library molecules from SMILES. Both compare the ordered top-three references for all **25** tasks and both backends against the original **150** reference records. Outputs include selected SMILES, similarities, per-task checks, software versions and input hashes. The exact validated Python 3.10 environment is listed in `reproduce/requirements-gin-validated.txt`; the broader requirements file also supports newer Python environments.
+These commands use the actual LogP/TPSA checkpoints, the 24,693-molecule single-component library, saved embeddings and reference inputs. The default retrieval run re-encodes query molecules; the second also re-encodes the entire library. The validation command checks all training/validation triplets and a forward loss without changing model weights. Optional `--run-training` runs the archived trainer in a new output directory; it is not part of default verification. The original ring encoder and its separate retrieval entry point remain unchanged.
 
-See [the GIN reproduction guide](docs/GIN_REPRODUCTION.md) for the single-task check, output interpretation and source provenance. Core numerical analysis and figure rendering remain available through the earlier commands; their original Python 3.12 dependency pins are separate from the validated GIN environment.
+See [GIN details](docs/GIN_EXTENDED_REPRODUCTION.md) for exact identities, float32 near-tie reporting and training inputs. Scientific-field exports include all retained proposed SMILES and computed values. Whole literature-containing dialogues, credentials, manuscript files and editable schematic artwork are not distributed.
 
-## Inspect and validate the retained training material
+## Cohorts and files
 
-```sh
-python reproduce/verify_training_inputs.py --out gin_run_training_inputs
-```
+| Cohort | Purpose | Planned runs |
+|---|---|---:|
+| Study A | Four condition-guidance strategies |500|
+| Initial ring B | T/M/G; retained as initial validation |375|
+| Study C | Two continuations of 75 shared initial-ring histories |150|
+| Extended Study B | T/M/G/R under ring, LogP and TPSA conditions |1,500|
 
-This checks all **15,461** retained training triplets and their ring-count labels, the **26,402** original SMILES rows and their agreement with the deduplicated library, the **50** recorded training epochs, and function identity against the original deployed source. It does not train a model. The original trainer, triplet builder and their inputs are indexed in [SOURCE_MAP.md](docs/SOURCE_MAP.md).
+Each extended run has two rounds of three proposal positions and at most one final molecule;1,469 runs deliver an eligible output. Planned runs and delivered records are not counts of unique molecular structures. The current docking subset uses the same 11 calibrated targets, with 660 generated-output positions and 99 deterministic library-return observations.
 
-## Included studies
-
-| Study | Purpose | Released final records |
-| --- | --- | --- |
-| A | Compare four guidance strategies across 25 target-seed tasks | 500 retained outputs |
-| B | Compare no examples (T), Morgan examples (M) and frozen-GIN examples (G) | 375 planned positions, including 2 nondeliveries |
-| C | Compare additional computed feedback with a matched continuation | 150 branches from 75 shared histories |
-
-Each B run can propose up to three molecules in each of two rounds, but returns at most one final molecule. The 375 planned positions are not the number of all proposed molecules. C retains the same starting candidates in both branches. Docking records cover 900 observations, including seeds, exclusions and missing outputs; the primary calibrated nonmetal comparison uses 11 targets.
-
-## Release scope
-
-Runnable entry points cover numerical result reproduction, quantitative figure rendering, and Morgan/frozen-GIN reference selection, including library re-encoding. The original encoder snapshot is preserved under `models/`; the executable implementation is `proligen/gin.py`, and the retained training implementation is `archive/train_gin.py`.
-
-Complete literature-containing API dialogues, credentials, account records, manuscript files and editable schematic artwork are outside this release. Historical generation/docking scripts remain archived implementation records with their original path assumptions. The exact contents and execution scope are described in [RELEASE_SCOPE.md](docs/RELEASE_SCOPE.md). See [TERMS.md](TERMS.md) for reuse terms and third-party attribution.
+`extensions/20261102/data/` holds numerical exports; `gin/` contains weights, embeddings, triplets, training logs and original implementation; `lossless/` contains completed scientific records; `scoring/` contains actual receptors, preparation identities, poses and scoring records. Original computational scripts and additional initial-cohort sensitivity analyses are archived separately. [Execution scope](docs/CURRENT_EXECUTION_SCOPE.md) describes each entry point. [TERMS.md](TERMS.md) records access and attribution; no new license is assigned to third-party material.

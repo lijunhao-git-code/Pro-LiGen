@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "independently_recomputed_candidate_eligibility": {
+    "G": 719,
+    "M": 723,
+    "T": 718
+  },
+  "direct_RDKit_cosine_verified_top6_for_all_25_tasks": true,
+  "target_aggregate_recomputed": true,
+  "structure_trace_aggregates_recomputed": true,
+  "figure1_all_coordinates_verified": true,
+  "figure2_ECDF_coordinates_verified": true,
+  "figure3_all_coordinates_verified": true,
+  "MCS_bounds": [
+    {
+      "method": "G",
+      "n_delivered": 125,
+      "n_MCS_complete": 125,
+      "lower_MCS_mean": 0.6965858678433723,
+      "upper_MCS_mean": 0.6965858678433723
+    },
+    {
+      "method": "M",
+      "n_delivered": 125,
+      "n_MCS_complete": 125,
+      "lower_MCS_mean": 0.6879822627159153,
+      "upper_MCS_mean": 0.6879822627159153
+    },
+    {
+      "method": "R_NN1",
+      "n_delivered": 25,
+      "n_MCS_complete": 25,
+      "lower_MCS_mean": 0.4951655341255644,
+      "upper_MCS_mean": 0.4951655341255644
+    },
+    {
+      "method": "R_QED3",
+      "n_delivered": 25,
+      "n_MCS_complete": 25,
+      "lower_MCS_mean": 0.4913399855378372,
+      "upper_MCS_mean": 0.4913399855378372
+    },
+    {
+      "method": "R_QED6",
+      "n_delivered": 25,
+      "n_MCS_complete": 25,
+      "lower_MCS_mean": 0.4645716491447958,
+      "upper_MCS_mean": 0.4645716491447958
+    },
+    {
+      "method": "T",
+      "n_delivered": 123,
+      "n_MCS_complete": 122,
+      "lower_MCS_mean": 0.7209080959893209,
+      "upper_MCS_mean": 0.7222414293226543
+    }
+  ],
+  "displayed_coordinate_rows": 1683,
+  "original_inputs_hashes_verified": true
+}
