@@ -1,5 +1,7 @@
 # Pro-LiGen: data, models and reproducible analysis
 
+Version **v0.4.2** adds Zenodo archival and citation metadata. Scientific code, models, records and figure assets are unchanged from **v0.4.1**.
+
 Version **v0.4.1** adds the [current submission supplement](extensions/20261110/README.md): the 750-position ChatDrug comparison, source server scripts, API reproducibility records, curation/chemical-form audits, saved docking cases and sensitivity analysis. Original project software is now licensed under MIT.
 
 ```sh

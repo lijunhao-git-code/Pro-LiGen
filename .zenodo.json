@@ -1,0 +1,52 @@
+{
+  "title": "Pro-LiGen: Code, Models and Data",
+  "version": "v0.4.2",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "mit",
+  "publication_date": "2026-11-10",
+  "language": "eng",
+  "creators": [
+    {
+      "name": "Nan, Xiaofei",
+      "affiliation": "School of Computer Science and Artificial Intelligence, Zhengzhou University, Zhengzhou 450001, China"
+    },
+    {
+      "name": "Li, Junhao",
+      "affiliation": "School of Computer Science and Artificial Intelligence, Zhengzhou University, Zhengzhou 450001, China"
+    },
+    {
+      "name": "Chen, Aoxiang",
+      "affiliation": "School of Computer Science and Artificial Intelligence, Zhengzhou University, Zhengzhou 450001, China"
+    },
+    {
+      "name": "Wu, Minghao",
+      "affiliation": "School of Computer Science and Artificial Intelligence, Zhengzhou University, Zhengzhou 450001, China"
+    },
+    {
+      "name": "Hou, Jiao",
+      "affiliation": "School of Ecology and Environment, Zhengzhou University, Zhengzhou 450001, China"
+    },
+    {
+      "name": "Guo, Chunyi",
+      "affiliation": "School of Computer Science and Artificial Intelligence, Zhengzhou University, Zhengzhou 450001, China"
+    }
+  ],
+  "description": "<p>Research software and associated frozen scientific records for Pro-LiGen: A Constraint-Preserving Framework for Exemplar-Guided Molecular Generation. The archive includes Studies A-C, the three-property T/M/G/R comparison (1,500 planned positions), the independent ChatDrug workflow comparison (750 formal positions and 4,390 candidate positions), frozen GIN models and training inputs, molecular reference libraries, scoring and saved docking-pose artifacts, API templates/resource records, and offline analysis and verification code.</p><p>This archival release preserves the scientific files from v0.4.1 and adds citation and archival metadata. No generation, training or docking was performed for this release. Original project software and its documentation are distributed under MIT. Third-party software, molecular source data, model inputs and receptor structures retain their original terms; the MIT metadata describes the original project software and does not relicense third-party material. See LICENSE and TERMS.md.</p>",
+  "notes": "The authors report no external funding. Creator order and affiliations follow the current manuscript. No author-contact table, private account material or full literature-containing dialogue is included. Version v0.4.2 is an archival-metadata update to v0.4.1.",
+  "keywords": [
+    "molecular generation",
+    "molecular editing",
+    "large language models",
+    "exemplar retrieval",
+    "graph isomorphism network",
+    "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/lijunhao-git-code/Pro-LiGen/releases/tag/v0.4.2",
+      "relation": "isIdenticalTo",
+      "scheme": "url"
+    }
+  ]
+}
