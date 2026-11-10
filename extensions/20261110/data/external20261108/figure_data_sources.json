@@ -1,0 +1,17 @@
+{
+  "figures/native_comparison.png": {
+    "inputs": {
+      "analysis/native_summary6.csv": "c40ad16bcfbb99f20107542d90c23166136620352e29fbc84dc215f8821e5648",
+      "analysis/paired_tests6.csv": "de976b8ad1dfa410309e5177719de2a7ccfd92e670eaaff225c5d0ce67731b8f"
+    },
+    "script": "code/analyze.py",
+    "script_sha256": "37bd1d3efcb32570b532fe03aaab136a889e6dce2c9b8d55c78ee22be707585f"
+  },
+  "figures/common_selector_frontier.png": {
+    "inputs": {
+      "analysis/candidate_frontier_summary.csv": "c9fd11eef32ee9008b78ad084479803f8f80f345bc862ec686b7908f7657acc4"
+    },
+    "script": "code/analyze.py",
+    "script_sha256": "37bd1d3efcb32570b532fe03aaab136a889e6dce2c9b8d55c78ee22be707585f"
+  }
+}

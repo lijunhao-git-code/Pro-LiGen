@@ -1,0 +1,53 @@
+{
+  "ring": {
+    "request_settings": [
+      {
+        "settings": {
+          "max_tokens": 16384,
+          "model": "deepseek-flash",
+          "reasoning_effort": "low",
+          "stream": false,
+          "thinking": {
+            "type": "enabled"
+          }
+        },
+        "calls": 2504
+      }
+    ],
+    "missing_request_files": 0
+  },
+  "properties": {
+    "request_settings": [
+      {
+        "settings": {
+          "max_tokens": 16384,
+          "model": "deepseek-flash",
+          "reasoning_effort": "low",
+          "stream": false,
+          "thinking": {
+            "type": "enabled"
+          }
+        },
+        "calls": 5000
+      }
+    ],
+    "missing_request_files": 0,
+    "concurrency": {
+      "workers": 32,
+      "events": [
+        {
+          "time_utc": "2026-10-28T11:50:28.759511+00:00",
+          "new_completed": 16,
+          "workers": 16
+        },
+        {
+          "time_utc": "2026-10-28T11:53:28.749476+00:00",
+          "new_completed": 48,
+          "workers": 32
+        }
+      ],
+      "technical_errors": 0
+    },
+    "concurrency_source_sha256": "a3e225e947bae8f8cc087bd0c4f172629532b9e71c8ccb9c048970da5134096c"
+  }
+}

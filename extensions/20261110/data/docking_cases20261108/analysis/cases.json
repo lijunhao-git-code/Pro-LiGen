@@ -1,0 +1,128 @@
+[
+  {
+    "condition": "ring",
+    "target": "CHEMBL274",
+    "pdb": "4MBS",
+    "roles": {
+      "seed": {
+        "job_id": "e7fdaacac7ef10eeef298d47",
+        "canonical": "CCO/N=C(/c1ccc(Br)cc1)C1CCN(C2(C)CCN(C(=O)c3c(C)cc(-c4ccncc4)cc3C)CC2)CC1",
+        "vina": -10.697,
+        "QED": 0.2067304201718645,
+        "RC": 5,
+        "TPSA": 58.03,
+        "MW": 617.6320000000001,
+        "coordinates_match_first_pose": true,
+        "heavy_atoms": 41,
+        "input_pose_count": 10,
+        "min_protein_ligand_heavy_distance": 3.0027523212809157,
+        "interaction_counts": {
+          "hydrophobic": 9,
+          "hbond": 1,
+          "waterbridge": 0,
+          "saltbridge": 0,
+          "pistacking": 1,
+          "pication": 0,
+          "halogen": 0,
+          "metal": 0
+        },
+        "top_pose_sdf_sha256": "d5ede83b6d627419bb2fc9a48727cbe36f8ad89caf4fba1a78469e8ecc0bdf73",
+        "complex_sha256": "496a6791be67a530134ecb853ac1f6f4531fe3667c7ecd02b973b2d87f0e1363",
+        "frozen_hydrogen_complex_sha256": "d7a304a7ea2f1564eeb594df87b625e5f86cfec68af1ec0d517c0295608ae10e"
+      },
+      "output": {
+        "job_id": "4a933c05c37c2d21a137598e",
+        "canonical": "CCO/N=C(/c1ccc(F)cc1)C1CCN(CCNC(=O)c2c(C)cc(-c3ccncc3)cc2C)CC1",
+        "vina": -10.073,
+        "QED": 0.31486988158980084,
+        "RC": 4,
+        "TPSA": 66.82,
+        "MW": 502.63400000000024,
+        "coordinates_match_first_pose": true,
+        "heavy_atoms": 37,
+        "input_pose_count": 10,
+        "min_protein_ligand_heavy_distance": 3.0636465805804742,
+        "interaction_counts": {
+          "hydrophobic": 11,
+          "hbond": 1,
+          "waterbridge": 0,
+          "saltbridge": 0,
+          "pistacking": 1,
+          "pication": 0,
+          "halogen": 0,
+          "metal": 0
+        },
+        "top_pose_sdf_sha256": "f8b6274043f28f4a20ac4f3686161256fbf60571a489db38614e6d6e9ddeadac",
+        "complex_sha256": "80c08c1c6beae03e231f1c759c494f521d57f2050f5ea30bf6ca81f94cfe9b95",
+        "frozen_hydrogen_complex_sha256": "67c075d0ab02e7432006fe9c8b1c2ab6e9adfead351d1cf6b890e07ec2cb1e50"
+      }
+    },
+    "selection_target_median": 0.702399999999999,
+    "selected_target_mean": 0.702399999999999,
+    "delta_QED": 0.10813946141793634,
+    "delta_vina": 0.6239999999999988
+  },
+  {
+    "condition": "tpsa",
+    "target": "CHEMBL211",
+    "pdb": "5ZKC",
+    "roles": {
+      "seed": {
+        "job_id": "56d6ad7b66ae85191271bb44",
+        "canonical": "CN1[C@@H]2CC[C@H]1C[C@@H](OC(=O)C(CO)c1ccccc1)C2",
+        "vina": -8.944,
+        "QED": 0.8605899449393155,
+        "RC": 3,
+        "TPSA": 49.769999999999996,
+        "MW": 289.37500000000006,
+        "coordinates_match_first_pose": true,
+        "heavy_atoms": 21,
+        "input_pose_count": 10,
+        "min_protein_ligand_heavy_distance": 2.873450209452598,
+        "interaction_counts": {
+          "hydrophobic": 7,
+          "hbond": 1,
+          "waterbridge": 0,
+          "saltbridge": 1,
+          "pistacking": 0,
+          "pication": 0,
+          "halogen": 0,
+          "metal": 0
+        },
+        "top_pose_sdf_sha256": "ffad5416d898deed2f0f781320cf63f6366660954b204818c4663d958b0ff6ce",
+        "complex_sha256": "7f254bd0fe848541ee5386ce8b1b60a19a297024504d1de08392744c6de3aab9",
+        "frozen_hydrogen_complex_sha256": "d92574dacb58ea045238c5d663f4fb7a89af7ee79fdb606a4dfd52c4fe28d6bd"
+      },
+      "output": {
+        "job_id": "fbc79f0248cc319b0bf0141a",
+        "canonical": "CC(C(=O)O[C@H]1C[C@H]2CC[C@@H](C1)N2C)c1ccc(F)cc1",
+        "vina": -9.024,
+        "QED": 0.8015073921960975,
+        "RC": 3,
+        "TPSA": 29.54,
+        "MW": 291.366,
+        "coordinates_match_first_pose": true,
+        "heavy_atoms": 21,
+        "input_pose_count": 10,
+        "min_protein_ligand_heavy_distance": 2.860039883137148,
+        "interaction_counts": {
+          "hydrophobic": 8,
+          "hbond": 2,
+          "waterbridge": 0,
+          "saltbridge": 1,
+          "pistacking": 0,
+          "pication": 0,
+          "halogen": 0,
+          "metal": 0
+        },
+        "top_pose_sdf_sha256": "81902515c9835765747822a61bcbeade7e62d8ccf50e5db768a5b0b258a2df40",
+        "complex_sha256": "9ad1b65e41bd0fdcaf7fbc723ce0a8924bf2e6323779d928ad38fd11a6ee08fd",
+        "frozen_hydrogen_complex_sha256": "59404b152977699233909f790c19bceb7691ab5cc8981637124f5e9c0ac98032"
+      }
+    },
+    "selection_target_median": -0.09159999999999888,
+    "selected_target_mean": -0.09159999999999888,
+    "delta_QED": -0.05908255274321805,
+    "delta_vina": -0.0799999999999983
+  }
+]

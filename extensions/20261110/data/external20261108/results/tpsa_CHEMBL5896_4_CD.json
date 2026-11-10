@@ -1,0 +1,82 @@
+{
+  "slot_id": "tpsa_CHEMBL5896_4_CD",
+  "property": "tpsa",
+  "chemblid": "CHEMBL5896",
+  "position": 4,
+  "group": "CD",
+  "order": 269,
+  "pilot": false,
+  "started_utc": "2026-11-08T11:34:01.565586+00:00",
+  "finished_utc": "2026-11-08T11:34:27.449283+00:00",
+  "technical_complete": true,
+  "status": "native_invalid",
+  "ok": false,
+  "canonical": null,
+  "selected_candidate": null,
+  "candidates": [
+    {
+      "turn": 4,
+      "candidate_position": 1,
+      "smiles": "CN(C)CCc1cccc(C2CCN(CCc3cnn(-c4nccc5c[nH]cnc45)c3)CC2)c1",
+      "valid": false,
+      "property_hit": false,
+      "eligible": false,
+      "reason": "invalid_smiles",
+      "native_evaluated": true
+    },
+    {
+      "turn": 4,
+      "candidate_position": 2,
+      "smiles": "CN(C)CCc1cc(F)cc(C2CCN(CCc3cnn(-c4nccc5c[nH]cnc45)c3)CC2)c1",
+      "valid": false,
+      "property_hit": false,
+      "eligible": false,
+      "reason": "invalid_smiles",
+      "native_evaluated": false
+    },
+    {
+      "turn": 4,
+      "candidate_position": 3,
+      "smiles": "CN(C)CCc1cccc(C2CCN(CCc3cnn(-c4nccc5c[nH]cnc45)c3)CC2)c1C",
+      "valid": false,
+      "property_hit": false,
+      "eligible": false,
+      "reason": "invalid_smiles",
+      "native_evaluated": false
+    },
+    {
+      "turn": 4,
+      "candidate_position": 4,
+      "smiles": "CN(C)CCCc1cccc(C2CCN(CCc3cnn(-c4nccc5c[nH]cnc45)c3)CC2)c1",
+      "valid": false,
+      "property_hit": false,
+      "eligible": false,
+      "reason": "invalid_smiles",
+      "native_evaluated": false
+    },
+    {
+      "turn": 4,
+      "candidate_position": 5,
+      "smiles": "CN(C)CCc1cccc(C2CCN(CCc3cnn(-c4nccc5c[nH]cnc45)c3)C2)c1",
+      "valid": false,
+      "property_hit": false,
+      "eligible": false,
+      "reason": "invalid_smiles",
+      "native_evaluated": false
+    }
+  ],
+  "provided_references": [],
+  "trace": [
+    {
+      "turn": 4,
+      "extracted_count": 5,
+      "native_candidate_position": 1,
+      "provided_references": [],
+      "native_reason": "invalid_smiles",
+      "C": 2
+    }
+  ],
+  "successful_attempt": 1,
+  "earlier_attempts": [],
+  "common_context_sha256": "d7e6fc1430fb6b8d4d2b14c3a8b213a18639bc84d029d3400f1357b582511cf3"
+}

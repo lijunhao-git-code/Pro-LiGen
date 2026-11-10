@@ -1,0 +1,27 @@
+{
+  "primary_cohort_total_cny": 97.79481744,
+  "initial_ring_cny": 30.19777376,
+  "feedback_C_cny": 2.98247902,
+  "logged_cohorts_combined_cny": 130.97507022000002,
+  "feedback_C_median_elapsed_seconds": 25.9570025,
+  "feedback_C_p90_elapsed_seconds": 46.5300298,
+  "pricing": {
+    "currency": "CNY",
+    "per_million_tokens": {
+      "peak_cache_hit": 0.04,
+      "peak_cache_miss": 2.0,
+      "peak_output": 8.0,
+      "offpeak_cache_hit": 0.02,
+      "offpeak_cache_miss": 1.0,
+      "offpeak_output": 4.0
+    },
+    "peak_window": "UTC+8 weekdays 09:00-12:00 and 14:00-18:00; original conservative holiday treatment",
+    "source": "Recorded study protocols and usage-estimate implementation; not current-price rebilling"
+  },
+  "scope": "Token-based estimates for logged cohorts, including technical retries. Not account billing or project-wide expenditure. Excludes unlogged exploratory runs, Study-A usage and server rental.",
+  "time_definition": "API-active time is the sum of recorded request durations per planned run. Batch wall time is earliest request start to latest finish, with concurrent execution. Includes known technical attempts; excludes docking and GIN training.",
+  "simultaneous_cohort_wall_hours": {
+    "ring": 0.5148526508333333,
+    "logp_tpsa": 1.1542687830555554
+  }
+}

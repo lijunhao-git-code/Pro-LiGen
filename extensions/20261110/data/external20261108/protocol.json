@@ -1,0 +1,104 @@
+{
+  "created_utc": "2026-11-08T11:14:31.780189+00:00",
+  "planned_final_positions": 750,
+  "conditions": {
+    "ring": {
+      "label": "RDKit RingCount",
+      "delta": -1,
+      "tolerance": 0
+    },
+    "logp": {
+      "label": "Crippen LogP",
+      "delta": -1.0,
+      "tolerance": 0.2
+    },
+    "tpsa": {
+      "label": "TPSA",
+      "delta": -20.0,
+      "tolerance": 5.0,
+      "units": "Angstrom squared"
+    }
+  },
+  "targets": [
+    "CHEMBL1741186",
+    "CHEMBL1821",
+    "CHEMBL1827",
+    "CHEMBL1908381",
+    "CHEMBL2176774",
+    "CHEMBL2185",
+    "CHEMBL2321615",
+    "CHEMBL2343",
+    "CHEMBL2525",
+    "CHEMBL2558",
+    "CHEMBL3401",
+    "CHEMBL3712868",
+    "CHEMBL3961",
+    "CHEMBL4375",
+    "CHEMBL4523509",
+    "CHEMBL5083",
+    "CHEMBL5668",
+    "CHEMBL5896",
+    "CHEMBL5939",
+    "CHEMBL211",
+    "CHEMBL2179",
+    "CHEMBL274",
+    "CHEMBL5469",
+    "CHEMBL5479",
+    "CHEMBL6055"
+  ],
+  "repeats": 5,
+  "methods": [
+    "G",
+    "CD"
+  ],
+  "input_mode": "Same frozen three-exchange target/literature/seed context for both methods; all new proposal calls contemporaneous; no old generated candidates reused.",
+  "context_repeats": "One archived first-repeat G background per task-condition, fixed across five fresh repeats and both methods.",
+  "G": "Original G proposal prompts 4/5, two x three candidates; computed feedback; eligible union best QED with SA/canonical ties.",
+  "CD": "Original first-parsed-candidate rule; initial request five SMILES; C=2 means initial plus at most two revisions; first eligible stops; invalid/unparsed stops and counts as failure.",
+  "CD_retrieval": "Same exact-condition pool; sparse count Morgan radius2 Tanimoto nearest to failed candidate; tie uses original library row order; one reference per revision.",
+  "CD_adaptations": [
+    "Common frozen task context/model service/library/condition evaluator",
+    "Ring task and bounded continuous-property targets",
+    "Common nonempty single-component carbon/noncopy checks",
+    "Durable logging and bounded technical retries"
+  ],
+  "output_policy": "Native outputs primary; common candidate replay secondary; no QED selector inserted into ChatDrug.",
+  "candidate_budget": "G requests six raw candidates; CD original initial five plus up to two one-candidate revisions, at most seven requested; actual extracted and evaluated counts retained.",
+  "primary": {
+    "endpoints": [
+      "S",
+      "U"
+    ],
+    "contrast": "G-CD",
+    "unit": "25 paired task means",
+    "family": "Holm across 3 conditions x2 endpoints =6 tests",
+    "sign_flip_draws": 100000,
+    "bootstrap_draws": 10000,
+    "random_seed": 42
+  },
+  "secondary": [
+    "conditional QED/SA",
+    "seed Morgan Tanimoto",
+    "candidate replay",
+    "actual calls and raw candidate count",
+    "validity and failure reasons"
+  ],
+  "pilot_positions": 12,
+  "pilot_excluded_from_formal": true,
+  "pilot_purpose": "Technical and input/parse/feedback/selector checks; no requirement that G outperform CD.",
+  "api": {
+    "model": "deepseek-flash",
+    "documented_version": "DeepSeek-V4.1-Flash-1017",
+    "max_tokens": 16384,
+    "reasoning_effort": "low",
+    "thinking": "enabled",
+    "temperature": "omitted",
+    "top_p": "omitted"
+  },
+  "no_new_training": true,
+  "no_docking": true,
+  "no_manuscript_edits": true,
+  "no_publication": true,
+  "authorization": "User selected 750 positions and requested execution on 2026-11-08; same previously authorized official DeepSeek service and scientific input types.",
+  "pause_policy": "Atomic request/response/slot records, SQLite WAL; live balance reserve2CNY; HTTP402 pauses; never repeat completed paid calls; unknown in-flight calls require reconciliation."
+}

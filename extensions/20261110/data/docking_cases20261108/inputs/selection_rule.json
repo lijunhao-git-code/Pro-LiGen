@@ -1,0 +1,13 @@
+{
+  "conditions": [
+    "ring",
+    "tpsa"
+  ],
+  "configuration": "G",
+  "target_rule": "Among the 11 calibrated tasks, closest task-mean delta Vina to the median across tasks; ties by ChEMBL ID.",
+  "output_rule": "Within that task, closest observed delta Vina to its task mean; ties by slot ID.",
+  "scope": "Two illustrative saved-pose cases, not evidence of binding affinity or of encoder superiority.",
+  "no_selection_on_contacts_or_QED": true,
+  "new_generation_calls": 0,
+  "new_docking_calls": 0
+}

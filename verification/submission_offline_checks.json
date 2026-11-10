@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "script": "reproduce/external_comparison.py",
+      "exit_code": 0
+    },
+    {
+      "script": "reproduce/verify_docking_cases.py",
+      "exit_code": 0
+    },
+    {
+      "script": "reproduce/power_sensitivity.py",
+      "exit_code": 0
+    },
+    {
+      "script": "data/reproducibility20261107/reproduce_api_resources.py",
+      "exit_code": 0
+    }
+  ],
+  "formal_external_positions": 750,
+  "external_candidate_positions": 4390,
+  "API_calls": 0,
+  "training_jobs": 0,
+  "docking_jobs": 0
+}

@@ -1,0 +1,112 @@
+{
+  "records": [
+    {
+      "source": "/root/ProLiGen_ChatDrug_comparison_750_20261108/code/analyze.py",
+      "target": "chatdrug_code/analyze.py",
+      "bytes": 12593,
+      "sha256": "37bd1d3efcb32570b532fe03aaab136a889e6dce2c9b8d55c78ee22be707585f"
+    },
+    {
+      "source": "/root/ProLiGen_ChatDrug_comparison_750_20261108/code/audit.py",
+      "target": "chatdrug_code/audit.py",
+      "bytes": 7829,
+      "sha256": "c5c04906ff3db9c35516816cb34af51d7870caece23ff989b913fdba21fb4217"
+    },
+    {
+      "source": "/root/ProLiGen_ChatDrug_comparison_750_20261108/code/common.py",
+      "target": "chatdrug_code/common.py",
+      "bytes": 5594,
+      "sha256": "90d1c8c5c59accc8d0fedb64fd9f2624962a7077e87761fcc08212d73a8dd38b"
+    },
+    {
+      "source": "/root/ProLiGen_ChatDrug_comparison_750_20261108/code/comparison.py",
+      "target": "chatdrug_code/comparison.py",
+      "bytes": 11631,
+      "sha256": "0e117307104b41a9f63af42dacfb1b8c486f12b944fe4248c580d84b95492da0"
+    },
+    {
+      "source": "/root/ProLiGen_ChatDrug_comparison_750_20261108/code/durable_api.py",
+      "target": "chatdrug_code/durable_api.py",
+      "bytes": 15733,
+      "sha256": "ba7bb6e8d57a6730006fd009a36cb8e2f707a5c524d88a48a1ba611c47c41d86"
+    },
+    {
+      "source": "/root/ProLiGen_ChatDrug_comparison_750_20261108/code/finish.py",
+      "target": "chatdrug_code/finish.py",
+      "bytes": 1198,
+      "sha256": "85696f40e247a23b26b78fdc4cdfa6f5f0196cea11a3416ad42c53ca92d7548f"
+    },
+    {
+      "source": "/root/ProLiGen_ChatDrug_comparison_750_20261108/code/package.py",
+      "target": "chatdrug_code/package.py",
+      "bytes": 2711,
+      "sha256": "75f05a9f54ef0efe823767f779403b8e55f6c7e1f49597278776b12f84d0eff6"
+    },
+    {
+      "source": "/root/ProLiGen_ChatDrug_comparison_750_20261108/code/prepare.py",
+      "target": "chatdrug_code/prepare.py",
+      "bytes": 8772,
+      "sha256": "8f157f74b06f3b68427cd4fea1afc623f9ebca9e0320df00af4d436d0856d51d"
+    },
+    {
+      "source": "/root/ProLiGen_ChatDrug_comparison_750_20261108/code/self_test.py",
+      "target": "chatdrug_code/self_test.py",
+      "bytes": 4064,
+      "sha256": "89d1c1ac7bd837f58c2a57bb4871263f85156a23c137f0534ee71c36efb6037c"
+    },
+    {
+      "source": "/root/ProLiGen_ChatDrug_comparison_750_20261108/code/service.py",
+      "target": "chatdrug_code/service.py",
+      "bytes": 2526,
+      "sha256": "7f47c2cc0f5217906e6760e3d08a5f89ed7df9e0acf79f77f70d4949c3817cd4"
+    },
+    {
+      "source": "/root/ProLiGen_ChatDrug_comparison_750_20261108/code/upstream_source_metadata.json",
+      "target": "chatdrug_code/upstream_source_metadata.json",
+      "bytes": 9914,
+      "sha256": "faaf8f693044e6f610894f3e387faf5a58a7ba8b18f3ae1b390d4e5d39256b6a"
+    },
+    {
+      "source": "/root/ProLiGen_ChatDrug_comparison_750_20261108/code/write_report.py",
+      "target": "chatdrug_code/write_report.py",
+      "bytes": 6935,
+      "sha256": "8c2125efa31d08c1f78f709eba421202a33070a37b2df512e381530926b7c0c0"
+    },
+    {
+      "source": "/root/ProLiGen_docking_cases_20261108/analyze.py",
+      "target": "docking_code/analyze.py",
+      "bytes": 9750,
+      "sha256": "cb7435bef9f7c2c44be1e10ef4151bb84b3e898c303dff1144321e5f396ee5b6"
+    },
+    {
+      "source": "/root/ProLiGen_docking_cases_20261108/plot.py",
+      "target": "docking_code/plot.py",
+      "bytes": 8550,
+      "sha256": "d9460e4ce81c25f26509b04c4be2a862679dc78c77f58f90b558670a0384e9f7"
+    }
+  ],
+  "formal_result_files": 750,
+  "result_schema": [
+    "slot_id",
+    "property",
+    "chemblid",
+    "position",
+    "group",
+    "order",
+    "pilot",
+    "started_utc",
+    "finished_utc",
+    "technical_complete",
+    "status",
+    "ok",
+    "canonical",
+    "selected_candidate",
+    "candidates",
+    "provided_references",
+    "trace",
+    "successful_attempt",
+    "earlier_attempts",
+    "common_context_sha256"
+  ],
+  "remote_python": "/root/miniconda3/envs/ljh/bin/python"
+}

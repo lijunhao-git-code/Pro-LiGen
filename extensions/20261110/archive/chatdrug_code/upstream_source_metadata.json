@@ -1,0 +1,243 @@
+{
+  "checked_utc": "2026-11-07T15:41:29.210788+00:00",
+  "scope": "Read-only public source and artifact inventory; no generation, training or docking",
+  "repositories": [
+    {
+      "name": "chatdrug",
+      "repository": "https://github.com/chao1224/ChatDrug",
+      "commit": "fb8470b81686c533fb3df1ad96cdb3405dae802d",
+      "tree_sha": "fb8470b81686c533fb3df1ad96cdb3405dae802d",
+      "tree_truncated": false,
+      "file_count": 28,
+      "result_or_test_paths": [],
+      "downloaded": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/chao1224/ChatDrug/fb8470b81686c533fb3df1ad96cdb3405dae802d/README.md",
+          "bytes": 4719,
+          "sha256": "50b9a294f0f6680389dc13e43cd04740bfc5f7ca3f8b02084052842b1152e750"
+        },
+        {
+          "path": "data/README.md",
+          "url": "https://raw.githubusercontent.com/chao1224/ChatDrug/fb8470b81686c533fb3df1ad96cdb3405dae802d/data/README.md",
+          "bytes": 3278,
+          "sha256": "4fcfab4ca5d54235486268e7e44193a750c57598937faa9b0bb19ae2c59fe4e6"
+        },
+        {
+          "path": "data/small_molecule/small_molecule_editing.txt",
+          "url": "https://raw.githubusercontent.com/chao1224/ChatDrug/fb8470b81686c533fb3df1ad96cdb3405dae802d/data/small_molecule/small_molecule_editing.txt",
+          "bytes": 8417,
+          "sha256": "6fa09f81402bebe7c14c12404c4c5edba5de32abf8d88f4f733485b992e79daa"
+        },
+        {
+          "path": "main_ChatDrug.py",
+          "url": "https://raw.githubusercontent.com/chao1224/ChatDrug/fb8470b81686c533fb3df1ad96cdb3405dae802d/main_ChatDrug.py",
+          "bytes": 9997,
+          "sha256": "70af6f5fa7c62d721d0dc798294a4ac672c671a1ce28ce9c0ce507932e500ba2"
+        },
+        {
+          "path": "utils.py",
+          "url": "https://raw.githubusercontent.com/chao1224/ChatDrug/fb8470b81686c533fb3df1ad96cdb3405dae802d/utils.py",
+          "bytes": 13702,
+          "sha256": "de1ba9159934867fd14f7be03beaa3ec7ad755e165d0b0beb2bf1f4117cd171a"
+        },
+        {
+          "path": "ChatDrug/task_and_evaluation/small_molecule_editing.py",
+          "url": "https://raw.githubusercontent.com/chao1224/ChatDrug/fb8470b81686c533fb3df1ad96cdb3405dae802d/ChatDrug/task_and_evaluation/small_molecule_editing.py",
+          "bytes": 9056,
+          "sha256": "343cab327297db6a84c51e9f92b6d8b00102b07d7753ff0835535b38100e3498"
+        }
+      ]
+    },
+    {
+      "name": "drugassist",
+      "repository": "https://github.com/blazerye/DrugAssist",
+      "commit": "838b75521bcf40224164de4ecd56b0ba1724a34a",
+      "tree_sha": "838b75521bcf40224164de4ecd56b0ba1724a34a",
+      "tree_truncated": false,
+      "file_count": 20,
+      "result_or_test_paths": [
+        "evaluate/evaluate.md",
+        "evaluate/main_eval.py",
+        "evaluate/mol_DB.csv",
+        "evaluate/small_molecule_editing.py",
+        "evaluate/testset.csv",
+        "evaluate/utils.py"
+      ],
+      "downloaded": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/blazerye/DrugAssist/838b75521bcf40224164de4ecd56b0ba1724a34a/README.md",
+          "bytes": 3854,
+          "sha256": "a0c58ce77fda3bff6ed0768e7850c4063f340d587cf8879f9edd10d1e3180db9"
+        },
+        {
+          "path": "evaluate/evaluate.md",
+          "url": "https://raw.githubusercontent.com/blazerye/DrugAssist/838b75521bcf40224164de4ecd56b0ba1724a34a/evaluate/evaluate.md",
+          "bytes": 4009,
+          "sha256": "7cde98ab0f11ace663267907f6e1a832749d6a1f9619928816b794cf9d27ea99"
+        }
+      ]
+    },
+    {
+      "name": "agentdrug",
+      "repository": "https://github.com/lhkhiem28/AgentDrug",
+      "commit": "a8d3a9eb459e161135a2c7e27490453603b3e6c2",
+      "tree_sha": "a8d3a9eb459e161135a2c7e27490453603b3e6c2",
+      "tree_truncated": false,
+      "file_count": 122,
+      "result_or_test_paths": [],
+      "downloaded": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/lhkhiem28/AgentDrug/a8d3a9eb459e161135a2c7e27490453603b3e6c2/README.md",
+          "bytes": 1420,
+          "sha256": "050f08e0fc47ad851e611943b7ee854a669753179305defcfcfea12bdd622ad2"
+        }
+      ]
+    },
+    {
+      "name": "retmol",
+      "repository": "https://github.com/NVlabs/RetMol",
+      "commit": "58c0677d9043235f04b554519c3c3cf7fd243339",
+      "tree_sha": "58c0677d9043235f04b554519c3c3cf7fd243339",
+      "tree_truncated": false,
+      "file_count": 307,
+      "result_or_test_paths": [
+        "MolBART/megatron_molbart/Megatron-LM-v1.1.5-3D_parallelism/examples/evaluate_zeroshot_gpt2.sh",
+        "MolBART/megatron_molbart/Megatron-LM-v1.1.5-3D_parallelism/tasks/zeroshot_gpt2/evaluate.py",
+        "download_scripts/download_results_reproduce.sh"
+      ],
+      "downloaded": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/NVlabs/RetMol/58c0677d9043235f04b554519c3c3cf7fd243339/README.md",
+          "bytes": 8447,
+          "sha256": "95156df44f5750ec0d346cfffbe7507e116a38a7e8727e59235a422e7e2956e7"
+        },
+        {
+          "path": "download_scripts/download_results_reproduce.sh",
+          "url": "https://raw.githubusercontent.com/NVlabs/RetMol/58c0677d9043235f04b554519c3c3cf7fd243339/download_scripts/download_results_reproduce.sh",
+          "bytes": 486,
+          "sha256": "d23081f96dd69be7466fe55dba77729263eebdedfe7d311d6dbc5b90b9c5ed8a"
+        }
+      ]
+    },
+    {
+      "name": "genmol",
+      "repository": "https://github.com/NVIDIA-BioNeMo/genmol",
+      "commit": "add09fc83b7255bd09c797e527c0f4b51f5fb7c1",
+      "tree_sha": "add09fc83b7255bd09c797e527c0f4b51f5fb7c1",
+      "tree_truncated": false,
+      "file_count": 86,
+      "result_or_test_paths": [],
+      "downloaded": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/NVIDIA-BioNeMo/genmol/add09fc83b7255bd09c797e527c0f4b51f5fb7c1/README.md",
+          "bytes": 12232,
+          "sha256": "5891b9ae1869ee55c1efa5952e11a356a02ca001f5df3b56978e480f4f55810e"
+        },
+        {
+          "path": "scripts/exps/lead/run.py",
+          "url": "https://raw.githubusercontent.com/NVIDIA-BioNeMo/genmol/add09fc83b7255bd09c797e527c0f4b51f5fb7c1/scripts/exps/lead/run.py",
+          "bytes": 6318,
+          "sha256": "39088b23ac8dd90ed010ad30ff4facf067aaec43704acf84eb1a03bf42c031f6"
+        },
+        {
+          "path": "scripts/exps/lead/eval.py",
+          "url": "https://raw.githubusercontent.com/NVIDIA-BioNeMo/genmol/add09fc83b7255bd09c797e527c0f4b51f5fb7c1/scripts/exps/lead/eval.py",
+          "bytes": 1455,
+          "sha256": "e7a0041256620d1c15bdaf4527744ab924d80fd4abe246aa53ecea93f4d397c6"
+        }
+      ]
+    }
+  ],
+  "extra": [
+    {
+      "name": "agentdrug_hf_tree",
+      "url": "https://huggingface.co/api/datasets/lhkhiem28/AgentDrug-datasets/tree/main?recursive=true&limit=1000",
+      "paths": [
+        "ZINC500",
+        "ZINC500/multi",
+        "ZINC500/multi/LogP+HBA+",
+        "ZINC500/multi/LogP+HBA-",
+        "ZINC500/multi/LogP+HBD+",
+        "ZINC500/multi/LogP+HBD-",
+        "ZINC500/multi/LogP+QED+",
+        "ZINC500/multi/LogP+QED-",
+        "ZINC500/multi/LogP+TPSA+",
+        "ZINC500/multi/LogP+TPSA-",
+        "ZINC500/multi/LogP-HBA+",
+        "ZINC500/multi/LogP-HBA-",
+        "ZINC500/multi/LogP-HBD+",
+        "ZINC500/multi/LogP-HBD-",
+        "ZINC500/multi/LogP-QED+",
+        "ZINC500/multi/LogP-QED-",
+        "ZINC500/multi/LogP-TPSA+",
+        "ZINC500/multi/LogP-TPSA-",
+        "ZINC500/single",
+        "ZINC500/single/HBA+",
+        "ZINC500/single/HBA-",
+        "ZINC500/single/HBD+",
+        "ZINC500/single/HBD-",
+        "ZINC500/single/LogP+",
+        "ZINC500/single/LogP-",
+        "ZINC500/single/QED+",
+        "ZINC500/single/QED-",
+        "ZINC500/single/TPSA+",
+        "ZINC500/single/TPSA-",
+        ".gitattributes",
+        "README.md",
+        "ZINC500/database.csv",
+        "ZINC500/multi/LogP+HBA+/test.csv",
+        "ZINC500/multi/LogP+HBA-/test.csv",
+        "ZINC500/multi/LogP+HBD+/test.csv",
+        "ZINC500/multi/LogP+HBD-/test.csv",
+        "ZINC500/multi/LogP+QED+/test.csv",
+        "ZINC500/multi/LogP+QED-/test.csv",
+        "ZINC500/multi/LogP+TPSA+/test.csv",
+        "ZINC500/multi/LogP+TPSA-/test.csv",
+        "ZINC500/multi/LogP-HBA+/test.csv",
+        "ZINC500/multi/LogP-HBA-/test.csv",
+        "ZINC500/multi/LogP-HBD+/test.csv",
+        "ZINC500/multi/LogP-HBD-/test.csv",
+        "ZINC500/multi/LogP-QED+/test.csv",
+        "ZINC500/multi/LogP-QED-/test.csv",
+        "ZINC500/multi/LogP-TPSA+/test.csv",
+        "ZINC500/multi/LogP-TPSA-/test.csv",
+        "ZINC500/single/HBA+/test.csv",
+        "ZINC500/single/HBA-/test.csv",
+        "ZINC500/single/HBD+/test.csv",
+        "ZINC500/single/HBD-/test.csv",
+        "ZINC500/single/LogP+/test.csv",
+        "ZINC500/single/LogP-/test.csv",
+        "ZINC500/single/QED+/test.csv",
+        "ZINC500/single/QED-/test.csv",
+        "ZINC500/single/TPSA+/test.csv",
+        "ZINC500/single/TPSA-/test.csv"
+      ],
+      "bytes": 11720
+    },
+    {
+      "name": "drugassist_model_metadata",
+      "url": "https://huggingface.co/api/models/blazerye/DrugAssist-7B",
+      "paths": [
+        ".gitattributes",
+        "DrugAssist-7B-4bit.gguf",
+        "README.md",
+        "config.json",
+        "demo.png",
+        "generation_config.json",
+        "logo.png",
+        "pytorch_model-00001-of-00002.bin",
+        "pytorch_model-00002-of-00002.bin",
+        "pytorch_model.bin.index.json",
+        "special_tokens_map.json",
+        "tokenizer.model",
+        "tokenizer_config.json"
+      ],
+      "bytes": 3959
+    }
+  ]
+}

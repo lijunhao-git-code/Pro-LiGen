@@ -1,0 +1,24 @@
+{
+  "continuous_prompts": {
+    "source": "work/single_property_run_v2_20261028/code/prepare_generation.py",
+    "source_sha256": "528a8a2a209f2c69032de75bc4c74ef39f19d31865318785a7a46d749fc8de5a",
+    "functions": {
+      "design_prompt": "def design_prompt(entry):\n    prop=entry['property'];info=PROPERTIES[prop]\n    refs=''\n    if entry['exemplars']:\n        refs='- 满足相同属性目标区间的参考分子（共3个）：\\n'+'\\n'.join(\n            f'  - Exemplar {i}（{info[\"label\"]}={properties(s)[prop]:.8f}）：{s}' for i,s in enumerate(entry['exemplars'],1))+'\\n'\n        approach='分析参考分子相对于种子的结构改造方式，结合种子及靶点信息进行设计。'\n    else:approach='分析种子的结构改造方式，结合种子及靶点信息进行设计。'\n    return f'''你是一位经验丰富的药物化学专家，擅长启发式分子设计。\n【任务】\n1. {approach}\n2. 生成3个全新的、化学上有效的SMILES，按当前单属性条件进行温和改造，并尽量保留种子的关键结构。\n3. 只设计单个连通且含碳的分子，不要直接输出种子或输入中提供的参考分子。\n【输入信息】\n- 靶点UniProt ID：{entry['uniprotid']}\n- 靶点ChEMBL ID：{entry['chemblid']}\n- 种子SMILES：{entry['seed_smiles']}\n- 种子{info['label']}：{entry['seed_property']:.8f}\n{refs}【目标属性】\n- 当前唯一性质硬条件：{info['label']}相对种子降低{abs(info['delta']):g}，允许误差±{info['tolerance']:g}。\n- 因此每个输出的RDKit实算{info['label']}应位于[{entry['target_lower']:.8f}, {entry['target_upper']:.8f}]（含端点）。\n- 不额外要求环数、分子量或另一属性达到某个数值。\n【输出格式】\n## Structural Analysis\n用1至2句话说明改造策略。\n## Generated Molecules\n<smiles>SMILES1</smiles>\n<smiles>SMILES2</smiles>\n<smiles>SMILES3</smiles>\n仅输出3个带标签候选。不要编造QED、SA、Vina或实验活性，也不要声称已实际对接。'''",
+      "optimize_prompt": "def optimize_prompt(entry):\n    info=PROPERTIES[entry['property']]\n    return f'''依据前文靶点、文献、种子以及程序实算结果，进行一次分子优化。\n唯一性质硬条件：{info['label']}应位于[{entry['target_lower']:.8f}, {entry['target_upper']:.8f}]。\n生成单连通含碳分子，不复制种子或输入范例；在达标前提下提高类药性并注意合成可行性和结构保留。\n程序会合并两轮各3个候选：按实际QED从高到低，完全同分时按SA原始分数从低到高，再按canonical SMILES排序。\n只提出3个候选，不声称自行执行RDKit、QSAR或对接，不编造性质和结合结果。\n简短解释后只输出：\n<smiles>SMILES1</smiles>\n<smiles>SMILES2</smiles>\n<smiles>SMILES3</smiles>'''"
+    }
+  },
+  "continuous_feedback": {
+    "source": "work/single_property_run_v2_20261028/code/common.py",
+    "source_sha256": "326655c52c52247110633473a2f35d1c2393bf5ce24410b9b2dfa7cfff3eadf7",
+    "functions": {
+      "feedback": "def feedback(rows,entry):\n    fields=['candidate_position','canonical','valid','property_value','delta_property','target_error','property_hit','eligible','reason','QED','SA_raw']\n    actual=[{k:r.get(k) for k in fields} for r in rows]\n    return ('\\n【程序实际计算的上一轮结果】\\n'+json.dumps(actual,ensure_ascii=False)+\n        f'\\n当前目标仅为{PROPERTIES[entry[\"property\"]][\"label\"]}位于[{entry[\"target_lower\"]:.8f}, {entry[\"target_upper\"]:.8f}]。'\n        '\\n以上由RDKit与标准SA scorer计算。上一轮合格候选会保留；请再提出3个候选，不复制种子或所给范例。未执行对接，不要编造Vina或实验结果。')"
+    }
+  },
+  "ring_feedback": {
+    "source": "work/ring_random_control_20261102/code/original_chemistry.py",
+    "source_sha256": "3d89d8c20c7b19981a23d75fbcd4a13cf5d19b762e976f70de91cf12a71b0378",
+    "functions": {
+      "optimization_feedback": "def optimization_feedback(records, entry):\n    proposals = [dict(position=r['candidate_position'], canonical=r.get('canonical'),\n                      valid=r['valid'], eligible=r['eligible'], reason=r['reason'],\n                      RC=r.get('RC'), QED=r.get('QED'), SA_raw=r.get('SA_raw')) for r in records]\n    return ('\\n【程序实际计算的上一轮结果】\\n'+json.dumps(proposals, ensure_ascii=False)+\n            '\\n以上由 RDKit 和标准 SA scorer 实际计算。未计算对接。请保持环数恰好为 '+\n            str(entry['target_rc'])+'；所有有效且满足条件的上一轮候选会保留到最终程序排序。')"
+    }
+  }
+}

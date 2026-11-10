@@ -1,0 +1,82 @@
+{
+  "slot_id": "tpsa_CHEMBL5083_5_CD",
+  "property": "tpsa",
+  "chemblid": "CHEMBL5083",
+  "position": 5,
+  "group": "CD",
+  "order": 552,
+  "pilot": false,
+  "started_utc": "2026-11-08T11:40:08.927482+00:00",
+  "finished_utc": "2026-11-08T11:40:34.633034+00:00",
+  "technical_complete": true,
+  "status": "native_invalid",
+  "ok": false,
+  "canonical": null,
+  "selected_candidate": null,
+  "candidates": [
+    {
+      "turn": 4,
+      "candidate_position": 1,
+      "smiles": "O=C(c1cc(Cc2n[nH]cc3ccccc23)ccc1F)N1CCN(C(=O)C2CCC2)CC1",
+      "valid": false,
+      "property_hit": false,
+      "eligible": false,
+      "reason": "invalid_smiles",
+      "native_evaluated": true
+    },
+    {
+      "turn": 4,
+      "candidate_position": 2,
+      "smiles": "O=C(c1cc(Cc2n[nH]cc3ccccc23)ccc1Cl)N1CCN(C(=O)C2CC2)CC1",
+      "valid": false,
+      "property_hit": false,
+      "eligible": false,
+      "reason": "invalid_smiles",
+      "native_evaluated": false
+    },
+    {
+      "turn": 4,
+      "candidate_position": 3,
+      "smiles": "O=C(c1cc(Cc2n[nH]cc3ccccc23)ccc1)N1CCN(C(=O)C2CC2)CC1",
+      "valid": false,
+      "property_hit": false,
+      "eligible": false,
+      "reason": "invalid_smiles",
+      "native_evaluated": false
+    },
+    {
+      "turn": 4,
+      "candidate_position": 4,
+      "smiles": "O=C(c1cc(Cc2n[nH]cc3ccccc23)ccc1F)N1CCN(C(=O)C)CC1",
+      "valid": false,
+      "property_hit": false,
+      "eligible": false,
+      "reason": "invalid_smiles",
+      "native_evaluated": false
+    },
+    {
+      "turn": 4,
+      "candidate_position": 5,
+      "smiles": "O=C(c1cc(Cc2n[nH]cc3ccccc23)ccc1F)N1CC(C)N(C(=O)C2CC2)CC1",
+      "valid": false,
+      "property_hit": false,
+      "eligible": false,
+      "reason": "invalid_smiles",
+      "native_evaluated": false
+    }
+  ],
+  "provided_references": [],
+  "trace": [
+    {
+      "turn": 4,
+      "extracted_count": 5,
+      "native_candidate_position": 1,
+      "provided_references": [],
+      "native_reason": "invalid_smiles",
+      "C": 2
+    }
+  ],
+  "successful_attempt": 1,
+  "earlier_attempts": [],
+  "common_context_sha256": "f8705aa721721732fcd6061daadb75ffeeec7cd9cc5c6a14532a94858df0cc81"
+}

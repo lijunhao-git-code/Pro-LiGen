@@ -1,0 +1,26 @@
+chemblid,pdb,ligand,chains,metal_atoms,redock_status,top1_rmsd_A,top1_pass,included,decision,reason
+CHEMBL1741186,7NPC,ULT,A,0.0,ok,0.2791108042509526,True,True,Included,Nonmetal; top-score redocking RMSD <= 2 Angstrom
+CHEMBL1821,5DSG,0HK,A,0.0,ok,0.8590472619415991,True,True,Included,Nonmetal; top-score redocking RMSD <= 2 Angstrom
+CHEMBL1827,1TBF,VIA,A,3.0,ok,0.9693306794694287,True,False,Metal,Calibration passed; metal-containing receptor excluded by the recorded protocol
+CHEMBL1908381,3C0I,3AM,A,0.0,ok,3.077268691135757,False,False,RMSD,Top-score redocking RMSD > 2 Angstrom
+CHEMBL2176774,5FG6,5XE,A,0.0,ok,5.182275377231827,False,False,RMSD,Top-score redocking RMSD > 2 Angstrom
+CHEMBL2185,4AF3,VX6,"A,D",0.0,ok,0.7855173169879632,True,True,Included,Nonmetal; top-score redocking RMSD <= 2 Angstrom
+CHEMBL2321615,,,,,not_run,,False,False,Pocket,"4TWK anchor37X is a detergent, not a validated small-molecule binding pocket."
+CHEMBL2343,2R5T,ANP,A,2.0,ok,2.7389082039054005,False,False,RMSD,Top-score redocking RMSD > 2 Angstrom
+CHEMBL2525,7D5B,66F,A,0.0,ok,7.817789017334206,False,False,RMSD,Top-score redocking RMSD > 2 Angstrom
+CHEMBL2558,2W4J,ADP,A,1.0,ok,1.4760053504613615,True,False,Metal,Calibration passed; metal-containing receptor excluded by the recorded protocol
+CHEMBL3401,9FZJ,SRL,A,0.0,ok,2.129446096698461,False,False,RMSD,Top-score redocking RMSD > 2 Angstrom
+CHEMBL3712868,5ICM,F45,A,0.0,ok,1.4492933125534178,True,True,Included,Nonmetal; top-score redocking RMSD <= 2 Angstrom
+CHEMBL3961,3GP0,NIL,A,0.0,ok,1.09211500109492,True,True,Included,Nonmetal; top-score redocking RMSD <= 2 Angstrom
+CHEMBL4375,7ZKS,IXQ,A,0.0,ok,1.5355098600025785,True,True,Included,Nonmetal; top-score redocking RMSD <= 2 Angstrom
+CHEMBL4523509,7OCB,V88,B,0.0,ok,4.711947268113173,False,False,RMSD,Top-score redocking RMSD > 2 Angstrom
+CHEMBL5083,4GV2,5ME,A,0.0,ok,1.880968744540985,True,True,Included,Nonmetal; top-score redocking RMSD <= 2 Angstrom
+CHEMBL5668,7ZKX,IXQ,A,0.0,ok,1.4753218329492028,True,True,Included,Nonmetal; top-score redocking RMSD <= 2 Angstrom
+CHEMBL5896,6G5X,MY7,B,0.0,ok,11.771263019946504,False,False,RMSD,Top-score redocking RMSD > 2 Angstrom
+CHEMBL5939,7Z28,I88,A,1.0,ok,7.378393960390729,False,False,RMSD,Top-score redocking RMSD > 2 Angstrom
+CHEMBL211,5ZKC,3C0,A,0.0,ok,1.2021030799280032,True,True,Included,Nonmetal; top-score redocking RMSD <= 2 Angstrom
+CHEMBL2179,,,,,not_run,,False,False,C10,missing experimental heavy atom C10
+CHEMBL274,4MBS,MRV,A,0.0,ok,0.452782878175507,True,True,Included,Nonmetal; top-score redocking RMSD <= 2 Angstrom
+CHEMBL5469,3FZS,B96,A,0.0,ok,0.6400664110109652,True,True,Included,Nonmetal; top-score redocking RMSD <= 2 Angstrom
+CHEMBL5479,,,,,not_run,,False,False,Pocket,"7OCM engineered HGF fragment; anchorEPE is buffer, not a demonstrated seed-binding pocket."
+CHEMBL6055,8EDH,WGK,A,0.0,ok,9.009753812325696,False,False,RMSD,Top-score redocking RMSD > 2 Angstrom

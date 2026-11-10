@@ -1,7 +1,5 @@
 # Access, reuse and attribution
 
-These research materials are publicly available for inspection, download and verification of the reported results. A project-wide software/data reuse license has not yet been selected; this release does not assign a new license to third-party material.
+The original Pro-LiGen source code authored by the Pro-LiGen contributors is available under the MIT License in LICENSE. This grant covers only that original source code and its documentation. It does not relicense third-party code, molecular source data, pretrained third-party models, receptor structures, literature text or other third-party material; their original licenses and attribution requirements remain applicable. A common data/model reuse license is not assigned by the software license.
 
-External software dependencies are not bundled and retain their respective licenses. Receptor coordinates are derived from the PDB entries linked in the receptor metadata. Molecular identifiers, source-row metadata and the saved retrieval-library split labels are retained. The published SMILES source projection, training triplets and deduplicated library are linked by executable checks; the target/seed source table supplies identifier and SMILES mappings. These records do not supply experimental affinity measurements.
-
-If you use these materials in research, identify this repository and the specific commit/release, and cite the associated Pro-LiGen article when its bibliographic record becomes available. A persistent archived version can be added after the authors finalize the release.
+External dependencies retain their respective licenses. Source identifiers, metadata and recorded provenance locate the inputs. Cite the specific repository commit/release and the Pro-LiGen article when available. The prepared API reproducibility supplement carries its own hashes and preserves the frozen scientific records.

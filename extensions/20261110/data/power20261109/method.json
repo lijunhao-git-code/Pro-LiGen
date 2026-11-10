@@ -1,0 +1,48 @@
+{
+  "method": "Two-sided paired-t model sensitivity using observed SD of 25 paired task-mean U differences",
+  "interpretation": "Conditional variance-based MDE benchmarks, not observed-effect power or exact power of the sign-flip/Holm analysis",
+  "task_count": 25,
+  "degrees_of_freedom": 24,
+  "target_power": 0.8,
+  "multiplicity": "alpha=0.05/m with m=4 for ring and m=8 for joint LogP/TPSA families; a conservative Bonferroni reference, not a reproduction of Holm power",
+  "integration": "Normal/chi-square mixture defining noncentral t; Gauss-Legendre quadrature [0,200]; orders 128 and 256 agree within 1e-8",
+  "calibrations": {
+    "1": {
+      "alpha": 0.05,
+      "critical_t": 2.0638985616280223,
+      "standardized_MDE": 0.5840266715500866
+    },
+    "4": {
+      "alpha": 0.0125,
+      "critical_t": 2.700233126019314,
+      "standardized_MDE": 0.714909730146772
+    },
+    "8": {
+      "alpha": 0.00625,
+      "critical_t": 2.9970081917962554,
+      "standardized_MDE": 0.7763408915829133
+    }
+  },
+  "software": {
+    "python": ">=3.10",
+    "numpy": "2.3.5"
+  },
+  "documentation": [
+    "https://www.statsmodels.org/stable/generated/statsmodels.stats.power.TTestPower.solve_power.html",
+    "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.nct.html"
+  ],
+  "inputs": [
+    {
+      "path": "data/updated20261102/ring/target_means.csv",
+      "sha256": "41a408e3dbfb712261490d0277ff229a749b632f5635e197b90f8ae6cf920a6a"
+    },
+    {
+      "path": "data/updated20261102/properties/target_means.csv",
+      "sha256": "505653679322f874ec447eeb7d31e5d2939021c0baee47b1cd740d6a5ca63fa8"
+    },
+    {
+      "path": "data/updated20261102/figure5_comparisons9.csv",
+      "sha256": "0f2e3032177c25b5ad1ff57cbf84f7df2069f32759905bf504486ba56e0fa5c3"
+    }
+  ]
+}

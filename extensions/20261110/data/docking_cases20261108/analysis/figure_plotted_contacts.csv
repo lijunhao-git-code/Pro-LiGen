@@ -1,0 +1,32 @@
+condition,role,contact_type,chain,resnr,residue,x,y
+ring,output,Aromatic,A,112,PHE,2.12,5
+ring,output,Hydrophobic,A,37,TYR,0.12,0
+ring,output,Hydrophobic,A,86,TRP,0.12,1
+ring,output,Hydrophobic,A,89,TYR,0.12,2
+ring,output,Hydrophobic,A,108,TYR,0.12,3
+ring,output,Hydrophobic,A,109,PHE,0.12,4
+ring,output,Hydrophobic,A,198,ILE,0.12,6
+ring,output,Hydrophobic,A,251,TYR,0.12,7
+ring,output,Hydrophobic,A,283,GLU,0.12,8
+ring,seed,Aromatic,A,112,PHE,1.88,5
+ring,seed,Hydrophobic,A,86,TRP,-0.12,1
+ring,seed,Hydrophobic,A,89,TYR,-0.12,2
+ring,seed,Hydrophobic,A,108,TYR,-0.12,3
+ring,seed,Hydrophobic,A,109,PHE,-0.12,4
+ring,seed,Hydrophobic,A,198,ILE,-0.12,6
+ring,seed,Hydrophobic,A,251,TYR,-0.12,7
+ring,seed,Hydrophobic,A,283,GLU,-0.12,8
+ring,seed,Short H-bond,A,37,TYR,0.88,0
+tpsa,output,Hydrophobic,A,104,TYR,0.12,0
+tpsa,output,Hydrophobic,A,155,TRP,0.12,3
+tpsa,output,Hydrophobic,A,194,ALA,0.12,4
+tpsa,output,Hydrophobic,A,400,TRP,0.12,5
+tpsa,output,Hydrophobic,A,426,TYR,0.12,8
+tpsa,output,Short H-bond,A,404,ASN,1.12,7
+tpsa,seed,Hydrophobic,A,104,TYR,-0.12,0
+tpsa,seed,Hydrophobic,A,108,ASN,-0.12,1
+tpsa,seed,Hydrophobic,A,111,VAL,-0.12,2
+tpsa,seed,Hydrophobic,A,155,TRP,-0.12,3
+tpsa,seed,Hydrophobic,A,400,TRP,-0.12,5
+tpsa,seed,Hydrophobic,A,403,TYR,-0.12,6
+tpsa,seed,Short H-bond,A,404,ASN,0.88,7

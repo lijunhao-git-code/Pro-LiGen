@@ -1,0 +1,83 @@
+{
+  "status": "passed_for_end_to_end_adapted_method_comparison",
+  "formal_positions": 750,
+  "methods": {
+    "G": 375,
+    "CD": 375
+  },
+  "property_method_cells": {
+    "ring_G": 125,
+    "ring_CD": 125,
+    "logp_G": 125,
+    "logp_CD": 125,
+    "tpsa_G": 125,
+    "tpsa_CD": 125
+  },
+  "paired_inputs": 375,
+  "common_fields_verified": [
+    "seed_smiles",
+    "seed_canonical",
+    "seed_property",
+    "target_center",
+    "target_lower",
+    "target_upper",
+    "tolerance",
+    "prefix_key",
+    "prefix_sha256"
+  ],
+  "same_actual_decoding_parameters": true,
+  "same_response_model": [
+    "deepseek-flash"
+  ],
+  "same_provider_fingerprint": [
+    "bc19ba97cbe016479903222bb1578db6"
+  ],
+  "actual_decoding_parameters": {
+    "max_tokens": 16384,
+    "model": "deepseek-flash",
+    "reasoning_effort": "low",
+    "stream": false,
+    "thinking": {
+      "type": "enabled"
+    }
+  },
+  "API_responses_by_group": {
+    "CD": 640,
+    "G": 753
+  },
+  "upstream_first_candidate_parser_checked_replies": 640,
+  "ChatDrug_retrieval_events_in_common_pool": 265,
+  "first_ChatDrug_request_G_examples_leaked": 0,
+  "reply_counts": {
+    "CD": {
+      "3": 118,
+      "2": 29,
+      "1": 228
+    },
+    "G": {
+      "2": 375
+    }
+  },
+  "formal_candidate_records": {
+    "CD": 2140,
+    "G": 2250
+  },
+  "QED_prompt_presence": {
+    "CD_task_prompts_mentioning_QED": 0,
+    "G_prompts_mentioning_QED": 376
+  },
+  "no_M_T_R_experimental_arms": true,
+  "frozen_inputs_and_generation_code_unchanged": true,
+  "primary_contrast": "G-CD",
+  "statistical_units": 25,
+  "primary_Holm_tests": 6,
+  "scope": [
+    "End-to-end Pro-LiGen G versus a ChatDrug public-implementation adaptation",
+    "Native proposal counts, prompts, feedback, stopping and selection differ by design",
+    "G explicitly includes QED-directed refinement/selection; CD task prompts do not request QED maximization",
+    "Not equal candidate counts, not equal API calls, not an isolated retrieval-backend experiment",
+    "Common frozen archived background with newly generated proposal/refinement outputs; report separately from old Study B"
+  ],
+  "manuscript_modified": false,
+  "new_generation_calls": 0
+}

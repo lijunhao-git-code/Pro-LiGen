@@ -1,0 +1,30 @@
+\begin{table}[!htbp]
+\centering\small
+\caption{External workflow comparison under three single-property conditions (Study D, 25 tasks per condition).}
+\label{tab:external_comparison}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrrrrr@{}}
+\toprule
+ & \multicolumn{2}{c}{Qualified delivery} & QED yield & \multicolumn{3}{c}{Delivered molecules} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-4}\cmidrule(l){5-7}
+Method & $n/N$ & $S$ (\%) & $U$ $\uparrow$ & QED $\uparrow$ & SA$_{\rm raw}$ $\downarrow$ & Tanimoto \\
+\midrule
+\multicolumn{7}{l}{\textit{One fewer ring}} \\
+Pro-LiGen & 125/125 & 100.0 & 0.6718 & 0.6718 & 2.6926 & 0.5467 \\
+ChatDrug (adapted) & 125/125 & 100.0 & 0.4975 & 0.4975 & 3.0906 & 0.7012 \\
+\midrule
+\multicolumn{7}{l}{\textit{LogP reduction: $1.0\pm0.2$}} \\
+Pro-LiGen & 117/125 & 93.6 & 0.4278 & 0.4548 & 3.2653 & 0.6711 \\
+ChatDrug (adapted) & 29/125 & 23.2 & 0.1196 & 0.4826 & 3.1951 & 0.6070 \\
+\midrule
+\multicolumn{7}{l}{\textit{TPSA reduction: $20\pm5$~\AA$^2$}} \\
+Pro-LiGen & 124/125 & 99.2 & 0.5455 & 0.5495 & 2.9731 & 0.5947 \\
+ChatDrug (adapted) & 112/125 & 89.6 & 0.4270 & 0.4759 & 3.0999 & 0.6619 \\
+\bottomrule
+\end{tabular*}
+\par\smallskip
+\begin{minipage}{\linewidth}\footnotesize
+Each method has 125 planned runs per condition (25 tasks, five runs each). $U$ assigns zero to runs with no output. Conditional QED, SA and Tanimoto are averaged within task, then across tasks with a delivery: 17 for ChatDrug--LogP and 25 for all other cells. Pro-LiGen uses QED-directed refinement and selection; ChatDrug returns its first eligible parsed proposal.
+\end{minipage}
+\end{table}

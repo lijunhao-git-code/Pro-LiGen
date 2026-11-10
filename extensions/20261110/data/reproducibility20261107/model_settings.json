@@ -1,0 +1,200 @@
+{
+  "main_model_family": "DeepSeek-V4.1-Flash",
+  "documented_main_revision": "V4.1-Flash-1017",
+  "request_model": "deepseek-flash",
+  "returned_models": {
+    "ring": {
+      "deepseek-flash": 2504
+    },
+    "properties": {
+      "deepseek-flash": 5000
+    }
+  },
+  "provider_fingerprints": {
+    "ring": {
+      "bc19ba97cbe016479903222bb1578db6": 2504
+    },
+    "properties": {
+      "bc19ba97cbe016479903222bb1578db6": 5000
+    }
+  },
+  "fingerprint_interpretation": "Provider metadata, not an independently verified checkpoint identity.",
+  "source_database_hashes": {
+    "ring": "924d51b2c203137014d35129984d90a3f67b2032ac255ec1730ea0308386bac0",
+    "properties": "37b939f602a7ad0b09f049400eb4e57dc96e5018bd18fe0d72dbd0febd3d42b7"
+  },
+  "main_cohort_settings": {
+    "ring": {
+      "submitted": [
+        {
+          "settings": {
+            "max_tokens": 16384,
+            "model": "deepseek-flash",
+            "reasoning_effort": "low",
+            "stream": false,
+            "thinking": {
+              "type": "enabled"
+            }
+          },
+          "calls": 2504
+        }
+      ],
+      "pilot_workers": 4,
+      "full_workers": 24
+    },
+    "properties": {
+      "submitted": [
+        {
+          "settings": {
+            "max_tokens": 16384,
+            "model": "deepseek-flash",
+            "reasoning_effort": "low",
+            "stream": false,
+            "thinking": {
+              "type": "enabled"
+            }
+          },
+          "calls": 5000
+        }
+      ],
+      "pilot_workers": 4,
+      "full_workers_schedule": [
+        8,
+        16,
+        32
+      ],
+      "observed_concurrency": {
+        "workers": 32,
+        "events": [
+          {
+            "time_utc": "2026-10-28T11:50:28.759511+00:00",
+            "new_completed": 16,
+            "workers": 16
+          },
+          {
+            "time_utc": "2026-10-28T11:53:28.749476+00:00",
+            "new_completed": 48,
+            "workers": 32
+          }
+        ],
+        "technical_errors": 0
+      },
+      "concurrency_source_sha256": "a3e225e947bae8f8cc087bd0c4f172629532b9e71c8ccb9c048970da5134096c"
+    }
+  },
+  "original_A_caller_settings": {
+    "model": "deepseek-v4-flash",
+    "reasoning_effort": "low",
+    "temperature": 0.7,
+    "max_tokens": 16384,
+    "request_timeout_seconds": 300,
+    "basis": {
+      "model": [
+        "experiment_guide:38",
+        "NG_launcher_log:1",
+        "RC_expansion_launcher:25"
+      ],
+      "reasoning_effort": [
+        "experiment_guide:38",
+        "NG_launcher_log:1",
+        "caller_snapshot:21"
+      ],
+      "temperature": [
+        "experiment_guide:38",
+        "caller_snapshot:21,57"
+      ],
+      "max_tokens": [
+        "experiment_guide:38",
+        "caller_snapshot:21,58"
+      ],
+      "request_timeout_seconds": [
+        "caller_snapshot:56"
+      ]
+    }
+  },
+  "initial_B_C_settings": {
+    "B": {
+      "created_utc": "2026-10-11T05:40:14.103002+00:00",
+      "planned_slots": 375,
+      "candidate_quota": {
+        "design_turns": [
+          4,
+          5
+        ],
+        "proposals_per_turn": 3,
+        "max_total": 6
+      },
+      "api": {
+        "model": "deepseek-flash",
+        "base_url": "https://api.deepseek.com",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "temperature": null,
+        "top_p": null,
+        "max_tokens": 16384,
+        "timeout_seconds": 300,
+        "sdk_max_retries": 0,
+        "max_whole_attempts_per_slot": 2,
+        "workers": 12
+      },
+      "immutable_weights_identified": false,
+      "software": {
+        "torch": "2.3.0+cu121",
+        "torch-geometric": "2.8.0.post1",
+        "rdkit": "2026.3.4",
+        "openai": "2.49.0",
+        "vina": "1.2.7",
+        "meeko": "0.7.1"
+      }
+    },
+    "C": {
+      "created_utc": "2026-10-12T10:59:04.745216+00:00",
+      "planned_slots": 150,
+      "candidate_quota": {
+        "shared_fourth": 3,
+        "new_fifth": 3
+      },
+      "schedule_random_seed": 42,
+      "api": {
+        "model": "deepseek-flash",
+        "base_url": "https://api.deepseek.com",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "temperature": null,
+        "top_p": null,
+        "max_tokens": 16384,
+        "timeout_seconds": 300,
+        "sdk_max_retries": 0,
+        "max_whole_attempts_per_slot": 2,
+        "workers": 8
+      },
+      "immutable_weights_identified": false,
+      "software": {}
+    },
+    "docking": {
+      "created_utc": "2026-10-12T10:59:03.019433+00:00",
+      "seed": 42,
+      "exhaustiveness": 16,
+      "n_poses": 10,
+      "cpu": 1,
+      "workers": 8,
+      "timeout_seconds": 600,
+      "sf_name": "vina",
+      "top1_rmsd_cutoff_A": 2.0,
+      "metal_targets_excluded_from_primary": true,
+      "parent_not_overwritten": true,
+      "salt_rule": "unique carbon-containing fragment; only atomic counterions",
+      "ligand_prep": "input formal charge; RDKit AddHs, Embed42/fallback random42, MMFF500, Meeko",
+      "ligand_protonation_enumeration": false,
+      "receptor_prep": "reuse preaudited receptor; new: OpenBabel pH7.4; NAD explicitly retained",
+      "no_rescue_parameter_tuning": true,
+      "rmsd": "RDKit CalcRMS heavy symmetry-aware in place; no alignment"
+    }
+  },
+  "documentation": {
+    "url": "https://api-docs.deepseek.com/updates/",
+    "checked_client_date": "2026-11-07",
+    "legacy_alias_routing_since": "2026-09-10",
+    "revision_update": "2026-10-17"
+  }
+}

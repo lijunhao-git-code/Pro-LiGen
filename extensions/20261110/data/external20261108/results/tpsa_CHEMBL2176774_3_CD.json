@@ -1,0 +1,82 @@
+{
+  "slot_id": "tpsa_CHEMBL2176774_3_CD",
+  "property": "tpsa",
+  "chemblid": "CHEMBL2176774",
+  "position": 3,
+  "group": "CD",
+  "order": 245,
+  "pilot": false,
+  "started_utc": "2026-11-08T11:33:28.359486+00:00",
+  "finished_utc": "2026-11-08T11:33:46.599319+00:00",
+  "technical_complete": true,
+  "status": "native_invalid",
+  "ok": false,
+  "canonical": null,
+  "selected_candidate": null,
+  "candidates": [
+    {
+      "turn": 4,
+      "candidate_position": 1,
+      "smiles": "CN1C[C@H](Nc2cnn(C)cc2Br)C[C@H](c2ccccc2)C1",
+      "valid": false,
+      "property_hit": false,
+      "eligible": false,
+      "reason": "invalid_smiles",
+      "native_evaluated": true
+    },
+    {
+      "turn": 4,
+      "candidate_position": 2,
+      "smiles": "CN1C[C@H](Nc2cnn(C)cc2Cl)C[C@H](c2ccccc2)C1",
+      "valid": false,
+      "property_hit": false,
+      "eligible": false,
+      "reason": "invalid_smiles",
+      "native_evaluated": false
+    },
+    {
+      "turn": 4,
+      "candidate_position": 3,
+      "smiles": "CN1C[C@H](Nc2cnn(C)cc2F)C[C@H](c2ccccc2)C1",
+      "valid": false,
+      "property_hit": false,
+      "eligible": false,
+      "reason": "invalid_smiles",
+      "native_evaluated": false
+    },
+    {
+      "turn": 4,
+      "candidate_position": 4,
+      "smiles": "CN1C[C@H](Nc2cnn(CC)cc2Br)C[C@H](c2ccccc2)C1",
+      "valid": false,
+      "property_hit": false,
+      "eligible": false,
+      "reason": "invalid_smiles",
+      "native_evaluated": false
+    },
+    {
+      "turn": 4,
+      "candidate_position": 5,
+      "smiles": "CN1C[C@H](Nc2cnn(C)cc2Br)C[C@H](c2ccc(F)cc2)C1",
+      "valid": false,
+      "property_hit": false,
+      "eligible": false,
+      "reason": "invalid_smiles",
+      "native_evaluated": false
+    }
+  ],
+  "provided_references": [],
+  "trace": [
+    {
+      "turn": 4,
+      "extracted_count": 5,
+      "native_candidate_position": 1,
+      "provided_references": [],
+      "native_reason": "invalid_smiles",
+      "C": 2
+    }
+  ],
+  "successful_attempt": 1,
+  "earlier_attempts": [],
+  "common_context_sha256": "51dbf69c2c687a728c96454b6ea74885a4708459a82a7c893c229faa4d711718"
+}

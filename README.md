@@ -1,5 +1,11 @@
 # Pro-LiGen: data, models and reproducible analysis
 
+Version **v0.4.0** adds the [current submission supplement](extensions/20261110/README.md): the 750-position ChatDrug comparison, source server scripts, API reproducibility records, curation/chemical-form audits, saved docking cases and sensitivity analysis. Original project software is now licensed under MIT.
+
+```sh
+python reproduce/verify_submission_supplement.py --out NEW_SUBMISSION_CHECK
+```
+
 This repository supports property-constrained molecular editing with exemplar retrieval, program-computed verification, candidate retention and final QED selection. Version **v0.3.1** adds a complete output-novelty audit and runnable entry. Version **v0.3.0** added the three-condition comparisons in the current manuscript: ring count, LogP and topological polar surface area (TPSA). The original v0.2.0 records and scientific assets remain intact.
 
 Start with [the current result-to-file map](docs/CURRENT_RESULTS_TO_FILES.md) or the [Chinese running guide](docs/README_中文.md). The [initial-release guide](docs/README_v020.md) and its original commands remain available.

@@ -1,0 +1,107 @@
+{
+  "scripts": {
+    "select_expand_targets_rc.py": {
+      "sha256": "6ede12dbe21ba7266c15588e6b827ce49dc23b11b69f3b3865df44f1c20268d1"
+    },
+    "filter_prompts.py": {
+      "sha256": "0103f57b86d5ade969b0712062b0a3f22604e2a0d44d52f4d8a5c886f806a7fa"
+    }
+  },
+  "task_lists": {
+    "exp30v2_pg_mw.jsonl": {
+      "source_sha256": "3c77d3ece2b21f7ca477ecbd7e79928b70083c4c9e4bc1a61aa0c7a943ab5abe",
+      "targets": [
+        "CHEMBL4338",
+        "CHEMBL2176774",
+        "CHEMBL5668",
+        "CHEMBL5939",
+        "CHEMBL2558",
+        "CHEMBL5406",
+        "CHEMBL4523509",
+        "CHEMBL4328",
+        "CHEMBL4375",
+        "CHEMBL3401",
+        "CHEMBL2185",
+        "CHEMBL5083",
+        "CHEMBL5896",
+        "CHEMBL1821",
+        "CHEMBL2525",
+        "CHEMBL1908381",
+        "CHEMBL3712868",
+        "CHEMBL3961",
+        "CHEMBL1827",
+        "CHEMBL2222",
+        "CHEMBL5282",
+        "CHEMBL2343",
+        "CHEMBL1949",
+        "CHEMBL1741186",
+        "CHEMBL2321615"
+      ]
+    },
+    "exp30rc_pg_aggr.jsonl": {
+      "source_sha256": "9bcd2a2a19f3c9dce559c074809e1cf5a42f9c5b427ad9ec759fc66035d8d9fc",
+      "targets": [
+        "CHEMBL1741186",
+        "CHEMBL1821",
+        "CHEMBL1827",
+        "CHEMBL1908381",
+        "CHEMBL2176774",
+        "CHEMBL2185",
+        "CHEMBL2321615",
+        "CHEMBL2343",
+        "CHEMBL2525",
+        "CHEMBL2558",
+        "CHEMBL3401",
+        "CHEMBL3712868",
+        "CHEMBL3961",
+        "CHEMBL4375",
+        "CHEMBL4523509",
+        "CHEMBL5083",
+        "CHEMBL5668",
+        "CHEMBL5896",
+        "CHEMBL5939"
+      ]
+    },
+    "rc_expand_new6.jsonl": {
+      "source_sha256": "1decad055656b56734fea046f7737a1a60db488a5725170f654f3e075855eced",
+      "targets": [
+        "CHEMBL211",
+        "CHEMBL2179",
+        "CHEMBL274",
+        "CHEMBL5469",
+        "CHEMBL5479",
+        "CHEMBL6055"
+      ]
+    },
+    "exp30rc25_pg_mild.jsonl": {
+      "source_sha256": "d0c9898886cfd60ed4b9640d3fd3da5f8e5dca9bce7315ee3f087192dc639ddd",
+      "targets": [
+        "CHEMBL1741186",
+        "CHEMBL1821",
+        "CHEMBL1827",
+        "CHEMBL1908381",
+        "CHEMBL2176774",
+        "CHEMBL2185",
+        "CHEMBL2321615",
+        "CHEMBL2343",
+        "CHEMBL2525",
+        "CHEMBL2558",
+        "CHEMBL3401",
+        "CHEMBL3712868",
+        "CHEMBL3961",
+        "CHEMBL4375",
+        "CHEMBL4523509",
+        "CHEMBL5083",
+        "CHEMBL5668",
+        "CHEMBL5896",
+        "CHEMBL5939",
+        "CHEMBL211",
+        "CHEMBL2179",
+        "CHEMBL274",
+        "CHEMBL5469",
+        "CHEMBL5479",
+        "CHEMBL6055"
+      ]
+    }
+  }
+}

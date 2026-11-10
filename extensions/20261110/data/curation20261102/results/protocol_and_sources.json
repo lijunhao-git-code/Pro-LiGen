@@ -1,0 +1,47 @@
+{
+  "rdkit": "2026.03.4",
+  "numpy": "1.23.5",
+  "source_files": {
+    "data/training/source_smiles26402.csv": "b25ec0c1e10a4f9ebb18a18d597e17e615c3c024b1b027184b62de001a5b6c9c",
+    "data/retrieval/library.csv": "314b79dee49b08e56e269e057ccd5cbab95326e91764d5b272af5509ef60def4",
+    "data/task_sources/best_ligand.csv": "fbbcb215c46dbbe63362a6442b6599cfa1a9482c25a4fc272c52a767f4a4f40a",
+    "data/SI_records/tasks25.json": "b9d0375f38453f8717bc1217fe97e9b299d8bd67f03fa241101c1f1337b069e1",
+    "extensions/20261102/gin/inputs/tasks25.json": "1309d5ba5774516c434605554b43d5f4c89a6fab9f09ccb7d6a71bbf91c31d8f",
+    "extensions/20261102/gin/inputs/library.csv": "02e485298eb25de207ab27cacafa4c3df99e3b671182e3f5519552c364b9604d",
+    "data/training/triplets_ring_count.csv": "113c0e809eed531ae03fcc10c3c7ce3b212ee9643b8389ab132348f7c8702af9",
+    "extensions/20261102/gin/training/logp_train_triplets.csv": "d398fe1c3bb3d45faba82913103873adbe84f22157f31aa76177fbe38b028dec",
+    "extensions/20261102/gin/training/logp_val_triplets.csv": "2070f482d390c55c570c6695ad76e2116a4b8ecb7256f99084b35bd8742edf88",
+    "extensions/20261102/gin/training/tpsa_train_triplets.csv": "cb536ad58559768138c7f1e78c608943e10488472e8c2b0e59e9d45f88e78dbc",
+    "extensions/20261102/gin/training/tpsa_val_triplets.csv": "4083b657a8497ada571427ba70bd98a1951a2182fbe6e814e291c0b8c76e4992",
+    "archive/train_gin.py": "1c01b995122431d67d2fb2952f796f764c60ecdcb829e97a2e9be95f58150edc",
+    "archive/study_a/build_prompts_rc_expand.py": "598e2c889ee834ece96445110ff9fc94d2fc81cf06fc41fc7e81a872a7018ebe",
+    "archive/generation/prepare_inputs.py": "5c041b063b514d1fc57f3dc5b40aa89c64d09afed10b99c0dc1409e585f2adf2"
+  },
+  "task_source_files": {
+    "filter_prompts.py": "0103f57b86d5ade969b0712062b0a3f22604e2a0d44d52f4d8a5c886f806a7fa",
+    "retrieval_source.json": "70931c995d90fb8e5b5d789412d60167ad354569e7d2e0ddeaefbb3150f1feb7",
+    "retrieved_rc_k60.csv": "c8ca2b11fa815a2f845adb6c5c33ef052d0d1e92b64204faed950dccc655750c",
+    "select_expand_targets_rc.py": "6ede12dbe21ba7266c15588e6b827ce49dc23b11b69f3b3865df44f1c20268d1",
+    "task_list_provenance.json": "b1461dacbb99c2395792ecf32682876e8d7550c24936bf4418bdb89645eee3ff"
+  },
+  "canonical": "Isomeric canonical SMILES, preserving charge, components, isotopes and specified stereo; no tautomer canonicalization or neutralization",
+  "component_rule": "Keep sole carbon-containing component only when every accompanying component is a single atom; otherwise keep original form",
+  "scaffold": "Typed Bemis-Murcko scaffold without stereochemistry; omit empty scaffolds",
+  "fingerprint": {
+    "kind": "binary Morgan",
+    "radius": 2,
+    "bits": 2048,
+    "includeChirality": false,
+    "similarity": "Tanimoto"
+  },
+  "near_duplicate_diagnostics": "Report NN Tanimoto >=0.80 and >=0.90 descriptively; these are not original exclusion rules and do not change memberships",
+  "library_split_scope": "Canonical molecule assignments in library.csv; not the historical RC trainer triplet split",
+  "rc_scope": "All archived triplet participants; original unseeded train/validation index assignment is not represented as recovered",
+  "initializer_scope": "Audit enumerated archived molecular inputs; do not infer the input membership of an earlier initializer from its checkpoint",
+  "task_selection": "Retain19 retrieval-feasible legacy tasks; sample6 from original ordered retrieval candidates after exclusions with Python random.Random(42); freeze final25 for subsequent studies",
+  "task_constraints": "RC>=2; legacy retrieval status ok; added tasks additionally exclude old25 and CHEMBL3401 and require seed MW<=700. Do not retroactively apply added-task MW filter to retained19.",
+  "no_structure_or_data_changes": true,
+  "new_generation_calls": 0,
+  "new_training_jobs": 0,
+  "new_docking_jobs": 0
+}

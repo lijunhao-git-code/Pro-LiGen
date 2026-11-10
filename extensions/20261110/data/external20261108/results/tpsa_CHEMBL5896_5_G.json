@@ -1,0 +1,102 @@
+{
+  "slot_id": "tpsa_CHEMBL5896_5_G",
+  "property": "tpsa",
+  "chemblid": "CHEMBL5896",
+  "position": 5,
+  "group": "G",
+  "order": 352,
+  "pilot": false,
+  "started_utc": "2026-11-08T11:35:45.317407+00:00",
+  "finished_utc": "2026-11-08T11:36:51.659036+00:00",
+  "technical_complete": true,
+  "status": "no_eligible_candidate",
+  "ok": false,
+  "canonical": null,
+  "selected_candidate": null,
+  "candidates": [
+    {
+      "turn": 4,
+      "candidate_position": 1,
+      "smiles": "CN(C)CCc1cccc(C2CCN(CCc3cnn(-c4nccc5c[nH]cnc45)c3)CC2)c1",
+      "valid": false,
+      "property_hit": false,
+      "eligible": false,
+      "reason": "invalid_smiles"
+    },
+    {
+      "turn": 4,
+      "candidate_position": 2,
+      "smiles": "CC(C)CCc1cccc(C2CCN(CCc3cnn(-c4nccc5c[nH]cnc45)c3)CC2)c1",
+      "valid": false,
+      "property_hit": false,
+      "eligible": false,
+      "reason": "invalid_smiles"
+    },
+    {
+      "turn": 4,
+      "candidate_position": 3,
+      "smiles": "CN(C)CCc1cccc(C2CCN(CCc3cnn(-c4ccccc5c(=O)n(C)cnc45)c3)CC2)c1",
+      "valid": false,
+      "property_hit": false,
+      "eligible": false,
+      "reason": "invalid_smiles"
+    },
+    {
+      "turn": 5,
+      "candidate_position": 1,
+      "smiles": "CN(C)CCc1cccc(C2CCN(CCc3cnn(-c4nccc5c[nH]cnc45)c3)CC2)c1",
+      "valid": false,
+      "property_hit": false,
+      "eligible": false,
+      "reason": "invalid_smiles"
+    },
+    {
+      "turn": 5,
+      "candidate_position": 2,
+      "smiles": "CC(C)CCc1cccc(C2CCN(CCc3cnn(-c4nccc5c[nH]cnc45)c3)CC2)c1",
+      "valid": false,
+      "property_hit": false,
+      "eligible": false,
+      "reason": "invalid_smiles"
+    },
+    {
+      "turn": 5,
+      "candidate_position": 3,
+      "smiles": "CN(C)CCc1cccc(C2CCN(Cc3cnn(-c4nccc5c[nH]cnc45)c3)CC2)c1",
+      "valid": false,
+      "property_hit": false,
+      "eligible": false,
+      "reason": "invalid_smiles"
+    }
+  ],
+  "provided_references": [
+    "CC(C)c1cc(C(=O)N2Cc3ccc(CN4CCN(C)CC4)cc3C2)c(O)cc1O",
+    "CNS(=O)(=O)CCc1ccc2[nH]cc(C3CCN(C)CC3)c2c1",
+    "CCCn1c(C2CCN(C)CC2)nc(-c2ccc(Cl)c(Cl)c2)c1-c1ccnc(NC2CC2)n1"
+  ],
+  "trace": [
+    {
+      "turn": 4,
+      "provided_references": [
+        "CC(C)c1cc(C(=O)N2Cc3ccc(CN4CCN(C)CC4)cc3C2)c(O)cc1O",
+        "CNS(=O)(=O)CCc1ccc2[nH]cc(C3CCN(C)CC3)c2c1",
+        "CCCn1c(C2CCN(C)CC2)nc(-c2ccc(Cl)c(Cl)c2)c1-c1ccnc(NC2CC2)n1"
+      ],
+      "parsed_candidates": 3,
+      "ignored_extra_tags": 0
+    },
+    {
+      "turn": 5,
+      "provided_references": [
+        "CC(C)c1cc(C(=O)N2Cc3ccc(CN4CCN(C)CC4)cc3C2)c(O)cc1O",
+        "CNS(=O)(=O)CCc1ccc2[nH]cc(C3CCN(C)CC3)c2c1",
+        "CCCn1c(C2CCN(C)CC2)nc(-c2ccc(Cl)c(Cl)c2)c1-c1ccnc(NC2CC2)n1"
+      ],
+      "parsed_candidates": 3,
+      "ignored_extra_tags": 0
+    }
+  ],
+  "successful_attempt": 1,
+  "earlier_attempts": [],
+  "common_context_sha256": "d7e6fc1430fb6b8d4d2b14c3a8b213a18639bc84d029d3400f1357b582511cf3"
+}

@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "source_files_unchanged": true,
+  "source_library_sets_equal": true,
+  "single_component_subset_matches_existing_property_inputs": true,
+  "all_task_seed_mappings_verified": true,
+  "selected_additions_exactly_reproduced": true,
+  "task_panel_matches_frozen_inputs": true,
+  "library_canonical_splits_exact_disjoint": true,
+  "property_triplets_respect_existing_molecule_splits": true,
+  "property_train_validation_molecular_intersection_zero": true,
+  "sets": 13,
+  "pairwise_rows": 78,
+  "nearest_summary_rows": 11,
+  "nearest_query_rows": 15140,
+  "nearest_scalar_checks": [
+    {
+      "query_set": "logp_validation",
+      "pairs_checked": 17342,
+      "maximum": 0.3888888888888889
+    },
+    {
+      "query_set": "tpsa_validation",
+      "pairs_checked": 16343,
+      "maximum": 0.3888888888888889
+    }
+  ],
+  "frozen_csv_comparisons": [
+    {
+      "file": "cross_set_nearest_neighbors.csv",
+      "rows": 15140,
+      "match": true
+    },
+    {
+      "file": "cross_set_nearest_summary.csv",
+      "rows": 11,
+      "match": true
+    },
+    {
+      "file": "near_duplicate_cases.csv",
+      "rows": 4878,
+      "match": true
+    },
+    {
+      "file": "pairwise_set_overlap.csv",
+      "rows": 78,
+      "match": true
+    },
+    {
+      "file": "set_inventory.csv",
+      "rows": 13,
+      "match": true
+    },
+    {
+      "file": "set_membership.csv",
+      "rows": 159114,
+      "match": true
+    },
+    {
+      "file": "task_inventory25.csv",
+      "rows": 25,
+      "match": true
+    },
+    {
+      "file": "task_selection_flow.csv",
+      "rows": 10,
+      "match": true
+    }
+  ],
+  "new_API_calls": 0,
+  "new_training_jobs": 0,
+  "new_docking_jobs": 0
+}
