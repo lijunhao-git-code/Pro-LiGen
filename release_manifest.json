@@ -1,5 +1,5 @@
 {
-  "release_version": "v0.4.0",
+  "release_version": "v0.4.1",
   "previous_release": "v0.3.1",
   "files": [
     {
@@ -81,11 +81,6 @@
       "path": "audit/b05_make_figures.py",
       "bytes": 17126,
       "sha256": "051305bba36c04808ac5a56f95881d02c594504fe16460a407fdd03439a99eb6"
-    },
-    {
-      "path": "audit/matplotlib_cache/fontlist-v330.json",
-      "bytes": 120748,
-      "sha256": "105f5753a3c11b04cc52945adadc0a7728f1b5340fce3c35eba9e82eb0f434cc"
     },
     {
       "path": "data/csv/A_retained500.csv",
@@ -4715,7 +4710,7 @@
     {
       "path": "docs/CURRENT_RESULTS_TO_FILES.md",
       "bytes": 3657,
-      "sha256": "dbfe8a41c8e8dd32d569880462964ac5da063f35fbcba1da0b386f6889ea1557"
+      "sha256": "4b6abe2dd50e47004bf17d15855c9aa39d34114abf2b9897ce0187c2b00ac703"
     },
     {
       "path": "docs/DATA_DICTIONARY.md",
@@ -4750,7 +4745,7 @@
     {
       "path": "docs/README_中文.md",
       "bytes": 2638,
-      "sha256": "8692a5469f027f26ace8c9314451f0391df1005e77e930234f6d7e756d142bd2"
+      "sha256": "6f95edbbe94b065d39957e25043191bc939616994a9c42e1d82853dbdbdb6e08"
     },
     {
       "path": "docs/RELEASE_SCOPE.md",
@@ -23920,7 +23915,7 @@
     {
       "path": "README.md",
       "bytes": 4794,
-      "sha256": "c8e7568ef05ec89ecc3ecfc67ca9c32ab4dfbc29d2d8ad05cf4ce3423a3c2934"
+      "sha256": "dbb712c2cc04ac7c2115d1fc27e62a3b5dda9293fab80a0ce0863d5ff8feda0d"
     },
     {
       "path": "reproduce/audit_novelty.py",
@@ -24138,14 +24133,14 @@
       "sha256": "4690bdf33ccd99151351713e48506e33dbbbd9dfd41f5c49486e9fd9b1907cf0"
     },
     {
-      "path": "verification/training_inputs.json",
-      "bytes": 1828,
-      "sha256": "af6cfbfb605e6c860ff7b9723e1473b64f71ab9ccef09ceb703f0b43f62cc3e7"
-    },
-    {
       "path": "verification/submission_release_scope.json",
       "bytes": 199,
       "sha256": "83faa4e516145b9c1b6919348f24e57b09fa48f318cbb35c57d9c94ba2027a53"
+    },
+    {
+      "path": "verification/training_inputs.json",
+      "bytes": 1828,
+      "sha256": "af6cfbfb605e6c860ff7b9723e1473b64f71ab9ccef09ceb703f0b43f62cc3e7"
     }
   ]
 }

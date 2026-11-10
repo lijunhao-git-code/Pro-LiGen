@@ -1,6 +1,6 @@
 # Pro-LiGen: data, models and reproducible analysis
 
-Version **v0.4.0** adds the [current submission supplement](extensions/20261110/README.md): the 750-position ChatDrug comparison, source server scripts, API reproducibility records, curation/chemical-form audits, saved docking cases and sensitivity analysis. Original project software is now licensed under MIT.
+Version **v0.4.1** adds the [current submission supplement](extensions/20261110/README.md): the 750-position ChatDrug comparison, source server scripts, API reproducibility records, curation/chemical-form audits, saved docking cases and sensitivity analysis. Original project software is now licensed under MIT.
 
 ```sh
 python reproduce/verify_submission_supplement.py --out NEW_SUBMISSION_CHECK

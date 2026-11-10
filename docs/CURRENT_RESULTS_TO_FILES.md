@@ -18,6 +18,6 @@ All paths below are relative to the repository root. Display numbers refer to th
 
 The ring, continuous-property and initial cohorts retain separate identities. Conditional descriptors first average successful observations within a task, then across tasks; S/U keep the planned-run denominator. Current manuscript table snippets and quantitative figure assets are in `extensions/20261102/paper_tables/` and `figures/`. Their filenames retain the original project naming convention.
 
-## Current submission additions (v0.4.0)
+## Current submission additions (v0.4.1)
 
 Main Table 3 is the 750-position external-method comparison, not the docking table. See [the submission supplement](../extensions/20261110/README.md) for its exact records and all new SI analyses. The original docking table is now Table 4; its scientific records and observation definitions are unchanged. Run `python reproduce/verify_submission_supplement.py --out NEW` for the new default offline checks.
